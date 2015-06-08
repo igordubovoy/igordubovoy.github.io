@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: "MyriadProRegular";
+    font-size: 11px;
+    color: #8D8D8D;
+}
+/*
+#menu {
+    padding: 0px;
+    width: 487.3906px;
+    height: 35px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 5px -3px #000000;
+    border-radius: 5px;
+
+}
+*/
+
+ul, li {
+    list-style-type: none;
+}
+
+.navigation li {
+    line-height: 33px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    float: left;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    background: linear-gradient(#FFFFFF, #F0F0F0 50%, #F0F0F0 50%, #EDEDED);
+
+
+}
+
+.firstList {
+    border-left: 1px solid #CCCCCC;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.lastList {
+    border-right: 1px solid #CCCCCC;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.navigation li:hover  {
+    color: #333333;
+    background: linear-gradient(#FBFBFB, #FDFDFD 50%, #FDFDFD 50%, #FFFFFF);
+
+}
+.navigation li:active {
+    color: #fff;
+    background: linear-gradient(#00C6DD, #58DAEB 50%, #48C1DA 50%, #0098BE);
+
+}
+
+
+.dropdown {
+    margin-left: -10px;
+    position: absolute;
+    padding: 0px;
+    width: 104px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1) inset;
+    display: none;
+
+}
+.dropdown li {
+
+    line-height: 24px;
+    border: none;
+    width: 84px;
+    background: none;
+    color: #CCCCCC;
+
+}
+
+li:hover .dropdown {
+    display: block;
+
+}
+
+
+
