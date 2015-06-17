@@ -11,7 +11,7 @@
             if(top < headerH) {
             menu.style.cssText += "top: "+ (headerH-top)+"px";
             }
-            else{  menu.style.cssText += "top:0";
+            else {  menu.style.cssText += "top:0";
             }
         }
 })()

@@ -1,5 +1,5 @@
-h1 {
-    color: orange;
+body {
+    color: black;
 }
 
 p:first-letter {
@@ -7,13 +7,15 @@ p:first-letter {
     font-size: 150%;
     font-weight: bold;
 }
+
 em {
     background: green;
     color: white;
     font-weight: bold;
 }
 
-#allotment  h2 {
+#allotment h2,
+h1 {
     color: orange;
 }
 
@@ -21,21 +23,21 @@ em {
     color: blue;
 }
 
-ul  li {
+ul {
     font-weight: bold;
 }
 
-#allotment ol.fruits-list li {
+#allotment .fruits-list {
     color: grey;
     font-weight: normal;
 }
+
 ol.vegetables-list li {
     color: red;
     font-weight: normal;
 }
 
-
-#warehouse ol.fruits-list li {
+#warehouse .fruits-list {
     color: green;
     font-weight: normal;
 }
@@ -44,11 +46,13 @@ thead tr td {
     font-weight: bold;
     text-align: center;
 }
+
 tbody tr td:first-child {
     color: orange;
     background-color: white;
     text-align: left;
 }
+
 tbody tr td {
     color: white;
     background-color: green;

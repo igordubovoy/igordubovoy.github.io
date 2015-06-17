@@ -1,0 +1,58 @@
+input[type="checkbox"] {
+    display: none
+}
+
+label[for*=red] {
+    color: red;
+}
+
+label[for*=green] {
+    color: green;
+}
+
+label[for*=blue] {
+    color: blue;
+}
+
+span {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 5px 3px 5px;
+}
+
+label {
+    text-decoration: underline;
+}
+
+span.blue {
+    background-color: blue;
+    color: white;
+}
+
+span.red {
+    background-color: red;
+    color: white;
+}
+
+span.green {
+    background-color: green;
+    color: white;
+}
+
+input#red:checked ~ span.red,
+input#blue:checked ~ span.blue,
+input#green:checked ~ span.green {
+    display: none;
+}
+
+input#red:checked ~ label[for*=red] {
+    color: #FFE2DE;
+}
+
+input#blue:checked ~ label[for*=blue] {
+    color: #DADDF6;
+}
+
+input#green:checked ~ label[for*=green] {
+    color: #E7FFD0;
+}
