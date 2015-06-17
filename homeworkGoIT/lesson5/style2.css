@@ -178,6 +178,10 @@
     color: #D3D3D3;
 }
 
+.other_but, .but:hover {
+    cursor: pointer;
+}
+
 .value.standart {
     position: static;
     float: left;
