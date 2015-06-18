@@ -3,8 +3,16 @@
         exit = document.querySelector('.close'),
         dark = document.getElementById('dark'),
         modal = document.querySelector('.general');
-    sign.addEventListener('click', clickSign, false);
-    exit.addEventListener('click', clickToExit, false);
+
+    if (sign.addEventListener) {
+        sign.addEventListener('click', clickSign, false);
+    } else {
+        sing.attachEvent('onclick', clickSign)
+    }
+    if (exit.addEventListener) {
+        exit.addEventListener('click', clickToExit, false);
+    }
+    exit.attachEvent('onclick', clickToExit);
 
     function clickSign() {
         dark.className = "dark_monitor";
@@ -17,4 +25,5 @@
         modal.style.cssText = '';
         sign.style.cssText = "visibility: visible"
     }
+
 })()
