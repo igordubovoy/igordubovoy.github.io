@@ -11,8 +11,9 @@
     }
     if (exit.addEventListener) {
         exit.addEventListener('click', clickToExit, false);
+    } else {
+        exit.attachEvent('onclick', clickToExit);
     }
-    exit.attachEvent('onclick', clickToExit);
 
     function clickSign() {
         dark.className = "dark_monitor";
