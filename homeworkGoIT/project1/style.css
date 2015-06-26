@@ -359,7 +359,7 @@ nav ul li:hover {
     font-family: 'Open Sans', sans-serif;
     line-height: 2em;
     font-size: 14px;
-    padding-top: 13px;
+    margin-top: 13px;
 }
 
 .middle_list li:hover {
