@@ -1,0 +1,123 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic);
+@font-face {
+    font-family: "trebuchet_regular";
+    src: url("fonts/trebuchet_regular.ttf");
+}
+
+@font-face {
+    font-family: "trebuchet_italic";
+    src: url("fonts/trebuchet_italic.ttf");
+}
+
+@font-face {
+    font-family: "futura_book";
+    src: url(fonts/futura_book_opentype.otf);
+}
+
+@font-face {
+    font-family: "futura_bold";
+    src: url(fonts/futura_bold_opentype.otf);
+}
+
+.comments_background {
+    margin: auto;
+    height: 315px;
+    width: 100%;
+    background-image: url(img/background3.png);
+}
+
+.comments {
+    position: relative;
+    margin: auto;
+    width: 1021px;
+    height: 98.5px;
+    padding-top: 50px;
+}
+
+.p_header_comm {
+    margin: 0px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.first {
+    color: #ee8129;
+    font-family: "futura_book";
+}
+
+.second {
+    color: #3170a8;
+    font-family: "futura_bold";
+}
+
+.client_comm_right,
+.client_comm_left {
+    width: 489.5px;
+    height: 100%;
+}
+
+.client_comm_left {
+    float: left;
+}
+
+.client_comm_right {
+    float: right;
+}
+
+.comment {
+    position: relative;
+    margin: 0;
+    width: 365px;
+    height: 98.5px;
+    background: #fff;
+    float: right;
+}
+
+.comment::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 11.5px solid transparent;
+    border-right: 14.5px solid #FFF;
+    border-bottom: 11.5px solid transparent;
+    top: 50%;
+    margin-top: -11px;
+    margin-left: -14px;
+}
+
+.p_com_head {
+    line-height: 37.5px;
+    margin: 0;
+    margin-left: 15.5px;
+    width: 330.5px;
+    height: 37.5px;
+    font-size: 13px;
+    color: #3070a8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    border-bottom: 1px dotted #666;
+}
+
+.name {
+    float: left;
+}
+
+.job {
+    float: right;
+}
+
+.p_com_body {
+    width: 330.5px;
+    height: 49px;
+    margin: 0px;
+    margin-left: 15.5px;
+    font-size: 13px;
+    color: #666;
+    padding-top: 7px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+}

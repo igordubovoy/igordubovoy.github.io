@@ -1,0 +1,381 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+@font-face {
+    font-family: "futura_book";
+    src: url(fonts/futura_book_opentype.otf);
+}
+
+@font-face {
+    font-family: "futura_bold";
+    src: url(fonts/futura_bold_opentype.otf);
+}
+
+@font-face {
+    font-family: "open_sans_semibold";
+    src: url(fonts/open_sans_semibold.ttf);
+}
+
+@font-face {
+    font-family: "calibrii";
+    src: url(fonts/calibrii.ttf);
+}
+
+@font-face {
+    font-family: "trebuchet_bold";
+    src: url("fonts/trebuchet_bold.ttf");
+}
+/* reset styles */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background: #fff;
+}
+
+header {
+    height: 116px;
+    width: 1023px;
+    margin: auto;
+    position: relative;
+}
+
+.p_header {
+    height: 116px;
+    line-height: 116px;
+    font-size: 36px;
+    width: 275px;
+    float: left;
+    position: relative;
+}
+
+.logo_first {
+    font-family: "futura_book";
+    color: #ee8129;
+}
+
+.logo_second {
+    color: #3070a8;
+    font-family: "futura_bold";
+    text-transform: uppercase;
+}
+
+nav {
+    width: 560px;
+    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    font-family: "open_sans_semibold";
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #989898;
+    padding: 0 15px;
+    padding-bottom: 34px;
+    transition: color 0.2s linear, border 0.2s linear;
+    border-bottom: 4px solid #fff;
+}
+
+nav ul li:hover {
+    border-bottom: 4px solid #3070a8;
+    color: #3070a8;
+    margin-bottom: -4px;
+    cursor: pointer;
+    transition: color 0.2s linear, border 0.2s linear;
+}
+
+.banner {
+    height: 585px;
+    background-image: url(img/background.png);
+}
+
+.div_banner {
+    padding-top: 146px;
+    color: white;
+    text-align: center;
+}
+
+.first_string {
+    font-family: "futura_book";
+    font-size: 36px;
+}
+
+.second_string {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-family: "futura_bold";
+}
+
+.last_string {
+    font-family: "calibrii";
+    font-size: 20px;
+}
+
+.second_string {
+    padding-top: 10px;
+    line-height: 1.2em;
+}
+
+.last_string {
+    padding-top: 15px;
+    line-height: 1.5em;
+}
+
+.banner_button {
+    margin-top: 30px;
+    height: 57px;
+    width: 245px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    color: #fff;
+    font-family: "open_sans_semibold";
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s linear, border 0.2s linear;
+}
+
+.banner_button:hover {
+    color: #ee8129;
+    border: 1px solid rgba(238, 129, 41, 0.55);
+    transition: color 0.2s linear, border 0.2s linear;
+}
+
+.services {
+    width: 1023px;
+    height: 563px;
+    margin: auto;
+}
+
+.p_services {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "trebuchet_bold";
+    font-size: 30px;
+    padding-top: 62px;
+    color: #41525c;
+}
+
+.service {
+    width: 341px;
+    height: 400px;
+    margin-top: 71px;
+    float: left;
+}
+
+.service img {
+    width: 141px;
+    height: 141px;
+    position: relative;
+    left: 50%;
+    margin-left: -70px;
+}
+
+.first_p_service {
+    text-align: center;
+    padding-top: 29px;
+    color: #3070a8;
+    font-family: "futura_book";
+    font-size: 30px;
+}
+
+.second_p_service {
+    font-family: 'Open Sans', sans-serif;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 25px;
+    width: 320px;
+    margin: auto;
+    line-height: 1.8em;
+}
+
+.middle_section_background {
+    background-image: url(img/background2.png);
+    height: 577px;
+}
+
+.middle_section {
+    width: 1023px;
+    height: 577px;
+    margin: auto;
+}
+
+.first_p_midle {
+    color: #ee8129;
+    font-family: "futura_book";
+    font-size: 26px;
+    text-transform: uppercase;
+    padding-top: 86px;
+    line-height: 2em;
+}
+
+.second_p_midle {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    color: #fff;
+    line-height: 2em;
+}
+
+.middle_list {
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.middle_list li {
+    color: #9d9d9d;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2em;
+    font-size: 14px;
+    padding-top: 13px;
+}
+
+.middle_list li:hover {
+    color: #3070a8;
+    cursor: pointer;
+    transition: color 0.2s linear;
+}
+
+.middle_list li::before {
+    content: url(img/elips.png);
+    position: absolute;
+    margin-left: -22px;
+}
+
+.middle_list li:hover::before {
+    content: url(img/elips_hover.png);
+    position: absolute;
+    margin-left: -22px;
+}
