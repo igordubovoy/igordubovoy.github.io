@@ -51,10 +51,10 @@ input.checkbox {
 
 .search:hover {
     width: 668px;
-    transition: all 1.5s;
+    transition: all 3s ease;
 }
 
 .search:hover ~ .tr {
     margin-left: 654px;
-    transition: all 1.5s;
+    transition: all 3s ease;
 }
