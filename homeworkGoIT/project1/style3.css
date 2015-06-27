@@ -30,7 +30,7 @@
     position: relative;
     margin: auto;
     width: 1021px;
-    height: 98.5px;
+    height: 99px;
     padding-top: 50px;
 }
 
@@ -54,7 +54,7 @@
 
 .client_comm_right,
 .client_comm_left {
-    width: 489.5px;
+    width: 490px;
     height: 100%;
 }
 
@@ -70,7 +70,7 @@
     position: relative;
     margin: 0;
     width: 365px;
-    height: 98.5px;
+    height: 99px;
     background: #fff;
     float: right;
 }
@@ -80,20 +80,20 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-top: 11.5px solid transparent;
-    border-right: 14.5px solid #FFF;
-    border-bottom: 11.5px solid transparent;
+    border-top: 12px solid transparent;
+    border-right: 15px solid #FFF;
+    border-bottom: 12px solid transparent;
     top: 50%;
     margin-top: -11px;
     margin-left: -14px;
 }
 
 .p_com_head {
-    line-height: 37.5px;
+    line-height: 38px;
     margin: 0;
-    margin-left: 15.5px;
-    width: 330.5px;
-    height: 37.5px;
+    margin-left: 16px;
+    width: 331px;
+    height: 38px;
     font-size: 13px;
     color: #3070a8;
     font-family: 'Open Sans', sans-serif;
@@ -111,10 +111,10 @@
 }
 
 .p_com_body {
-    width: 330.5px;
+    width: 331px;
     height: 49px;
     margin: 0px;
-    margin-left: 15.5px;
+    margin-left: 16px;
     font-size: 13px;
     color: #666;
     padding-top: 7px;
