@@ -1,0 +1,42 @@
+.search {
+    width: 544px;
+    height: 62px;
+    background: #ffcc66;
+}
+
+.search::before {
+    content: '';
+    margin-left: 544px;
+    z-index: 1;
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-top: 31px solid transparent;
+	border-left: 12px solid #ffcc66;
+	border-bottom: 31px solid transparent;
+}
+
+input.text {
+    margin: 5px 0 0 5px;
+    width: 454px;
+    height: 24px;
+    box-shadow: 0px 0px 3px 0px #c6c6c6 inset;
+    border: 1px solid #c6c6c6;
+    outline: none;
+}
+
+.submit {
+    width: 67px;
+    height: 26px;
+}
+
+input.checkbox {
+    margin-top: 7px;
+}
+
+label {
+    position: absolute;
+    margin-top: 4px;
+    font-family: sans-serif;
+    font-size: 14px;
+}

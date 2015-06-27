@@ -1,0 +1,60 @@
+.search {
+    position: relative;
+    width: 558px;
+    height: 62px;
+    background: linear-gradient(to top, #eaba4c, #ffcb53);
+}
+
+.tr {
+    margin-top: -62px;
+    content: '';
+    margin-left: 544px;
+    z-index: 1;
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-top: 31px solid #fff;
+	border-bottom: 31px solid #fff;
+    border-left: 14px solid transparent;
+}
+
+input.text {
+    margin: 5px 0 0 5px;
+    width: 454px;
+    height: 24px;
+    box-shadow: 0px 0px 3px 0px #c6c6c6 inset;
+    border: 1px solid #c6c6c6;
+    outline: none;
+}
+
+.submit {
+    width: 67px;
+    height: 26px;
+}
+
+input.checkbox {
+    margin-top: 7px;
+}
+
+.forExamp {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.examp {
+    border-bottom: 1px dotted #000;
+    cursor: pointer;
+}
+
+.search:hover {
+    width: 668px;
+    transition: all 1.5s;
+}
+
+.search:hover ~ .tr {
+    margin-left: 654px;
+    transition: all 1.5s;
+}
