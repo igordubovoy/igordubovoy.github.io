@@ -2,8 +2,8 @@
     width: 544px;
     height: 62px;
     background: #ffcc66;
+    transition: all 1.5s;
 }
-
 
 input.text {
     margin: 5px 0 0 5px;
@@ -12,11 +12,17 @@ input.text {
     box-shadow: 0px 0px 3px 0px #c6c6c6 inset;
     border: 1px solid #c6c6c6;
     outline: none;
+    transition: all 1.5s;
 }
 
 .submit {
     width: 67px;
     height: 26px;
+    display: block;
+    position: relative;
+    margin-left: 466px;
+    margin-top: -27px;
+    transition: all 1.5s;
 }
 
 input.checkbox {
@@ -29,16 +35,18 @@ label {
     font-family: sans-serif;
     font-size: 14px;
 }
+
 .tr {
     z-index: 1;
     margin-top: -62px;
     margin-left: 544px;
     position: absolute;
     width: 0;
-	height: 0;
-	border-top: 31px solid transparent;
-	border-left: 12px solid #ffcc66;
-	border-bottom: 31px solid transparent;
+    height: 0;
+    border-top: 31px solid transparent;
+    border-left: 12px solid #ffcc66;
+    border-bottom: 31px solid transparent;
+    transition: all 1.5s;
 }
 
 .search:hover {
@@ -49,4 +57,12 @@ label {
 .search:hover ~ .tr {
     margin-left: 668px;
     transition: all 1.5s;
+}
+
+input.text:hover {
+    width: 564px;
+}
+
+input.text:hover ~ .submit {
+    margin-left: 576px;
 }
