@@ -217,6 +217,10 @@ nav ul li:hover {
 }
 
 .banner {
+    width: 1400px;
+    height: 585px;
+    margin: auto;
+    background-repeat: no-repeat;
     height: 585px;
     background-image: url(img/background.png);
 }
@@ -323,6 +327,8 @@ nav ul li:hover {
 }
 
 .middle_section_background {
+    width: 1400px;
+    margin: auto;
     background-image: url(img/background2.png);
     height: 577px;
 }
@@ -366,6 +372,7 @@ nav ul li:hover {
 .middle_list li:hover {
     color: #3070a8;
     cursor: pointer;
+
 }
 
 .middle_list li::before {
