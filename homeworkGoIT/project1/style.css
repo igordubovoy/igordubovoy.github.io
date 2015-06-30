@@ -205,7 +205,7 @@ nav ul li {
     padding: 0 15px;
     padding-bottom: 34px;
     transition: color 0.2s linear, border 0.2s linear;
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid transparent;
 }
 
 nav ul li:hover {
@@ -217,12 +217,11 @@ nav ul li:hover {
 }
 
 .banner {
-
-    height: 585px;
     height: 585px;
     background-image: url(img/background.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100% 585px;
 }
 
 .div_banner {
@@ -330,6 +329,7 @@ nav ul li:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(img/background2.png);
+    background-size:100% 577px;
     height: 577px;
 }
 
@@ -372,7 +372,6 @@ nav ul li:hover {
 .middle_list li:hover {
     color: #3070a8;
     cursor: pointer;
-
 }
 
 .middle_list li::before {
