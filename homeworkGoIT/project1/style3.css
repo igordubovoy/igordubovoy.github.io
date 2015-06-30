@@ -20,10 +20,10 @@
 }
 
 .comments_background {
-    margin: auto;
     height: 315px;
-    width: 1400px;
     background-image: url(img/background3.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .comments {
