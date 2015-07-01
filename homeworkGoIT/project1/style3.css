@@ -24,13 +24,11 @@
     background-image: url(img/background3.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 315px;
 }
 
 .comments {
-    position: relative;
     margin: auto;
-    width: 1021px;
+    width: 1023px;
     height: 99px;
     padding-top: 50px;
 }
@@ -56,7 +54,7 @@
 .client_comm_right,
 .client_comm_left {
     width: 490px;
-    height: 100%;
+    height: 99px;
 }
 
 .client_comm_left {
@@ -69,7 +67,6 @@
 
 .comment {
     position: relative;
-    margin: 0;
     width: 365px;
     height: 99px;
     background: #fff;

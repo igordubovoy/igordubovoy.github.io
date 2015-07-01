@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
 @font-face {
     font-family: "futura_book";
     src: url(fonts/futura_book_opentype.otf);
@@ -221,7 +221,6 @@ nav ul li:hover {
     background-image: url(img/background.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 585px;
 }
 
 .div_banner {
@@ -329,7 +328,6 @@ nav ul li:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(img/background2.png);
-    background-size:100% 577px;
     height: 577px;
 }
 
@@ -384,4 +382,99 @@ nav ul li:hover {
     content: url(img/elips_hover.png);
     position: absolute;
     margin-left: -22px;
+}
+
+.contacts {
+    height: 345px;
+    width: 1023px;
+    margin: auto;
+}
+
+.contact-wrapper {
+    height: 345px;
+    width: 507px;
+    float: left;
+    font-family: "open_sans_semibold";
+    color: #666;
+    font-size: 14px;
+    line-height: 2.2em;
+}
+
+#map-canvas {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 345px;
+    margin-top: -345px;
+}
+
+footer {
+    position: absolute;
+    height: 104px;
+    width: 100%;
+    background: #3070a8;
+}
+
+address {
+    padding-top: 48px;
+}
+
+address,
+.mail,
+.telephone {
+    padding-left: 61px;
+}
+
+.mail,
+.telephone {
+    display: block;
+    padding-top: 12px;
+}
+
+address::before {
+    content: url(img/1.png);
+    position: absolute;
+    margin-left: -55px;
+}
+
+.telephone::before {
+    content: url(img/tel.png);
+    position: absolute;
+    margin-left: -52px;
+}
+
+.mail::before {
+    content: url(img/mail.png);
+    position: absolute;
+    margin-left: -54px;
+    margin-top: 2px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    padding-right: 20px;
+    padding-left: 3px;
+    cursor: pointer;
+}
+
+footer p {
+    padding-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    line-height: 2em;
+}
+
+.company-name {
+    font-weight: 700;
+}
+
+.footer-website {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
 }
