@@ -406,13 +406,15 @@ nav ul li:hover {
     width: 50%;
     height: 345px;
     margin-top: -345px;
+    max-width: 700px;
 }
 
 footer {
-    position: absolute;
+    margin: auto;
     height: 104px;
     width: 100%;
     background: #3070a8;
+    max-width: 1400px;
 }
 
 address {
