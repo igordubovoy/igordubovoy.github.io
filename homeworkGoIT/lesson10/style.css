@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+body {
+    background: #f6f9f9;
+}
+
+.header-gallery,
+.sub-header-gallery {
+    text-align: center;
+    color: #909090;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.header-gallery {
+    margin-top: 45px;
+    font-size: 41px;
+}
+
+.sub-header-gallery {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.gallery {
+    margin: auto;
+    margin-top: 80px;
+    max-width: 1170px;
+    width: 100%;
+    min-height: 580px;
+    height: 100%;
+}
+
+.background {
+    width: 360px;
+    height: 260px;
+    display: inline-block;
+    margin: 0 26px 26px 0;
+    border-radius: 2px;
+}
+
+.background._1 {
+    background-image: url(img/small/1.jpg);
+}
+
+.background._2 {
+    background-image: url(img/small/2.jpg);
+}
+
+.background._3 {
+    background-image: url(img/small/3.jpg);
+}
+
+.background._4 {
+    background-image: url(img/small/4.jpg);
+}
+
+.background._5 {
+    background-image: url(img/small/5.jpg);
+}
+
+.background._6 {
+    background-image: url(img/small/6.jpg);
+}
+
+.background.hover_1:hover,
+.background.hover_2:hover,
+.background.hover_3:hover,
+.background.hover_4:hover,
+.background.hover_5:hover,
+.background.hover_6:hover {
+    background: rgba(37, 166, 247, 0.75);
+    cursor: pointer;
+}
+
+.position-buttons {
+    height: 42px;
+    width: 94px;
+    margin: auto;
+    margin-top: 30%;
+    position: relative;
+    visibility: hidden;
+}
+
+.background:hover .position-buttons {
+    visibility: visible;
+}
+
+.position-buttons button {
+    padding: 0;
+    border: 1px solid #fff;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    outline: none;
+    background: rgb(37, 166, 247);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.link {
+    margin-left: 52px;
+}
+
+.icon {
+    position: absolute;
+    margin: -16% 0 0 -15%;
+}
+
+.position-buttons button:hover {
+    opacity: 0.70;
+}

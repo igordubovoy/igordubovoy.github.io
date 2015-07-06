@@ -1,0 +1,224 @@
+@font-face {
+    font-family: "helvetica bold";
+    src: url("font/HelveticaBold.otf");
+}
+
+@font-face {
+    font-family: "helvetica light";
+    src: url("font/HelveticaLight.otf");
+}
+
+@font-face {
+    font-family: "helvetica roman";
+    src: url("font/HelveticaRoman.otf");
+}
+body {
+    background-image: url(img/backgr.jpg)
+}
+.dark_monitor {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    z-index: 999;
+
+}
+.general {
+    visibility: hidden;
+    position: absolute;
+    width: 560px;
+    height: 239px;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #CCD0D4;
+    margin-top: -119.5px;
+    margin-left: -280px;
+    border-radius: 5px;
+}
+
+.left {
+    height: 239px;
+    width: 328px;
+    float: left;
+    border-right: 1px solid #CCD0D4;
+    background: linear-gradient( #FDFDFD 26%, #F1F2F4 74%);
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    box-shadow: 0px 0px 2px 0px #fff inset;
+}
+
+.left_center {
+    position: relative;
+    height: 239px;
+    width: 289px;
+    margin: auto;
+}
+
+h3 {
+    margin: 0;
+    font-family: "helvetica bold";
+    font-size: 16px;
+    height: 56.5px;
+    border-bottom: 1px solid #E6E7E7;
+    color: #6d7179;
+    line-height: 56.5px;
+}
+
+.header_left {
+    font-size: 16px;
+}
+
+.header_right {
+    font-size: 14px;
+}
+
+.right_center {
+    height: 239px;
+    width: 191px;
+    position: relative;
+    margin: auto;
+}
+
+.right {
+    float: right;
+    width: 231px;
+    height: 239px;
+    background: linear-gradient( #F5F8F9 26%, #EBECEE 74%);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0px 0px 1px 1px #fff inset;
+}
+
+.close {
+    width: 16.5px;
+    height: 15.5px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 5px;
+    float: right;
+    z-index: 1;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #6a7686;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    font-family: "helvetica light";
+    font-size: 13px;
+    color: #484b50;
+}
+
+.p_right {
+    font-size: 12px;
+    padding-top: 16px;
+    line-height: 145%;
+}
+
+.form {
+    padding-top: 19.5px;
+    height: 162px;
+    width: 289px;
+}
+
+.input_text {
+    float: right;
+    width: 217px;
+    height: 26.5px;
+    padding: 0;
+    border: 1px solid #CDCDCD;
+    border-radius: 3px;
+    background: linear-gradient( #F8F8F8 30%, #fff 70%);
+    box-shadow: 0px 0px 3px 1px #fff inset;
+    box-shadow: 0px 1px 0px 0px #D9DADB;
+    outline: none;
+}
+
+.p_form {
+    float: left;
+    font-size: 13px;
+    height: 28.5px;
+    line-height: 28.5px;
+}
+
+.input_text.pass,
+form p:nth-child(n+2) {
+    margin-top: 15.5px;
+}
+
+.left_but {
+    background: linear-gradient( #8895A4 16%, #677384 84%);
+    border: 1px solid #5C6166;
+    outline: none;
+    float: right;
+    margin-top: 31.5px;
+    padding: 0;
+}
+
+.left_but.marker {
+    height: 32.5px;
+    width: 32.5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.left_but.singup {
+    height: 32.5px;
+    width: 66.5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: none;
+    box-shadow: -1px 0px 1px 0px #8495A9 inset;
+    font-family: "helvetica roman";
+    font-size: 12px;
+    color: #fff;
+}
+
+.left_but:active {
+    background: #677384;
+}
+
+.marker img {
+    margin-top: 5px;
+}
+
+.link {
+    position: relative;
+    margin-top: 114px;
+    font-family: "helvetica light";
+    font-size: 11px;
+    height: 32.5px;
+    vertical-align: middle;
+    width: 150px;
+}
+
+.link a {
+    color: #484b50;
+    text-decoration: none;
+}
+
+.right_button {
+    width: 122.5px;
+    height: 30.5px;
+    border: 1px solid #CBCED0;
+    border-radius: 3px;
+    margin-top: 23px;
+    background: linear-gradient( #E8EEF5 29%, #DAE2EF 71%);
+    outline: none;
+    color: #66717E;
+    font-family: "helvetica roman";
+    font-size: 12px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.right_button:active {
+    background: #DAE2EF;
+}
