@@ -23,6 +23,7 @@ body {
 }
 
 .gallery {
+    text-align: center;
     margin: auto;
     margin-top: 80px;
     max-width: 1170px;
@@ -34,7 +35,7 @@ body {
 .dark_monitor {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 792px;
     top: 0;
     left: 0;
     background-image: url(img/background.png);
@@ -84,6 +85,7 @@ body {
     display: inline-block;
     margin: 0 26px 26px 0px;
     border-radius: 2px;
+    transition: all 0.3s;
 }
 
 .background._1 {
@@ -123,8 +125,8 @@ body {
 .position-buttons {
     height: 42px;
     width: 94px;
-    margin: auto;
-    margin-top: 30%;
+    margin-top: 31%;
+    margin-left: 25%;
     position: relative;
     visibility: hidden;
 }
