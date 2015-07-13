@@ -19,10 +19,10 @@
 }
 @font-face {
     font-family: "HelveticaRegular";
-    src: url("../../fonts/Helvetica/HelveticaRegular.eot");
-    src: url("../../fonts/Helvetica/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
-    url("../../fonts/Helvetica/HelveticaRegular.woff") format("woff"),
-    url("../../fonts/Helvetica/HelveticaRegular.ttf") format("truetype");
+    src: url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.eot");
+    src: url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.woff") format("woff"),
+    url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
