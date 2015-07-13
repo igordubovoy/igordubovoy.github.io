@@ -19,12 +19,13 @@
 }
 @font-face {
     font-family: "HelveticaRegular";
-    src: url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.eot");
-    src: url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
-    url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.woff") format("woff"),
-    url("../../homeworkGoIT/project2/fonts/Helvetica/HelveticaRegular.ttf") format("truetype");
+    src: url("../../homeworkGoIT/project2/fonts/helvetica/HelveticaRegular.eot");
+    src: url("../../homeworkGoIT/project2/fonts/helvetica/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../../homeworkGoIT/project2/fonts/helvetica/HelveticaRegular.woff") format("woff"),
+    url("../../homeworkGoIT/project2/fonts/helvetica/HelveticaRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
+
 }
 
 html, body, div, span, applet, object, iframe,
