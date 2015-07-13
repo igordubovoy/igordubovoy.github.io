@@ -112,12 +112,7 @@ body {
     background-image: url(img/small/6.jpg);
 }
 
-.background.hover_1:hover,
-.background.hover_2:hover,
-.background.hover_3:hover,
-.background.hover_4:hover,
-.background.hover_5:hover,
-.background.hover_6:hover {
+.background.hover:hover {
     background: rgba(37, 166, 247, 0.75);
     cursor: pointer;
 }
