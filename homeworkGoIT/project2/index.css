@@ -1,19 +1,19 @@
 @font-face {
     font-family: "HelveticaLight";
-    src: url("/fonts/helvetica/HelveticaLight.eot");
-    src: url("/fonts/helvetica/HelveticaLight.eot?#iefix")format("embedded-opentype"),
-    url("/fonts/helvetica/HelveticaLight.woff") format("woff"),
-    url("/fonts/helvetica/HelveticaLight.ttf") format("truetype");
+    src: url("../fonts/helvetica/HelveticaLight.eot");
+    src: url("../fonts/helvetica/HelveticaLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/helvetica/HelveticaLight.woff") format("woff"),
+    url("../fonts/helvetica/HelveticaLight.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "HelveticaBold";
-    src: url("/fonts/helvetica/HelveticaBold.eot");
-    src: url("/fonts/helvetica/HelveticaBold.eot?#iefix")format("embedded-opentype"),
-    url("/fonts/helvetica/HelveticaBold.woff") format("woff"),
-    url("/fonts/helvetica/HelveticaBold.ttf") format("truetype");
+    src: url("../fonts/helvetica/HelveticaBold.eot");
+    src: url("../fonts/helvetica/HelveticaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/helvetica/HelveticaBold.woff") format("woff"),
+    url("../fonts/helvetica/HelveticaBold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
