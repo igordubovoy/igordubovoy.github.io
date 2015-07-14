@@ -81,7 +81,7 @@ table {
 .top-content {
     height: 100%;
     max-width: 990px;
-    min-width: 830px;
+    min-width: 780px;
     width: 100%;
     margin: auto;
     font-family: "HelveticaLight";
@@ -126,12 +126,13 @@ table {
     font-size: 13px;
     display: inline-block;
     line-height: 21px;
+    font-family: "HelveticaLight";
 }
 
 .top-contacts-icon {
     width: 21px;
     height: 21px;
-    border-radius: 100%;
+    border-radius: 50%;
     display: inline-block;
     float: right;
     margin-left: 7px;
@@ -176,7 +177,7 @@ table {
 .banner-content {
     margin: auto;
     max-width: 990px;
-    min-width: 830px;
+    min-width: 800px;
     height: 100%;
     color: #fff;
     position: relative;
@@ -366,7 +367,7 @@ select:focus {
 .about-company-content {
     margin: auto;
     max-width: 990px;
-    min-width: 830px;
+    min-width: 800px;
     height: 100%;
     color: #333333;
 }
@@ -421,7 +422,7 @@ select:focus {
 
 .offer._2,
 .offer._3 {
-    margin-left: 56px;
+    margin-left: 52px;
 }
 
 .offer._1 {
@@ -442,6 +443,7 @@ select:focus {
     background-position: top;
     background-repeat: no-repeat;
 }
+
 .offer-header {
     text-transform: uppercase;
     font-size: 15px;
@@ -469,6 +471,7 @@ select:focus {
     border-radius: 50%;
     border: 1px solid #e6e6e6;
 }
+
 .offer-view a {
     text-decoration: none;
     display: block;
@@ -482,15 +485,18 @@ select:focus {
     font-size: 13px;
     transition: background 0.3s;
 }
+
 .offer-view a:hover {
     background: #e6e6e6;
 }
+
 .company-comments {
     max-width: 990px;
     margin: auto;
     height: 256px;
     position: relative;
 }
+
 .comments.bracket_1,
 .comments.bracket_2 {
     font-family: "HelveticaBold";
@@ -498,42 +504,51 @@ select:focus {
     color: #f2f2f2;
     position: relative;
 }
+
 .comments.bracket_1 {
     padding-top: 20px;
 }
+
 .comments.bracket_2 {
     margin-left: 72%;
     padding-top: 15px;
 }
+
 .comments-text {
     margin-top: -5px;
     color: #333;
     font-size: 13px;
     font-family: "HelveticaRegular";
     line-height: 1.6em;
+    width: 75%;
 }
+
 .comment-client-name {
     margin-left: 57%;
     padding-top: 15px;
     text-transform: uppercase;
     font-family: "HelveticaBold";
 }
+
 .started {
     height: 190px;
     background: #f2f2f2;
     max-width: 1920px;
     margin: auto;
 }
+
 .centered-start-button-background {
     max-width: 990px;
     height: 100%;
     margin: auto;
 }
+
 #comments-man {
     position: absolute;
     right: 28px;
     top: 82px;
 }
+
 .comments-button_1,
 .comments-button_2 {
     height: 36px;
@@ -549,30 +564,38 @@ select:focus {
     background-color: #fffeff;
     transition: background 0.3s;
 }
+
 .comments-button_2 {
     right: 1px;
 }
+
 .comments-button_1 {
     right: 43px;
 }
+
 .comments-button_1 {
     background-image: url(img/icon/icon-button-comments-left.png);
 }
+
 .comments-button_2 {
     background-image: url(img/icon/icon-button-comments-right.png);
 }
+
 .comments-button_1:hover {
     background-image: url(img/icon/icon-button-comments-left-hover.png);
 }
+
 .comments-button_2:hover {
     background-image: url(img/icon/icon-button-comments-right-hover.png);
 }
+
 .comments-button_2:hover,
 .comments-button_1:hover {
     background-position: 50% 10px;
     background-repeat: no-repeat;
     background-color: #f2f2f2;
 }
+
 .button-started {
     width: 540px;
     height: 60px;
@@ -592,6 +615,7 @@ select:focus {
     letter-spacing: 0.025em;
     cursor: pointer;
 }
+
 .button-started:hover {
     background-color: #ce4234;
 }
@@ -603,6 +627,7 @@ footer {
     border-top: 1px solid #99c8e7;
     margin: auto;
 }
+
 .center-footer {
     position: relative;
     margin: auto;
@@ -653,9 +678,10 @@ footer {
 .footer-social-icons {
     padding-top: 7px;
     padding-left: 20px;
-    width: 134px;
+    width: 136px;
     height: 21px;
 }
+
 .footer-company-information {
     padding-left: 20px;
     padding-top: 10px;

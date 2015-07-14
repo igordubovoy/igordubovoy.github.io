@@ -1,0 +1,78 @@
+.banner-text {
+    max-width: 50%;
+}
+
+.offer {
+    width: 100%;
+    height: 178px;
+}
+
+.offer._1,
+.offer._2,
+.offer._3 {
+    background-position: top left;
+}
+
+.offer-header {
+    padding: 0 0 0 309px;
+    text-align: left;
+}
+
+.offer-text {
+    max-width: 440px;
+    width: 100%;
+    text-align: left;
+    padding: 15px 0 0 309px;
+}
+
+.offer-view {
+    margin: 0;
+    margin-left: 309px;
+    margin-top: 112px;
+}
+
+.offer._2,
+.offer._3 {
+    margin-left: 0;
+}
+
+.offer._3 {
+    margin-bottom: 30px;
+}
+
+.about-company-text1,
+.about-company-text2 {
+    max-width: 55%;
+}
+
+#comments-man {
+    right: 0;
+}
+
+.comments-text {
+    max-width: 70%;
+}
+
+.comment-client-name {
+    margin-left: 50%;
+}
+
+.comments.bracket_2 {
+    margin-left: 67%;
+}
+
+.button-started {
+    width: 470px;
+    font-size: 20px;
+    background-position: 405px 50%;
+}
+
+
+.footer-social-icons {
+    padding-top: 0;
+}
+
+.footer-company-information {
+    padding-top: 5px;
+    line-height: 1.4em;
+}
