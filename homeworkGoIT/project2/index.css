@@ -541,12 +541,13 @@ select:focus {
     max-width: 990px;
     height: 100%;
     margin: auto;
+    position: relative;
 }
 
 #comments-man {
     position: absolute;
     right: 28px;
-    top: 82px;
+    top: -173px;
 }
 
 .comments-button_1,
