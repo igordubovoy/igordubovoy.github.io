@@ -238,10 +238,10 @@ table {
     width: 320px;
     height: 36px;
     outline: none;
-    text-indent: 10px;
     -webkit-appearance: none;
     /*    for ff*/
-
+    padding-left: 9px;
+    text-indent: 0.01px;
     -moz-appearance: none;
     /*    for ie*/
 
@@ -325,7 +325,7 @@ select:focus {
 /* Firefox 18- */
 
 .registration-form input:-moz-placeholder,
-#addres:-moz-placeholder {
+textarea#addres:-moz-placeholder {
     color: #333333;
     opacity: 1;
     transition: opacity 0.5s ease;
