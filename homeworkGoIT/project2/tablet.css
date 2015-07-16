@@ -5,8 +5,8 @@
 .about-company-text1,
 .about-company-text2,
 .company-offers-header,
-.offer,
-.offer._2 ,
+.offer._1,
+.offer._2,
 .offer._3,
 .comments-header,
 .comments.bracket_1,
@@ -30,7 +30,7 @@
 }
 
 .offer {
-    width: 100%;
+    width: 90%;
     height: 178px;
 }
 
@@ -65,7 +65,7 @@
 
 .about-company-text1,
 .about-company-text2 {
-    max-width: 55%;
+    max-width:50%;
 }
 
 #comments-man {
