@@ -26,6 +26,15 @@
     font-style: normal;
     font-weight: normal;
 }
+@font-face {
+    font-family: "HelveticaMedium";
+    src: url("fonts/helvetica/HelveticaMedium.eot");
+    src: url("/fonts/helvetica/HelveticaMedium.eot?#iefix")format("embedded-opentype"),
+    url("fonts/helvetica/HelveticaMedium.woff") format("woff"),
+    url("fonts/helvetica/HelveticaMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -213,7 +222,7 @@ table {
 .form-header {
     padding-top: 28px;
     font-size: 25px;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     text-transform: uppercase;
     color: #333333;
 }
@@ -244,7 +253,6 @@ table {
     text-indent: 0.01px;
     -moz-appearance: none;
     /*    for ie*/
-
     -ms-appearance: none;
     appearance: none!important;
     background-image: url(img/icon/icon1.png);
@@ -264,7 +272,7 @@ select {
     height: 34px;
     outline: none;
     font-size: 15px;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     border: 1px solid #e6e6e6;
     background: #f2f2f2;
     padding: 0;
@@ -299,7 +307,7 @@ select:focus {
     outline: none;
     background: #e74c3c;
     color: #fff;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     font-size: 25px;
     cursor: pointer;
 }
@@ -316,11 +324,13 @@ select:focus {
 }
 /* Firefox 19+ */
 
-.registration-form input::-moz-placeholder {
+.registration-form input::-moz-placeholder,
+#addres::-moz-placeholder {
     color: #333333;
     opacity: 1;
     transition: opacity 0.5s ease;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaMedium";
+
 }
 /* Firefox 18- */
 
@@ -345,7 +355,8 @@ textarea#addres:-moz-placeholder {
 }
 /* Firefox 19+ */
 
-.registration-form input:focus::-moz-placeholder {
+.registration-form input:focus::-moz-placeholder,
+#addres:focus::-moz-placeholder{
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -389,7 +400,7 @@ textarea#addres:-moz-placeholder {
 
 .about-company-text1,
 .about-company-text2 {
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     font-size: 13px;
     display: block;
     max-width: 59%;
@@ -405,7 +416,7 @@ textarea#addres:-moz-placeholder {
 
 .company-offers-header,
 .comments-header {
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     font-size: 25px;
     text-transform: uppercase;
     padding-top: 35px;
@@ -458,7 +469,7 @@ textarea#addres:-moz-placeholder {
     padding-top: 18px;
     width: 290px;
     text-align: center;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     font-size: 13px;
     line-height: 1.6em;
 }
@@ -481,7 +492,7 @@ textarea#addres:-moz-placeholder {
     line-height: 52px;
     text-align: center;
     color: #333;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     font-size: 13px;
     transition: background 0.3s;
 }
@@ -518,7 +529,7 @@ textarea#addres:-moz-placeholder {
     margin-top: -5px;
     color: #333;
     font-size: 13px;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     line-height: 1.6em;
     width: 75%;
 }
@@ -563,7 +574,7 @@ textarea#addres:-moz-placeholder {
     background-repeat: no-repeat;
     cursor: pointer;
     background-color: #fffeff;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
 .comments-button_2 {
@@ -574,26 +585,29 @@ textarea#addres:-moz-placeholder {
     right: 43px;
 }
 
+.comments-button_1,
+.comments-button_2 {
+    background-image: url(img/icon/sprite_icon_buttons.png);
+}
 .comments-button_1 {
-    background-image: url(img/icon/icon-button-comments-left.png);
+    background-position: 13px 50%;
+}
+.comments-button_2 {
+    background-position: -19px 50%;
 }
 
-.comments-button_2 {
-    background-image: url(img/icon/icon-button-comments-right.png);
-}
 
 .comments-button_1:hover {
-    background-image: url(img/icon/icon-button-comments-left-hover.png);
+    background-position: -55px 50%;
 }
 
 .comments-button_2:hover {
-    background-image: url(img/icon/icon-button-comments-right-hover.png);
+    background-position: -91px 50%;
+
 }
 
 .comments-button_2:hover,
 .comments-button_1:hover {
-    background-position: 50% 10px;
-    background-repeat: no-repeat;
     background-color: #f2f2f2;
 }
 
@@ -606,14 +620,13 @@ textarea#addres:-moz-placeholder {
     margin-top: 68px;
     color: #fff;
     text-transform: uppercase;
-    font-family: "HelveticaRegular";
+    font-family: Helvetica, "HelveticaRegular";
     font-size: 25px;
     text-align: left;
     text-indent: 20px;
     background-image: url(img/icon/icon-button-started.png);
     background-repeat: no-repeat;
     background-position: 485px 50%;
-    letter-spacing: 0.025em;
     cursor: pointer;
 }
 
