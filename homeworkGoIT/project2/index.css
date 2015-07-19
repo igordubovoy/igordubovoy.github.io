@@ -272,7 +272,7 @@ select {
     height: 34px;
     outline: none;
     font-size: 15px;
-    font-family: Helvetica, "HelveticaRegular";
+    font-family: "HelveticaRegular";
     border: 1px solid #e6e6e6;
     background: #f2f2f2;
     padding: 0;
@@ -321,6 +321,7 @@ select:focus {
     color: #333333;
     opacity: 1;
     transition: opacity 0.5s ease;
+    font-family: "HelveticaRegular";
 }
 /* Firefox 19+ */
 
