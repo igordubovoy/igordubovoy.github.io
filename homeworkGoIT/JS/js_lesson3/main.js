@@ -99,7 +99,7 @@ function exercise6() {
     for (var i = 1; i < getDegree; i++) {
         result = result * getNumber;
     }
-    console.log(result);
+    alert(result);
 }
 
 
