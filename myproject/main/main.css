@@ -190,7 +190,7 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(154, 239,244);;
+    color: rgb(154, 239,244);
 }
 
 .gallery {
@@ -210,7 +210,7 @@ nav a:hover {
     height: 270px;
     display: inline-block;
     background-color: gray;
-    margin: 10px 3px 5px 3px;
+    margin: 10px 3px 0 3px;
     background-repeat: no-repeat;
 }
 
@@ -255,6 +255,7 @@ nav a:hover {
 }
 
 footer {
+    margin-top: 10px;
     border-top: solid 1px #f0f0f0;
     height: 136px;
     width: 100%;
@@ -305,4 +306,22 @@ footer {
 }
 .mail:hover {
     background-position: -135px 30px;
+}
+
+#toTop {
+    width: 50px;
+    height: 50px;
+    background: #f7f7f7;
+    position: fixed;
+    bottom: 50px;
+    right: 35px;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+    background-image: url(image/sprite/up.png);
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+#toTop:hover {
+    background-position: 0 -50px;
 }
