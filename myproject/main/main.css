@@ -251,7 +251,7 @@ nav a:hover {
 }
 
 .gallery_image.hover:hover {
-    background-color: rgba(154, 239,244, 0.5);
+    background-color: rgba(154, 239,244, 0.3);
 }
 
 footer {
@@ -309,11 +309,10 @@ footer {
 }
 
 #toTop {
-    width: 49px;
-    height: 49px;
-    background: #f7f7f7;
+    width: 50px;
+    height: 50px;
     position: fixed;
-    bottom: 50px;
+    bottom: 60px;
     right: 35px;
     cursor: pointer;
     display: none;
@@ -324,4 +323,18 @@ footer {
 }
 #toTop:hover {
     opacity: 1;
+}
+
+.session {
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+}
+
+.session_photo {
+    margin-bottom: 3px;
+}
+
+.session_photo:first-child {
+    margin-top: 35px;
 }
