@@ -209,37 +209,36 @@ nav a:hover {
     width: 348px;
     height: 270px;
     display: inline-block;
-    background-color: gray;
     margin: 10px 3px 0 3px;
     background-repeat: no-repeat;
 }
 
 .gallery_image._1 {
-    background-image: url(gallery_icon/1.%D0%A8%D0%B0%D0%B1%D0%BE%D0%B9%D0%BA%D0%B8.jpg);
+    background-image: url(gallery_icon/1.jpg);
 }
 .gallery_image._2 {
-    background-image: url(gallery_icon/2%20%D0%94%D0%B5%D0%B2%D0%B8%D1%87%D0%BD%D0%B8%D0%BA.jpg);
+    background-image: url(gallery_icon/2.jpg);
 }
 .gallery_image._3 {
-    background-image: url(gallery_icon/3.%D0%9B%D1%8E%D0%B4%D0%B0-%D0%B2%D0%B5%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0.jpg);
+    background-image: url(gallery_icon/3.jpg);
 }
 .gallery_image._4 {
-    background-image: url(gallery_icon/4.%D0%A2%D0%BE%D0%BC%D0%B0%20%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9.jpg);
+    background-image: url(gallery_icon/4.jpg);
 }
 .gallery_image._5 {
-    background-image: url(gallery_icon/5.%D0%A1%D0%B0%D1%88%D0%B0-%D0%9C%D0%B0%D1%88%D0%B0.jpg);
+    background-image: url(gallery_icon/5.jpg);
 }
 .gallery_image._6 {
-    background-image: url(gallery_icon/6.%D0%91%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D0%A1%D0%B0%D1%88%D0%B0.jpg);
+    background-image: url(gallery_icon/6.jpg);
 }
 .gallery_image._7 {
-    background-image: url(gallery_icon/7.%D0%92%D0%B0%D0%B4%D0%B8%D0%BC-%D0%90%D0%BB%D0%B5%D0%BD%D0%B0.jpg);
+    background-image: url(gallery_icon/7.jpg);
 }
 .gallery_image._8 {
-    background-image: url(gallery_icon/8.%D0%9A%D0%B0%D1%82%D1%8F.jpg);
+    background-image: url(gallery_icon/8.jpg);
 }
 .gallery_image._9 {
-    background-image: url(gallery_icon/9.%D0%92%D0%B5%D1%80%D0%B0.jpg);
+    background-image: url(gallery_icon/9.jpg);
 }
 
 .gallery_image.hover {
@@ -251,6 +250,7 @@ nav a:hover {
 }
 
 .gallery_image.hover:hover {
+    box-shadow: 0px 0px 100px -25px #000000 inset;
     background-color: rgba(154, 239,244, 0.3);
 }
 
@@ -337,4 +337,29 @@ footer {
 
 .session_photo:first-child {
     margin-top: 35px;
+}
+
+.signature {
+    width: 100%;
+    height: 35px;
+
+}
+
+.h4_signature {
+    margin: 0;
+    text-align: right;
+    font-size: 1.1em;
+    font-weight: normal;
+    font-family: 'opengost_b';
+}
+.h4_signature.names {
+    text-transform: uppercase;
+    color: #000;
+}
+.h4_signature.date {
+    font-style: italic;
+    color: #808080;
+}
+.and {
+    text-transform: lowercase;
 }
