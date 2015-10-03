@@ -363,3 +363,50 @@ footer {
 .and {
     text-transform: lowercase;
 }
+
+.contacts_info {
+    max-width: 1010px;
+    height: 100%;
+    margin: auto;
+    margin-top: 37px;
+    text-align: center;
+}
+
+.contacts_info img{
+    margin-top: 12px;
+    display: inline-block;
+}
+.contact_text {
+    margin-top: 12px;
+    float: right;
+    height: 339px;
+    width: 500px;
+    text-align: left;
+    font-style: italic;
+
+}
+.contact_text h1 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 3em;
+}
+.contact_text p {
+    padding: 5px 15px 5px 35px;
+    font-size: 1.2em;
+}
+.number {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.tel_number, .social_text {
+   text-align: center;
+}
+@media (max-width: 1055px) {
+    .contact_text {
+        display: block;
+        margin: auto;
+        float: none;
+    }
+}
+
+
