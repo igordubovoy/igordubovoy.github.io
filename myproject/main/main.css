@@ -379,8 +379,8 @@ footer {
 .contact_text {
     margin-top: 12px;
     float: right;
-    height: 339px;
-    width: 500px;
+    min-height: 339px;
+    max-width: 500px;
     text-align: left;
     font-style: italic;
 
