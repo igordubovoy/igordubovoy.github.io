@@ -280,6 +280,9 @@ nav ul li:hover {
     height: 563px;
     margin: auto;
 }
+.services p {
+    display: inline-block;
+}
 
 .p_services {
     text-align: center;

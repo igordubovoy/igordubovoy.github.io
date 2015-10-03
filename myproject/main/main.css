@@ -386,7 +386,6 @@ footer {
 
 }
 .contact_text h1 {
-    padding-top: 10px;
     text-align: center;
     font-size: 3em;
 }
@@ -401,6 +400,24 @@ footer {
 .tel_number, .social_text {
    text-align: center;
 }
+.services {
+    margin: auto;
+    margin-top: 37px;
+    max-width: 1010px;
+    height: 100%;
+    text-align: center;
+}
+.services p {
+    display: inline-block;
+    text-align: left;
+    width: 282px;
+    height: 160px;
+}
+.wedding {
+    max-width: 860px;
+    margin-left: 125px;
+}
+
 @media (max-width: 1055px) {
     .contact_text {
         display: block;
@@ -408,5 +425,8 @@ footer {
         float: none;
     }
 }
+
+
+
 
 
