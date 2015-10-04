@@ -655,7 +655,7 @@ footer {
         display: block;
         background-size: 210px 210px;
         background-position: 50% 0;
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .services_text,
     .services_text.solo {
