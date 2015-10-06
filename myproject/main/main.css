@@ -377,6 +377,7 @@ nav a:hover {
     height: 232px;
     cursor: pointer;
     transition: 0.8s;
+    margin-top: 0;
 }
 
 .gallery_image.hover:hover {
