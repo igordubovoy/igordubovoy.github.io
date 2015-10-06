@@ -671,6 +671,8 @@ footer {
 }
 @media (max-width: 360px) {
     .gallery_image, .gallery_image.hover {
-        width: 100%
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
