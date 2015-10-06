@@ -669,6 +669,7 @@ footer {
         height: 295px;
     }
 }
+/*
 @media (max-width: 360px) {
     .gallery_image, .gallery_image.hover {
         width: 100%;
@@ -676,3 +677,4 @@ footer {
         margin-right: 0;
     }
 }
+*/
