@@ -333,6 +333,7 @@ nav a:hover {
     display: inline-block;
     margin: 10px 3px 0 3px;
     background-repeat: no-repeat;
+
 }
 
 .gallery_image._1 {
@@ -669,12 +670,4 @@ footer {
         height: 295px;
     }
 }
-@media (max-width: 360px) {
-    .gallery_image, .gallery_image.hover {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        display: block;
-        margin: auto;
-    }
-}
+
