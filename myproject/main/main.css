@@ -371,6 +371,9 @@ nav a:hover {
 .gallery_image._9 {
     background-image: url(gallery_icon/9.jpg);
 }
+.gallery_image._10 {
+    background-image: url(gallery_icon/10.jpg);
+}
 
 .gallery_image.hover {
     background-color: transparent;
