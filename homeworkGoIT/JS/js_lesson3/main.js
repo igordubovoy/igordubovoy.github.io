@@ -15,8 +15,8 @@ function exercise1() {
 function exercise2() {
 
     //Running script
-    for (var simple = 2; i <= 10; i++) {
-        for (var divider = 2; j <= i; j++) {
+    for (var simple = 2; simple <= 10; simple++) {
+        for (var divider = 2; divider <= simple; divider++) {
             if (simple % divider == 0) break;
         }
         if (simple == divider) {
@@ -31,12 +31,19 @@ function exercise3() {
 
     //Running script
     for (var i = 1; i <= 100; i++) {
-        if (i % 3 == 0) {
-            console.log('Fizz');
-        } else if (i % 5 == 0 && i % 3 != 0) {
-            console.log('Buzz');
-        } else {
-            console.log(i);
+//        if (i % 3 == 0) {
+//            console.log('Fizz');
+//        } else if (i % 5 == 0 && i % 3 != 0) {
+//            console.log('Buzz');
+//        } else {
+//            console.log(i);
+//        }
+        var number = i%3;
+        switch(number) {
+            case 0:
+                console.log('Fizz');
+                break;
+            case
         }
     }
 }

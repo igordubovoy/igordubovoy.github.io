@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/*fonts preloading*/
+@font-face {
+  font-family: "GothamProLight";
+  src: url("fonts/GothamProLight/GothamProLight.eot");
+  src: url("fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("fonts/GothamProLight/GothamProLight.woff") format("woff"), url("fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GothamProBold";
+  src: url("fonts/GothamProBold/GothamProBold.eot");
+  src: url("fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("fonts/GothamProBold/GothamProBold.woff") format("woff"), url("fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+/*fonts tuning*/
+/* line 24, ../sass/_technology.scss */
+.p-like {
+  font: 1em GothamProLight, sans-serif;
+}
+
+/* line 28, ../sass/_technology.scss */
+.h1-like {
+  font: 1em GothamProBold, sans-serif;
+}
+
+/* line 32, ../sass/_technology.scss */
+.h2-like {
+  font: 1em GothamProBold, sans-serif;
+}
+
+/* line 36, ../sass/_technology.scss */
+.h3-like {
+  font: 1.9285em GothamProBold, sans-serif;
+}
+
+/* line 40, ../sass/_technology.scss */
+.h4-like {
+  font: bold 1.2857em GothamProLight, sans-serif;
+}
+
+/* line 45, ../sass/_technology.scss */
+.graycolor {
+  color: #7f868d;
+}
+
+/*╨╝╨░╤А╨┤╨╢╨╕╨╜╤Л ╨┤╨╗╤П ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░ ╤Б╨╡╨║╤Ж╨╕╨╕*/
+/* line 51, ../sass/_technology.scss */
+.buffer-top-bottom {
+  margin: 32px 0;
+}
+
+/*╨┐╨░╨┤╨┤╨╕╨╜╨│╨╕ ╨┤╨╗╤П ╨║╨╛╨╗╨╛╨╜╨╛╨║ */
+/* line 56, ../sass/_technology.scss */
+.padd-top-bottom {
+  padding: 8px 0;
+}
+
+/*╤Ж╨╡╨╜╤В╤А╨╛╨▓╨║╨░ ╨║╨░╤А╤В╨╕╨╜╨║╨╕ ╨┐╨╛╨┤ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨╛╨╝ ╤Б╨╡╨║╤Ж╨╕╨╕*/
+/* line 61, ../sass/_technology.scss */
+.img-centered {
+  margin: 0 auto;
+}
+
+/* line 64, ../sass/_technology.scss */
+.container.technology {
+  padding-bottom: 60px;
+}
+
+@font-face {
+  font-family: "GothamProRegular";
+  src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+  src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 13, ../sass/_style-sytnik.scss */
+div.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 17, ../sass/_style-sytnik.scss */
+div.container div.row {
+  margin: 0;
+}
+/* line 19, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default {
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color: #fff;
+  background-image: none;
+  width: 100%;
+}
+/* line 25, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/* line 29, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand {
+  padding: 0;
+}
+/* line 31, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .logo {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  padding: 15px 0 0 11px;
+  border-radius: 5px;
+  font-size: 36px;
+  background-color: #df1f29;
+}
+/* line 40, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .logo span {
+  color: #fff;
+}
+/* line 45, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .text {
+  display: inline-block;
+  font-size: 36px;
+  color: #515151;
+}
+/* line 52, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle {
+  background-color: #df1f29;
+}
+/* line 54, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle span.icon-bar {
+  background-color: #515151;
+}
+/* line 58, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle:hover {
+  border: 1px solid #f47108;
+}
+/* line 63, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav {
+  float: right;
+}
+/* line 66, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+  text-align: center;
+  color: #515151;
+  font-size: 15px;
+}
+/* line 71, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav li a:hover {
+  padding-bottom: 13px;
+  border-bottom: 2px solid #f47108;
+  color: #df1f29;
+}
+
+/* line 84, ../sass/_style-sytnik.scss */
+div.carousel.slide {
+  width: 100%;
+}
+/* line 86, ../sass/_style-sytnik.scss */
+div.carousel.slide div.carousel-inner {
+  width: 100%;
+}
+/* line 88, ../sass/_style-sytnik.scss */
+div.carousel.slide div.carousel-inner div.item {
+  width: 100%;
+}
+/* line 90, ../sass/_style-sytnik.scss */
+div.carousel.slide div.carousel-inner div.item img.img {
+  width: 100%;
+}
+
+/* line 4, ../sass/main.scss */
+.map,
+footer {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* line 10, ../sass/main.scss */
+footer {
+  height: 358px;
+  background-color: #343434;
+  position: relative;
+  color: #ababab;
+  font-family: "GothamProLight";
+  font-size: 15px;
+}
+/* line 17, ../sass/main.scss */
+footer .footer-social-icons {
+  width: 312px;
+  height: 90px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -156px;
+}
+/* line 24, ../sass/main.scss */
+footer .footer-social-icons a {
+  display: block;
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  left: 111px;
+}
+/* line 31, ../sass/main.scss */
+footer .footer-social-icons a:first-child {
+  float: left;
+  position: static;
+  background-image: url(../img/fb.png);
+}
+/* line 36, ../sass/main.scss */
+footer .footer-social-icons a:last-child {
+  float: right;
+  position: static;
+  background-image: url(../img/google.png);
+}
+/* line 41, ../sass/main.scss */
+footer .footer-social-icons ._2 {
+  background-image: url(../img/tw.png);
+}
+/* line 45, ../sass/main.scss */
+footer ul {
+  display: block;
+  margin: auto;
+  height: 17px;
+  max-width: 550px;
+  padding: 204px 0 0 0;
+}
+/* line 51, ../sass/main.scss */
+footer ul li {
+  list-style: none;
+  float: left;
+  padding: 0 15px 0 15px;
+  border-right: 1px #ababab solid;
+}
+/* line 56, ../sass/main.scss */
+footer ul li a {
+  color: #ababab;
+}
+/* line 59, ../sass/main.scss */
+footer ul li a:hover {
+  text-decoration: none;
+}
+/* line 63, ../sass/main.scss */
+footer ul li:last-child {
+  border-right: none;
+}
+/* line 67, ../sass/main.scss */
+footer p {
+  clear: both;
+  text-align: center;
+  padding-top: 5px;
+}
+/* line 72, ../sass/main.scss */
+footer .footer-logo {
+  height: 85px;
+  width: 168px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -84px;
+  background-image: url(../img/logofooter.png);
+}

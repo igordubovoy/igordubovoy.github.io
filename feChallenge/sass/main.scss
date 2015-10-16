@@ -1,0 +1,81 @@
+@import "technology";
+@import "style-sytnik";
+$footer-color: #343434;
+.map,
+footer {
+    max-width: 1400px;
+    margin: auto;
+}
+
+footer {
+    height: 358px;
+    background-color: $footer-color;
+    position: relative;
+    color: #ababab;
+    font-family: "GothamProLight";
+    font-size: 15px;
+    .footer-social-icons {
+        width: 312px;
+        height: 90px;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        margin-left: -156px;
+        a {
+            display: block;
+            position: absolute;
+            height: 90px;
+            width: 90px;
+            left: 111px;
+        }
+        a:first-child {
+            float: left;
+            position: static;
+            background-image: url(../img/fb.png)
+        }
+        a:last-child {
+            float: right;
+            position: static;
+            background-image: url(../img/google.png);
+        }
+        ._2 {
+            background-image: url(../img/tw.png)
+        }
+    }
+    ul {
+        display: block;
+        margin: auto;
+        height: 17px;
+        max-width: 550px;
+        padding: 204px 0 0 0;
+        li {
+            list-style: none;
+            float: left;
+            padding: 0 15px 0 15px;
+            border-right: 1px #ababab solid;
+            a {
+                color: #ababab;
+            }
+            a:hover {
+                text-decoration: none;
+            }
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+    p{
+        clear: both;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .footer-logo {
+        height: 85px;
+        width: 168px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -84px;
+        background-image: url(../img/logofooter.png)
+    }
+}
