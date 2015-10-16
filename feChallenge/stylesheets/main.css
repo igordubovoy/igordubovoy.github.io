@@ -75,17 +75,17 @@
   font-style: normal;
   font-weight: normal;
 }
-/* line 13, ../sass/_style-sytnik.scss */
+/* line 12, ../sass/_style-sytnik.scss */
 div.container {
   margin: 0;
   padding: 0;
   width: 100%;
 }
-/* line 17, ../sass/_style-sytnik.scss */
+/* line 16, ../sass/_style-sytnik.scss */
 div.container div.row {
   margin: 0;
 }
-/* line 19, ../sass/_style-sytnik.scss */
+/* line 18, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default {
   border-radius: 0;
   margin-bottom: 0;
@@ -93,16 +93,16 @@ div.container div.row div.navbar.navbar-default {
   background-image: none;
   width: 100%;
 }
-/* line 25, ../sass/_style-sytnik.scss */
+/* line 24, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper {
   margin-left: 10%;
   margin-right: 10%;
 }
-/* line 29, ../sass/_style-sytnik.scss */
+/* line 28, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand {
   padding: 0;
 }
-/* line 31, ../sass/_style-sytnik.scss */
+/* line 30, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .logo {
   display: inline-block;
   height: 48px;
@@ -112,42 +112,48 @@ div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.
   font-size: 36px;
   background-color: #df1f29;
 }
-/* line 40, ../sass/_style-sytnik.scss */
+/* line 38, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .logo span {
   color: #fff;
 }
-/* line 45, ../sass/_style-sytnik.scss */
+/* line 42, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .text {
   display: inline-block;
   font-size: 36px;
   color: #515151;
 }
-/* line 52, ../sass/_style-sytnik.scss */
+/* line 48, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle {
   background-color: #df1f29;
 }
-/* line 54, ../sass/_style-sytnik.scss */
+/* line 50, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle span.icon-bar {
   background-color: #515151;
 }
-/* line 58, ../sass/_style-sytnik.scss */
+/* line 54, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle:hover {
   border: 1px solid #f47108;
 }
-/* line 63, ../sass/_style-sytnik.scss */
+/* line 58, ../sass/_style-sytnik.scss */
+div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse {
+  margin: 20px 0 15px 0;
+}
+/* line 60, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav {
   float: right;
 }
-/* line 66, ../sass/_style-sytnik.scss */
+/* line 63, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav li a {
   text-align: center;
   color: #515151;
   font-size: 15px;
+  padding-top: 30px;
+  border-top: 2px solid transparent;
+  margin-top: -15px;
 }
 /* line 71, ../sass/_style-sytnik.scss */
 div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav li a:hover {
-  padding-bottom: 13px;
-  border-bottom: 2px solid #f47108;
+  border-top: 2px solid #f47108;
   color: #df1f29;
 }
 
