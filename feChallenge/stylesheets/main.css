@@ -2,15 +2,15 @@
 /*fonts preloading*/
 @font-face {
   font-family: "GothamProLight";
-  src: url("fonts/GothamProLight/GothamProLight.eot");
-  src: url("fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("fonts/GothamProLight/GothamProLight.woff") format("woff"), url("fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+  src: url("../fonts/GothamProLight/GothamProLight.eot");
+  src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProLight/GothamProLight.woff") format("woff"), url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "GothamProBold";
-  src: url("fonts/GothamProBold/GothamProBold.eot");
-  src: url("fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("fonts/GothamProBold/GothamProBold.woff") format("woff"), url("fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -182,7 +182,7 @@ footer {
   position: relative;
   color: #ababab;
   font-family: "GothamProLight";
-  font-size: 15px;
+  font-size: 14px;
 }
 /* line 17, ../sass/main.scss */
 footer .footer-social-icons {
@@ -222,7 +222,7 @@ footer ul {
   display: block;
   margin: auto;
   height: 17px;
-  max-width: 550px;
+  max-width: 583px;
   padding: 204px 0 0 0;
 }
 /* line 51, ../sass/main.scss */
