@@ -11,13 +11,14 @@
 
     var style = window.getComputedStyle(document.body),
         prop = +style.height.substring(0, style.height.length - 2);
-
+    console.log(prop)
 
 
     function viewModal() {
         var scroll = window.scrollY * 100 / prop;
         console.log(scroll)
-        if (scroll > 68.6) {
+
+        if (scroll > 99) {
             dark.className = "dark_monitor";
             modal.style.cssText += "visibility: visible; z-index: 1000";
         } else {
