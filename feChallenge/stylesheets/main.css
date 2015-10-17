@@ -69,108 +69,170 @@
 }
 
 @font-face {
-  font-family: "GothamProRegular";
-  src: url("../fonts/GothamProRegular/GothamProRegular.eot");
-  src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* line 12, ../sass/_style-sytnik.scss */
+/* line 13, ../sass/_style-sytnik.scss */
+header {
+  font-family: GothamProBold;
+  height: 111px;
+  width: 100%;
+  background-color: #fff;
+}
+/* line 19, ../sass/_style-sytnik.scss */
+header .wrapper {
+  margin: auto;
+  width: 85%;
+  height: inherit;
+}
+/* line 24, ../sass/_style-sytnik.scss */
+header .wrapper div#menuBtn {
+  display: none;
+  margin-top: 27px;
+  float: right;
+  top: 0;
+  right: 0;
+  padding: 9px 8px 8px 8px;
+  z-index: 25;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+/* line 37, ../sass/_style-sytnik.scss */
+header .wrapper div.logo {
+  margin-top: 12px;
+  display: inline-block;
+}
+/* line 40, ../sass/_style-sytnik.scss */
+header .wrapper div.logo div.logo-background {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  font-size: 36px;
+  background-color: #df1f29;
+}
+/* line 49, ../sass/_style-sytnik.scss */
+header .wrapper div.logo div.logo-background span.logo-text {
+  margin-left: 11px;
+  color: #fff;
+}
+/* line 54, ../sass/_style-sytnik.scss */
+header .wrapper div.logo h1 {
+  display: inline-block;
+}
+/* line 58, ../sass/_style-sytnik.scss */
+header .wrapper .menu {
+  float: right;
+}
+/* line 60, ../sass/_style-sytnik.scss */
+header .wrapper .menu ul {
+  float: right;
+  list-style: none;
+  margin-bottom: 0px;
+}
+/* line 65, ../sass/_style-sytnik.scss */
+header .wrapper .menu ul .margin {
+  margin-right: 45px;
+}
+/* line 68, ../sass/_style-sytnik.scss */
+header .wrapper .menu ul li {
+  display: inline-block;
+}
+/* line 71, ../sass/_style-sytnik.scss */
+header .wrapper .menu ul li a {
+  display: inline-block;
+  line-height: 107px;
+  height: 111px;
+  color: #515151;
+  font-size: 15px;
+}
+/* line 78, ../sass/_style-sytnik.scss */
+header .wrapper .menu ul li a:hover {
+  border-bottom: solid 3px #f47108;
+  color: #df1f29;
+  text-decoration: none;
+}
+
+@media (max-width: 836px) {
+  /* line 91, ../sass/_style-sytnik.scss */
+  header {
+    height: 80px;
+  }
+  /* line 93, ../sass/_style-sytnik.scss */
+  header .wrapper {
+    position: relative;
+  }
+  /* line 95, ../sass/_style-sytnik.scss */
+  header .wrapper div.logo {
+    margin-top: 0;
+  }
+  /* line 98, ../sass/_style-sytnik.scss */
+  header .wrapper #myMenu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  /* line 107, ../sass/_style-sytnik.scss */
+  header .wrapper #myMenu ul {
+    width: 100%;
+    padding: 0;
+  }
+  /* line 111, ../sass/_style-sytnik.scss */
+  header .wrapper #myMenu ul .margin {
+    margin: 0;
+  }
+  /* line 114, ../sass/_style-sytnik.scss */
+  header .wrapper #myMenu ul li {
+    height: 60px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #df1f29;
+  }
+  /* line 121, ../sass/_style-sytnik.scss */
+  header .wrapper #myMenu ul li a {
+    padding-top: 20px;
+    width: 100%;
+    height: inherit;
+    line-height: normal;
+  }
+  /* line 130, ../sass/_style-sytnik.scss */
+  header .wrapper div#menuBtn {
+    display: block;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 10px;
+    margin-top: 13px;
+  }
+}
+/* line 142, ../sass/_style-sytnik.scss */
 div.container {
   margin: 0;
   padding: 0;
   width: 100%;
 }
-/* line 16, ../sass/_style-sytnik.scss */
-div.container div.row {
-  margin: 0;
-}
-/* line 18, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default {
-  border-radius: 0;
-  margin-bottom: 0;
-  background-color: #fff;
-  background-image: none;
+/* line 146, ../sass/_style-sytnik.scss */
+div.container div.carousel.slide {
   width: 100%;
 }
-/* line 24, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-/* line 28, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand {
-  padding: 0;
-}
-/* line 30, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .logo {
-  display: inline-block;
-  height: 48px;
-  width: 48px;
-  padding: 15px 0 0 11px;
-  border-radius: 5px;
-  font-size: 36px;
-  background-color: #df1f29;
-}
-/* line 38, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .logo span {
-  color: #fff;
-}
-/* line 42, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header a.navbar-brand .text {
-  display: inline-block;
-  font-size: 36px;
-  color: #515151;
-}
-/* line 48, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle {
-  background-color: #df1f29;
-}
-/* line 50, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle span.icon-bar {
-  background-color: #515151;
-}
-/* line 54, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.navbar-header button.navbar-toggle:hover {
-  border: 1px solid #f47108;
-}
-/* line 58, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse {
-  margin: 20px 0 15px 0;
-}
-/* line 60, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav {
-  float: right;
-}
-/* line 63, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav li a {
-  text-align: center;
-  color: #515151;
-  font-size: 15px;
-  padding-top: 30px;
-  border-top: 2px solid transparent;
-  margin-top: -15px;
-}
-/* line 71, ../sass/_style-sytnik.scss */
-div.container div.row div.navbar.navbar-default div.wrapper div.collapse.navbar-collapse ul.nav.navbar-nav li a:hover {
-  border-top: 2px solid #f47108;
-  color: #df1f29;
-}
-
-/* line 84, ../sass/_style-sytnik.scss */
-div.carousel.slide {
+/* line 148, ../sass/_style-sytnik.scss */
+div.container div.carousel.slide div.carousel-inner {
   width: 100%;
 }
-/* line 86, ../sass/_style-sytnik.scss */
-div.carousel.slide div.carousel-inner {
+/* line 150, ../sass/_style-sytnik.scss */
+div.container div.carousel.slide div.carousel-inner div.item {
   width: 100%;
 }
-/* line 88, ../sass/_style-sytnik.scss */
-div.carousel.slide div.carousel-inner div.item {
-  width: 100%;
-}
-/* line 90, ../sass/_style-sytnik.scss */
-div.carousel.slide div.carousel-inner div.item img.img {
+/* line 152, ../sass/_style-sytnik.scss */
+div.container div.carousel.slide div.carousel-inner div.item img.img {
   width: 100%;
 }
 

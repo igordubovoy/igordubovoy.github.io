@@ -11,69 +11,62 @@
 </head>
 
 <body>
-    <div class="container">
+
+
+    <!--МЕНЮ-->
+
+    <header>
 
         <!--МЕНЮ-->
 
-        <div class="row">
-            <div class="navbar navbar-default">
-                <div class="wrapper">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
-                            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
-                      </span>
-                        </button>
-
-                        <!--Логотип-->
-
-                        <a class="navbar-brand" href="#">
-                            <div class="logo"><span>Q</span></div><span class="text">Quantum</span>
-                        </a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="responsive-menu">
-
-                        <!--Кнопки меню-->
-
-                        <ul class="nav navbar-nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Solutions</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
+        <div class="wrapper">
+            <div class="logo">
+                <div class="logo-background"><span class="logo-text">Q</span></div>
+                <h1>Quantum</h1>
             </div>
+            <div id="menuBtn">
+                <img src="http://www.sfplex.li/images/menu_btn.png">
+            </div>
+            <div class="menu" id="myMenu">
+                <ul>
+                    <li class="margin"><a href="#"><span>Home</span></a></li>
+                    <li class="margin"><a href="#"><span>Products</span></a></li>
+                    <li class="margin"><a href="#"><span>Solutions</span></a></li>
+                    <li><a href="#"><span>Contact Us</span></a></li>
+                </ul>
+            </div>
+
         </div>
+    </header>
 
-        <!--СЛАЙДЕР-->
-
-        <div class="carousel slide" id="myCarousel">
+    <!--СЛАЙДЕР-->
+    <div class="container">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li class="active" data-target="#carousel-example-generic" data-slide-to="0"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="item active">
 
                     <!--Описание слайдов-->
 
-                    <img class="img" src="img-carousel/Layer%201.png" />
+                    <img class="img" src="img-carousel/Layer%201.jpg" />
                     <div class="carousel-caption">
                         <h4>Zagolovok</h4>
                         <p>Paragarph</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="img" src="img-carousel/apartmens.png" />
+                    <img class="img" src="img-carousel/apartmens.jpg" />
                     <div class="carousel-caption">
                         <h4>Zagolovok</h4>
                         <p>Paragarph</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="img" src="img-carousel/city.png" />
+                    <img class="img" src="img-carousel/city.jpg" />
                     <div class="carousel-caption">
                         <h4>Zagolovok</h4>
                         <p>Paragarph</p>
@@ -173,13 +166,14 @@
                 <li><a href="">Corporate</a></li>
                 <li><a href="">About us</a></li>
             </ul>
-            <p>Copyright © 2014 Queez All rights reserved</p>
+            <p>Copyright © 2015 Quantum All rights reserved</p>
         </div>
         <div class="footer-logo"></div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/sytnik.js"></script>
 </body>
 
 </html>

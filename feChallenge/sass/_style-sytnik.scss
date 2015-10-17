@@ -1,95 +1,158 @@
 @font-face {
-    font-family: "GothamProRegular";
-    src: url("../fonts/GothamProRegular/GothamProRegular.eot");
-    src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamProBold/GothamProBold.woff") format("woff"),
+  url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 $white: #fff;
 $red: #df1f29;
 $text: #515151;
-div.container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    div.row {
-        margin: 0;
-        div.navbar.navbar-default {
-            border-radius: 0;
-            margin-bottom: 0;
-            background-color: $white;
-            background-image: none;
-            width: 100%;
-            div.wrapper {
-                margin-left: 10%;
-                margin-right: 10%;
-                div.navbar-header {
-                    a.navbar-brand {
-                        padding: 0;
-                        .logo {
-                            display: inline-block;
-                            height: 48px;
-                            width: 48px;
-                            padding: 15px 0 0 11px;
-                            border-radius: 5px;
-                            font-size: 36px;
-                            background-color: $red;
-                            span {
-                                color: $white;
-                            }
-                        }
-                        .text {
-                            display: inline-block;
-                            font-size: 36px;
-                            color: $text;
-                        }
-                    }
-                    button.navbar-toggle {
-                        background-color: $red;
-                        span.icon-bar {
-                            background-color: $text;
-                        }
-                    }
-                    button.navbar-toggle:hover {
-                        border: 1px solid #f47108;
-                    }
-                }
-                div.collapse.navbar-collapse {
-                    margin: 20px 0 15px 0;
-                    ul.nav.navbar-nav {
-                        float: right;
-                        li {
-                            a {
-                                text-align: center;
-                                color: $text;
-                                font-size: 15px;
-                                padding-top: 30px;
-                                border-top: 2px solid transparent;
-                                margin-top: -15px;
-                            }
-                            a:hover {
-                                border-top: 2px solid #f47108;
-                                //background-color: $red;
-                                color: $red;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+header {
+  font-family: GothamProBold;
+  height: 111px;
+  width: 100%;
 
-div.carousel.slide {
+  background-color: $white;
+  .wrapper {
+    margin: auto;
+
+    width: 85%;
+    height: inherit;
+    div#menuBtn {
+      display: none;
+      //position: absolute;
+      margin-top: 27px;
+      float: right;
+      top: 0;
+      right: 0;
+      padding: 9px 8px 8px 8px;
+      z-index: 25;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+    }
+    div.logo {
+      margin-top: 12px;
+      display: inline-block;
+      div.logo-background {
+        display: inline-block;
+
+        height: 50px;
+        width: 50px;
+
+        border-radius: 5px;
+        font-size: 36px;
+        background-color: $red;
+        span.logo-text {
+          margin-left: 11px;
+          color: $white;
+        }
+      }
+      h1 {
+        display: inline-block;
+      }
+    }
+    .menu {
+      float: right;
+      ul {
+        float: right;
+        list-style: none;
+        margin-bottom: 0px;
+
+        .margin {
+          margin-right: 45px;
+        }
+        li{
+          display: inline-block;
+
+          a {
+            display: inline-block;
+            line-height: 107px;
+            height: 111px;
+            color: $text;
+            font-size: 15px;
+          }
+          a:hover {
+            border-bottom: solid 3px #f47108;
+
+            color: $red;
+            text-decoration: none;
+          }
+        }
+      }
+
+    }
+  }
+}
+@media (max-width: 836px) {
+  header{
+    height: 80px;
+    .wrapper {
+      position: relative;
+      div.logo {
+        margin-top: 0;
+      }
+      #myMenu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+
+        background-color: $white;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        ul {
+          width: 100%;
+          padding: 0;
+
+          .margin {
+            margin: 0;
+          }
+          li {
+
+            height: 60px;
+            display: block;
+            text-align: center;
+            border-bottom: 1px solid $red;
+
+            a {
+              padding-top: 20px;
+              width: 100%;
+              height: inherit;
+              line-height: normal;
+            }
+          }
+        }
+      }
+      div#menuBtn {
+        display: block;
+        position: absolute;
+        float: right;
+        top: 0;
+        right: 10px;
+        margin-top: 13px;
+
+      }
+    }
+  }
+}
+div.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  div.carousel.slide {
     width: 100%;
     div.carousel-inner {
+      width: 100%;
+      div.item {
         width: 100%;
-        div.item {
-            width: 100%;
-            img.img {
-                width: 100%;
-            }
+        img.img {
+          width: 100%;
         }
+      }
     }
+  }
 }
