@@ -329,8 +329,74 @@ footer .footer-logo {
   background-image: url(../img/logofooter.png);
 }
 
+/* line 82, ../sass/main.scss */
+.modal-form {
+  width: 300px;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  margin-top: -184px;
+  margin-left: -160px;
+  background: white;
+}
+
+/* line 94, ../sass/main.scss */
+form button {
+  display: block !important;
+  margin: auto !important;
+}
+
+/* line 98, ../sass/main.scss */
+button {
+  font-family: "GothamProBold" !important;
+  color: #df1f29 !important;
+}
+
+/* line 103, ../sass/main.scss */
+.dark_monitor {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 1;
+}
+
+/* line 115, ../sass/main.scss */
+.mdl-textfield__input {
+  border: none !important;
+  font-family: "GothamProLight";
+}
+
+/* line 119, ../sass/main.scss */
+::-webkit-input-placeholder {
+  font-family: "GothamProLight" !important;
+}
+
+/* line 120, ../sass/main.scss */
+::-moz-placeholder {
+  font-family: "GothamProLight" !important;
+}
+
+/* Firefox 19+ */
+/* line 121, ../sass/main.scss */
+:-moz-placeholder {
+  font-family: "GothamProLight" !important;
+}
+
+/* Firefox 18- */
+/* line 122, ../sass/main.scss */
+:-ms-input-placeholder {
+  font-family: "GothamProLight" !important;
+}
+
 @media (max-width: 420px) {
-  /* line 83, ../sass/main.scss */
+  /* line 125, ../sass/main.scss */
   .map {
     height: 320px;
   }

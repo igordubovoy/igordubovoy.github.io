@@ -5,20 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Quantum webstudio</title>
+    <link rel="stylesheet" href="http://site.ru/your/path/contactable/contactable.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="mdl/material.css">
     <link rel="stylesheet" href="stylesheets/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 
 <body>
-
-
-    <!--МЕНЮ-->
+    <div id="dark"></div>
+    <div class="modal-form">
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample1" />
+                <label class="mdl-textfield__label" for="sample1">Name</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="email" id="sample2" />
+                <label class="mdl-textfield__label" for="sample2">Email</label>
+                <span class="mdl-textfield__error">Please provide a valid email address</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3" pattern="-?[0-9]*(\.[0-9]+)?" />
+                <label class="mdl-textfield__label" for="sample3">Telephone</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5"></textarea>
+                <label class="mdl-textfield__label" for="sample5">Message...</label>
+            </div>
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--primary">Submit</button>
+        </form>
+    </div>
 
     <header>
-
-        <!--МЕНЮ-->
-
         <div class="wrapper">
             <div class="logo">
                 <div class="logo-background"><span class="logo-text">Q</span></div>
@@ -174,6 +194,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/sytnik.js"></script>
+    <script src="mdl/material.js"></script>
+    <script src="modal.js"></script>
 </body>
 
 </html>
