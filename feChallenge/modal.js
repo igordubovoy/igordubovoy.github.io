@@ -18,7 +18,7 @@
         var scroll = window.scrollY * 100 / prop;
         console.log(scroll)
 
-        if (scroll > 68.5) {
+        if (scroll > 99) {
             dark.className = "dark_monitor";
             modal.style.cssText += "visibility: visible; z-index: 1000";
         } else {
