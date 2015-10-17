@@ -329,9 +329,9 @@ footer .footer-logo {
   background-image: url(../img/logofooter.png);
 }
 
-@media (max-width: 360px) {
+@media (max-width: 420px) {
   /* line 83, ../sass/main.scss */
   .map {
-    height: 360px;
+    height: 320px;
   }
 }
