@@ -79,3 +79,8 @@ footer {
         background-image: url(../img/logofooter.png)
     }
 }
+@media (max-width: 360px){
+    .map {
+        height: 360px;
+    }
+}

@@ -328,3 +328,10 @@ footer .footer-logo {
   margin-left: -84px;
   background-image: url(../img/logofooter.png);
 }
+
+@media (max-width: 360px) {
+  /* line 83, ../sass/main.scss */
+  .map {
+    height: 360px;
+  }
+}
