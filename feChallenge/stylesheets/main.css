@@ -48,7 +48,7 @@
 /*╨╝╨░╤А╨┤╨╢╨╕╨╜╤Л ╨┤╨╗╤П ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░ ╤Б╨╡╨║╤Ж╨╕╨╕*/
 /* line 51, ../sass/_technology1.scss */
 .buffer-top-bottom {
-  margin: 32px 0;
+  padding: 32px 0;
 }
 
 /*╨┐╨░╨┤╨┤╨╕╨╜╨│╨╕ ╨┤╨╗╤П ╨║╨╛╨╗╨╛╨╜╨╛╨║ */
@@ -192,67 +192,74 @@ section.carousel.slide div.carousel-inner div.item img {
   font-weight: bold;
 }
 /*fonts tuning*/
-/* line 24, ../sass/_custom.scss */
+/* line 24, ../sass/_custom1.scss */
 .p-like {
   font: 1em GothamProLight, sans-serif;
 }
 
-/* line 28, ../sass/_custom.scss */
+/* line 28, ../sass/_custom1.scss */
 .h1-like {
   font: 1em GothamProBold, sans-serif;
 }
 
-/* line 32, ../sass/_custom.scss */
+/* line 32, ../sass/_custom1.scss */
 .h2-like {
   font: 1em GothamProBold, sans-serif;
 }
 
-/* line 36, ../sass/_custom.scss */
+/* line 36, ../sass/_custom1.scss */
 .h3-like {
   font: 1.9285em GothamProBold, sans-serif;
 }
 
-/* line 40, ../sass/_custom.scss */
+/* line 40, ../sass/_custom1.scss */
 .h4-like {
   font: bold 1.2857em GothamProLight, sans-serif;
 }
 
-/* line 45, ../sass/_custom.scss */
+/* line 45, ../sass/_custom1.scss */
 .graycolor {
   color: #7f868d;
 }
 
 /*╨┐╨░╨┤╨┤╨╕╨╜╨│╨╕ ╨┤╨╗╤П ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░ ╤Б╨╡╨║╤Ж╨╕╨╕*/
-/* line 51, ../sass/_custom.scss */
+/* line 51, ../sass/_custom1.scss */
 .buffer-top-bottom {
-  padding: 8px 0;
+  padding: 32px 0;
 }
 
 /*╤Ж╨╡╨╜╤В╤А╨╛╨▓╨║╨░ ╨║╨░╤А╤В╨╕╨╜╨║╨╕ ╨┐╨╛╨┤ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨╛╨╝ ╤Б╨╡╨║╤Ж╨╕╨╕*/
-/* line 56, ../sass/_custom.scss */
-.img-centered {
+/* line 56, ../sass/_custom1.scss */
+.subline:after {
+  content: "";
+  width: 45px;
+  height: 4px;
   margin: 0 auto;
+  background: #ff0000;
+  position: absolute;
+  top: 100%;
+  left: 47%;
 }
 
-/* line 60, ../sass/_custom.scss */
+/* line 66, ../sass/_custom1.scss */
 .container-buffer {
   padding: 24px 0;
 }
 
-/* line 64, ../sass/_custom.scss */
+/* line 70, ../sass/_custom1.scss */
 .p-media {
   padding-right: 10px;
 }
 
 /* carousel */
-/* line 69, ../sass/_custom.scss */
+/* line 75, ../sass/_custom1.scss */
 #quote-carousel {
   padding: 0 10px 30px 10px;
   margin-top: 30px;
 }
 
 /* Control buttons  */
-/* line 76, ../sass/_custom.scss */
+/* line 82, ../sass/_custom1.scss */
 #quote-carousel .carousel-control {
   background: none;
   color: #222;
@@ -262,19 +269,19 @@ section.carousel.slide div.carousel-inner div.item img {
 }
 
 /* Previous button  */
-/* line 85, ../sass/_custom.scss */
+/* line 91, ../sass/_custom1.scss */
 #quote-carousel .carousel-control.left {
   left: -30px;
 }
 
 /* Next button  */
-/* line 90, ../sass/_custom.scss */
+/* line 96, ../sass/_custom1.scss */
 #quote-carousel .carousel-control.right {
   right: -30px !important;
 }
 
 /* Changes the position of the indicators */
-/* line 95, ../sass/_custom.scss */
+/* line 101, ../sass/_custom1.scss */
 #quote-carousel .carousel-indicators {
   right: 50%;
   top: auto;
@@ -283,40 +290,41 @@ section.carousel.slide div.carousel-inner div.item img {
 }
 
 /* Changes the color of the indicators */
-/* line 103, ../sass/_custom.scss */
+/* line 109, ../sass/_custom1.scss */
 #quote-carousel .carousel-indicators li {
   background: #c0c0c0;
 }
 
-/* line 107, ../sass/_custom.scss */
+/* line 113, ../sass/_custom1.scss */
 #quote-carousel .carousel-indicators .active {
   background: #333333;
 }
 
-/* line 111, ../sass/_custom.scss */
+/* line 117, ../sass/_custom1.scss */
 #quote-carousel img {
   width: 250px;
   height: 100px;
 }
 
 /* End carousel */
-/* line 118, ../sass/_custom.scss */
+/* line 124, ../sass/_custom1.scss */
 .item blockquote {
   border-left: none;
   margin: 0;
 }
 
-/* line 123, ../sass/_custom.scss */
+/* line 129, ../sass/_custom1.scss */
 .item blockquote img {
   margin-bottom: 10px;
 }
 
-/* line 127, ../sass/_custom.scss */
+/* line 133, ../sass/_custom1.scss */
 .item blockquote p:before {
   content: "\f10d";
   font-family: 'Fontawesome';
   float: left;
   margin-right: 10px;
+  color: #ff0000;
 }
 
 /* line 5, ../sass/main.scss */

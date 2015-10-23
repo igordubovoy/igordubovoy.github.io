@@ -49,12 +49,18 @@
 //section - technologies - modificators
  /*паддинги для заголовка секции*/
 .buffer-top-bottom {
-    padding: 8px 0;
+    padding: 32px 0;
 }
 
 /*центровка картинки под заголовком секции*/
-.img-centered {
+.subline:after {
+    content:"";
+    width: 45px;
+    height: 4px;
     margin: 0 auto;
+    background: #ff0000;
+    position: absolute;
+    top: 100%; left: 47%;
 }
 
 .container-buffer {
@@ -129,4 +135,5 @@
     font-family: 'Fontawesome';
     float: left;
     margin-right: 10px;
+    color: #ff0000;
 }
