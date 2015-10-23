@@ -461,30 +461,8 @@ button {
   font-family: "GothamProLight";
 }
 
-/* line 123, ../sass/main.scss */
-::-webkit-input-placeholder {
-  font-family: "GothamProLight" !important;
-}
-
-/* line 124, ../sass/main.scss */
-::-moz-placeholder {
-  font-family: "GothamProLight" !important;
-}
-
-/* Firefox 19+ */
-/* line 125, ../sass/main.scss */
-:-moz-placeholder {
-  font-family: "GothamProLight" !important;
-}
-
-/* Firefox 18- */
-/* line 126, ../sass/main.scss */
-:-ms-input-placeholder {
-  font-family: "GothamProLight" !important;
-}
-
 @media (max-width: 420px) {
-  /* line 129, ../sass/main.scss */
+  /* line 126, ../sass/main.scss */
   .map {
     height: 320px;
   }

@@ -120,10 +120,7 @@ button{
     border: none !important;
     font-family:"GothamProLight";
 }
-::-webkit-input-placeholder {font-family:"GothamProLight"!important;;}
-::-moz-placeholder          {font-family:"GothamProLight"!important;;}/* Firefox 19+ */
-:-moz-placeholder           {font-family:"GothamProLight"!important;;}/* Firefox 18- */
-:-ms-input-placeholder      {font-family:"GothamProLight"!important;;}
+
 
 @media (max-width: 420px){
     .map {
