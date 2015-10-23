@@ -70,169 +70,109 @@
   font-style: normal;
   font-weight: normal;
 }
-/* line 12, ../sass/_style-sytnik.scss */
-header {
+/* line 14, ../sass/_header-style.scss */
+header.navbar.navbar-default {
   font-family: GothamProBold;
-  height: 111px;
-  width: 100%;
+  opacity: 0.9;
+  background-image: none;
   background-color: #fff;
+  box-shadow: none;
+  border-bottom: none;
 }
-/* line 17, ../sass/_style-sytnik.scss */
-header .wrapper {
-  margin: auto;
-  width: 85%;
-  height: inherit;
+/* line 26, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+  text-align: center;
+  color: #515151;
 }
-/* line 21, ../sass/_style-sytnik.scss */
-header .wrapper div#menuBtn {
-  display: none;
-  margin-top: 27px;
-  float: right;
-  top: 0;
-  right: 0;
-  padding: 9px 8px 8px 8px;
-  z-index: 25;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
+/* line 30, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a:hover {
+  border-left: solid 3px #f47108;
+  border-right: solid 3px #f47108;
+  color: #df1f29;
 }
-/* line 34, ../sass/_style-sytnik.scss */
-header .wrapper div.logo {
-  margin-top: 12px;
-  display: inline-block;
+/* line 39, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.navbar-header a.navbar-brand {
+  padding-top: 0;
 }
-/* line 37, ../sass/_style-sytnik.scss */
-header .wrapper div.logo div.logo-background {
+/* line 41, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.navbar-header a.navbar-brand img {
   display: inline-block;
   height: 50px;
-  width: 50px;
-  border-radius: 5px;
-  font-size: 36px;
-  background-color: #df1f29;
 }
-/* line 44, ../sass/_style-sytnik.scss */
-header .wrapper div.logo div.logo-background span.logo-text {
-  margin-left: 11px;
-  color: #fff;
-}
-/* line 49, ../sass/_style-sytnik.scss */
-header .wrapper div.logo h1 {
+/* line 46, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.navbar-header a.navbar-brand p {
   display: inline-block;
-}
-/* line 53, ../sass/_style-sytnik.scss */
-header .wrapper .menu {
   float: right;
-}
-/* line 55, ../sass/_style-sytnik.scss */
-header .wrapper .menu ul {
-  float: right;
-  list-style: none;
-  margin-bottom: 0px;
-}
-/* line 59, ../sass/_style-sytnik.scss */
-header .wrapper .menu ul .margin {
-  margin-right: 45px;
-}
-/* line 62, ../sass/_style-sytnik.scss */
-header .wrapper .menu ul li {
-  display: inline-block;
-}
-/* line 64, ../sass/_style-sytnik.scss */
-header .wrapper .menu ul li a {
-  display: inline-block;
-  line-height: 107px;
-  height: 111px;
+  margin-top: 15px;
   color: #515151;
-  font-size: 15px;
-}
-/* line 71, ../sass/_style-sytnik.scss */
-header .wrapper .menu ul li a:hover {
-  border-bottom: solid 3px #f47108;
-  color: #df1f29;
-  text-decoration: none;
+  font-size: 36px;
 }
 
-@media (max-width: 836px) {
-  /* line 83, ../sass/_style-sytnik.scss */
-  header {
-    height: 80px;
-  }
-  /* line 85, ../sass/_style-sytnik.scss */
-  header .wrapper {
-    position: relative;
-  }
-  /* line 87, ../sass/_style-sytnik.scss */
-  header .wrapper div.logo {
-    margin-top: 0;
-  }
-  /* line 90, ../sass/_style-sytnik.scss */
-  header .wrapper #myMenu {
-    display: none;
-    position: absolute;
-    width: 100%;
-    z-index: 999;
+/* line 58, ../sass/_header-style.scss */
+section.carousel.slide {
+  margin-top: 50px;
+}
+
+@media (min-width: 767px) {
+  /* line 62, ../sass/_header-style.scss */
+  header.navbar.navbar-default {
+    font-family: "GothamProBold";
+    font-weight: bold;
+    opacity: 0.9;
+    background-image: none;
     background-color: #fff;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
+    box-shadow: none;
   }
-  /* line 98, ../sass/_style-sytnik.scss */
-  header .wrapper #myMenu ul {
-    width: 100%;
-    padding: 0;
-  }
-  /* line 101, ../sass/_style-sytnik.scss */
-  header .wrapper #myMenu ul .margin {
-    margin: 0;
-  }
-  /* line 104, ../sass/_style-sytnik.scss */
-  header .wrapper #myMenu ul li {
-    height: 60px;
-    display: block;
-    text-align: center;
-    border-bottom: 1px solid #df1f29;
-  }
-  /* line 109, ../sass/_style-sytnik.scss */
-  header .wrapper #myMenu ul li a {
-    padding-top: 20px;
-    width: 100%;
-    height: inherit;
-    line-height: normal;
-  }
-  /* line 118, ../sass/_style-sytnik.scss */
-  header .wrapper div#menuBtn {
-    display: block;
-    position: absolute;
+  /* line 72, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse {
     float: right;
-    top: 0;
-    right: 10px;
-    margin-top: 13px;
+  }
+  /* line 75, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li.li-margin {
+    margin-right: 50px;
+  }
+  /* line 79, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+    position: relative;
+    color: #515151;
+    padding: 42px 0 44px 0;
+  }
+  /* line 85, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a:hover {
+    border-top: solid 3px #f47108;
+    border-right: none;
+    border-left: none;
+  }
+  /* line 93, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header {
+    height: 110px;
+  }
+  /* line 95, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header a.navbar-brand {
+    padding-top: 28px;
+    padding-bottom: 83px;
+  }
+  /* line 98, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header a.navbar-brand img {
+    display: inline-block;
+    height: 50px;
+  }
+  /* line 103, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header a.navbar-brand p {
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+    color: #515151;
+    font-size: 36px;
+  }
+
+  /* line 115, ../sass/_header-style.scss */
+  section.carousel.slide {
+    margin-top: 110px;
   }
 }
-/* line 130, ../sass/_style-sytnik.scss */
-#carousel {
-  max-height: 542px;
-}
-
-/* line 134, ../sass/_style-sytnik.scss */
-div.container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-/* line 138, ../sass/_style-sytnik.scss */
-div.container div.carousel.slide {
-  width: 100%;
-}
-/* line 140, ../sass/_style-sytnik.scss */
-div.container div.carousel.slide div.carousel-inner {
-  width: 100%;
-}
-/* line 142, ../sass/_style-sytnik.scss */
-div.container div.carousel.slide div.carousel-inner div.item {
-  width: 100%;
-}
-/* line 144, ../sass/_style-sytnik.scss */
-div.container div.carousel.slide div.carousel-inner div.item img.img {
+/* line 123, ../sass/_header-style.scss */
+section.carousel.slide div.carousel-inner div.item img {
   width: 100%;
 }
 
