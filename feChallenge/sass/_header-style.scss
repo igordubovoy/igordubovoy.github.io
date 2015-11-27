@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamProBold/GothamProBold.woff") format("woff"),
+  url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+$white: #fff;
+$red: #df1f29;
+$text: #515151;
+
+header.navbar.navbar-default {
+  font-family: GothamProBold;
+
+  opacity: 0.9;
+  background-image: none;
+  background-color: $white;
+  box-shadow: none;
+  border-bottom: none;
+  div.container {
+    div.collapse.navbar-collapse {
+      ul.nav.navbar-nav {
+        li {
+          a {
+            text-align: center;
+            color: $text;
+          }
+          a:hover {
+            border-left: solid 3px #f47108;
+            border-right: solid 3px #f47108;
+            color: $red;
+          }
+        }
+      }
+    }
+    div.navbar-header {
+      a.navbar-brand {
+        padding-top: 0;
+        img {
+          display: inline-block;
+          height: 50px;
+
+        }
+        p {
+          display: inline-block;
+          float: right;
+          margin-top: 15px;
+
+          color: $text;
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+section.carousel.slide {
+  margin-top: 50px;
+}
+@media (min-width: 767px) {
+  header.navbar.navbar-default {
+    font-family: "GothamProBold";
+    font-weight: bold;
+
+    opacity: 0.9;
+    background-image: none;
+    background-color: $white;
+    box-shadow: none;
+    //border-bottom: none;
+    div.container {
+      div.collapse.navbar-collapse {
+        float: right;
+        ul.nav.navbar-nav {
+          li.li-margin {
+            margin-right: 50px;
+          }
+          li {
+            a {
+              position: relative;
+              color: $text;
+              padding: 42px 0 44px 0;
+            }
+
+            a:hover {
+              border-top: solid 3px #f47108;
+              border-right: none;
+              border-left: none;
+            }
+          }
+        }
+      }
+      div.navbar-header {
+        height: 110px;
+        a.navbar-brand {
+          padding-top: 28px;
+          padding-bottom: 83px;
+          img {
+            display: inline-block;
+            height: 50px;
+
+          }
+          p {
+            display: inline-block;
+            float: right;
+            margin-top: 15px;
+
+            color: $text;
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+  section.carousel.slide {
+    margin-top: 110px;
+  }
+}
+
+section.carousel.slide {
+  div.carousel-inner {
+    div.item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

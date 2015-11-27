@@ -1,0 +1,139 @@
+/*fonts preloading*/
+@font-face {
+    font-family: "GothamProLight";
+    src: url("../fonts/GothamProLight/GothamProLight.eot");
+    src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
+    url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "GothamProBold";
+    src: url("../fonts/GothamProBold/GothamProBold.eot");
+    src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GothamProBold/GothamProBold.woff") format("woff"),
+    url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+
+/*fonts tuning*/
+
+.p-like {
+    font: 1em GothamProLight, sans-serif;
+}
+
+.h1-like {
+    font: 1em GothamProBold, sans-serif;
+}
+
+.h2-like {
+    font: 1em GothamProBold, sans-serif;
+}
+
+.h3-like {
+    font: 1.9285em GothamProBold, sans-serif;
+}
+
+.h4-like {
+    font: bold 1.2857em GothamProLight, sans-serif;
+}
+
+
+.graycolor {
+    color: #7f868d;
+}
+
+//section - technologies - modificators
+ /*паддинги для заголовка секции*/
+.buffer-top-bottom {
+    padding: 32px 0;
+}
+
+/*центровка картинки под заголовком секции*/
+.subline:after {
+    content:"";
+    width: 45px;
+    height: 4px;
+    margin: 0 auto;
+    background: #ff0000;
+    position: absolute;
+    top: 100%; left: 47%;
+}
+
+.container-buffer {
+    padding: 24px 0;
+}
+
+.p-media {
+    padding-right: 10px;
+}
+
+/* carousel */
+#quote-carousel
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left
+{
+  left: -30px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right
+{
+  right: -30px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+    color: #ff0000;
+}

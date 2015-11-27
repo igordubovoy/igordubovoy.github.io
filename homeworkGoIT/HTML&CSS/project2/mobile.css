@@ -1,0 +1,277 @@
+.top {
+    height: 160px;
+    text-align: center;
+}
+
+.top-content,
+.banner,
+.banner-content {
+    min-width: 100%
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: 17px;
+}
+
+.company-name {
+    padding-top: 72px;
+    border-bottom: 1px solid #2980b9;
+    line-height: 40px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.top-contacts {
+    position: static;
+    margin: 0;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.registration-form {
+    top: 198px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+}
+
+.form-header {
+    padding-top: 33px;
+    font-size: 20px;
+}
+
+.registration-form form {
+    width: 260px;
+    margin-top: 25px;
+}
+
+.registration-form textarea {
+    width: 239px;
+}
+
+.registration-form input:not(.button-submit) {
+    width: 258px;
+}
+
+#select-course {
+    background-position: 232px 50%;
+    width: 260px;
+}
+
+.button-submit {
+    width: 200px;
+    font-size: 20px;
+    font-family: "HelveticaLight";
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.banner-text-header,
+.banner-text {
+    max-width: 100%;
+}
+
+.banner-text-header {
+    font-size: 40px;
+    padding-top: 35px;
+}
+
+.banner-text {
+    font-size: 16px;
+    max-width: 85%;
+    margin: auto;
+    line-height: 1.8em;
+}
+
+.about-company {
+    height: 100%;
+}
+
+.about-company-content {
+    text-align: center;
+    min-width: 100%;
+}
+
+.about-company-header {
+    padding-top: 415px;
+}
+
+.about-company-text1,
+.about-company-text2 {
+    margin: auto;
+    max-width: 85%
+}
+
+.about-company-text2 {
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+.company-offers,
+.company-comments,
+.centered-start-button-background {
+    text-align: center;
+}
+
+.company-comments {
+    height: 504px;
+}
+
+.company-offers-header {
+    font-size: 20px;
+}
+
+.offer._1,
+.offer._2,
+.offer._3 {
+    display: block;
+    margin: auto;
+}
+
+.offer._1 {
+    margin-top: 30px;
+}
+
+.offer._3 {
+    margin-bottom: 15px;
+}
+
+.comments-header {
+    line-height: 1.3em;
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.comments-button_1,
+.comments-button_2 {
+    margin-top: 15px;
+    display: inline-block;
+    position: static;
+}
+
+.comments-text {
+    margin-top: -10px;
+    text-align: left;
+    padding-left: 15px;
+    width: 80%;
+}
+
+.comment-client-name {
+    font-size: 13px;
+}
+
+.comments.bracket_1 {
+    padding-left: 13px;
+    text-align: left;
+    padding-top: 15px;
+}
+
+.comment-client-name,
+.comments.bracket_2 {
+    text-align: right;
+    padding-right: 10%;
+    margin: 0;
+}
+
+.centered-start-button-background {
+    height: 240px;
+    position: relative;
+}
+
+.button-started {
+    font-family: "HelveticaLight";
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    height: 130px;
+    margin-top: 60px;
+    line-height: 1.7em;
+    left: 50%;
+    margin-left: -150px;
+    padding: 0 42px 40px 25px;
+    background-position: 138px 84px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+.started {
+    height: 100%;
+}
+
+#comments-man {
+    position: absolute;
+    left: 50%;
+    margin-left: -112px;
+    top: -123px;
+}
+
+footer {
+    height: 100%;
+}
+
+.center-footer {
+    position: relative;
+    height: 315px;
+}
+
+.footer-logo {
+    position: absolute;
+    left: 50%;
+    margin: 32px 0 0 -27px;
+    display: block;
+    height: 49px;
+    width: 49px;
+}
+
+.footer-logo-text {
+    line-height: 49px;
+    font-size: 20px;
+}
+
+.footer-company-name-text {
+    display: inline-block;
+}
+
+.footer-company-name {
+    display: block;
+    margin: auto;
+    padding-top: 85px;
+    position: static;
+    width: 173px;
+    height: auto;
+    line-height: 36px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #2980b9;
+}
+
+.footer-contacts {
+    position: static;
+    margin: auto;
+    text-align: center;
+    border: none;
+    width: 80%;
+}
+
+.footer-social-icons {
+    margin: auto;
+    padding-left: 0;
+    height: 21px;
+}
+
+.footer-company-information {
+    padding-top: 40px;
+    width: 80%;
+    padding-left: 0;
+    margin: auto;
+    line-height: 1.6em;
+}

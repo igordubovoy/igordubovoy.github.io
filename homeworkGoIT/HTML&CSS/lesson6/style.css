@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "trebuchet_regular";
+    src: url("fonts/trebuchet_regular.ttf");
+}
+
+@font-face {
+    font-family: "trebuchet_italic";
+    src: url("fonts/trebuchet_italic.ttf");
+}
+
+.comments_background {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    margin-top: 157.5px;
+    height: 315px;
+    width: 100%;
+    background-image: url(img/background.png);
+}
+
+.comments {
+    position: relative;
+    margin: auto;
+    width: 1021px;
+    height: 98.5px;
+    padding-top: 50px;
+}
+
+.p_header {
+    margin: 0px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
+    font-family: "trebuchet_regular";
+}
+
+.first {
+    color: #ee8129;
+}
+
+.second {
+    color: #3170a8;
+}
+
+.staciya,
+.david {
+    width: 489.5px;
+    height: 100%;
+}
+
+.staciya {
+    float: left;
+}
+
+.david {
+    float: right;
+}
+
+.triangle {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 11.5px solid transparent;
+    border-right: 14.5px solid #FFF;
+    border-bottom: 11.5px solid transparent;
+    float: right;
+    top: 50%;
+    margin-top: -11px;
+}
+
+.comment {
+    width: 365px;
+    height: 100%;
+    background: #fff;
+    float: right;
+}
+
+.comment_header {
+    height: 37.5px;
+    width: 330.5px;
+    border-bottom: 1px dotted #666;
+    margin-left: 15.5px;
+}
+
+.p_com_head {
+    line-height: 37.5px;
+    margin: 0;
+    height: 37.5px;
+    font-size: 13px;
+    color: #3070a8;
+    font-family: "trebuchet_italic";
+}
+
+.name {
+    float: left;
+}
+
+.job {
+    float: right;
+}
+
+.comm_body {
+    margin-left: 15.5px;
+    width: 330.5px;
+    height: 59.5px;
+}
+
+.p_com_body {
+    height: 49px;
+    margin: 0px;
+    font-size: 13px;
+    color: #666;
+    padding-top: 10.5px;
+    font-family: "trebuchet_regular";
+    line-height: 1.5em;
+}

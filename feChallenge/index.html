@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quantum webstudio</title>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <link rel="stylesheet" href="mdl/material.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+
+<body>
+    <div id="dark"></div>
+    <div class="modal-form">
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample1" />
+                <label class="mdl-textfield__label" for="sample1">Name</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="email" id="sample2" />
+                <label class="mdl-textfield__label" for="sample2">Email</label>
+                <span class="mdl-textfield__error">Please provide a valid email address</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3" pattern="-?[0-9]*(\.[0-9]+)?" />
+                <label class="mdl-textfield__label" for="sample3">Telephone</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5"></textarea>
+                <label class="mdl-textfield__label" for="sample5">Message...</label>
+            </div>
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--primary">Submit</button>
+        </form>
+    </div>
+
+    <!--NAVBAR-->
+
+    <header class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <!--NAVBAR BUTTON-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <!--NAVBAR LOGO-->
+                    <img src="http://quantum-inc.com/img/quantum-logo.gif">
+                    <p>Quantum</p>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <!--NAVBAR MENU-->
+                <ul class="nav navbar-nav">
+                    <li class="li-margin" id="home"><a href="#">Home</a></li>
+                    <li class="li-margin"><a href="#">Product</a></li>
+                    <li class="li-margin" id="solutions"><a href="#">Solutions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Carousel-->
+
+    <section class="carousel slide" id="myCarousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img class="img" src="img-carousel/Layer%201.jpg" />
+                <!--IMG&DISCRIPTION-->
+                <div class="carousel-caption">
+                    <h4>Zagolovok</h4>
+
+                    <p>Paragarph</p>
+                </div>
+            </div>
+            <div class="item">
+                <img class="img" src="img-carousel/apartmens.jpg" />
+                <!--IMG&DISCRIPTION-->
+                <div class="carousel-caption">
+                    <h4>Zagolovok</h4>
+
+                    <p>Paragarph</p>
+                </div>
+            </div>
+            <div class="item">
+                <img class="img" src="img-carousel/city.jpg" />
+                <!--IMG&DISCRIPTION-->
+                <div class="carousel-caption">
+                    <h4>Zagolovok</h4>
+
+                    <p>Paragarph</p>
+                </div>
+            </div>
+        </div>
+        <a href="#myCarousel" class="carousel-control left" data-slide="prev">&lsaquo;</a>
+        <!--ARROW-->
+        <a href="#myCarousel" class="carousel-control right" data-slide="next">&rsaquo;</a>
+        <!--ARROW-->
+    </section>
+    <!-- TECHNOLOGIES SECTION -->
+    <section class="container container-buffer">
+        <div class="row buffer-top-bottom">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h3 class="h3-like graycolor subline">TECHNOLOGIES WE ARE USING</h3>
+                <!--<img class="img-responsive img-centered" src="img/divider.png" alt="divider"> -->
+            </div>
+        </div>
+        <div class="row buffer-top-bottom">
+            <!-- UNIT ADDS  -->
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 buffer-top-bottom">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="img/html5.png" alt="HTML5 logo">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading h4-like">HTML5</h4>
+                        <p class="p-like">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/ UNIT ADDS  -->
+            <!-- UNIT ADDS  -->
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 buffer-top-bottom">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="img/css3.png" alt="CSS3 logo">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading h4-like">CSS3</h4>
+                        <p class="p-like p-media">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/ UNIT ADDS  -->
+            <!-- UNIT ADDS  -->
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 buffer-top-bottom">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="img/javascript.png" alt="Javascript logo">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading h4-like">JAVASCRIPT</h4>
+                        <p class="p-like p-media">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/ UNIT ADDS  -->
+            <!-- UNIT ADDS  -->
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 buffer-top-bottom">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="img/jquery.png" alt="HTML5 logo">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading h4-like">JQUERY</h4>
+                        <p class="p-like p-media">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/ UNIT ADDS  -->
+            <!-- UNIT ADDS  -->
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 buffer-top-bottom">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="img/bootstrap.png" alt="HTML5 logo">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading h4-like">BOOTSTRAP</h4>
+                        <p class="p-like p-media">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/ UNIT ADDS  -->
+            <!-- UNIT ADDS  -->
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 buffer-top-bottom">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="img/sass.png" alt="HTML5 logo">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading h4-like">SASS</h4>
+                        <p class="p-like p-media">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/ UNIT ADDS  -->
+        </div>
+    </section>
+    <!--/ TECHNOLOGIES SECTION -->
+
+
+    <!-- TESTIMONIALS SECTION -->
+    <div class="container container-buffer">
+        <div class="row">
+            <div class='col-md-offset-2 col-md-8 text-center'>
+                <h3 class="h3-like graycolor subline">WHAT OUR CLIENTS SAYS</h3>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-offset-2 col-md-8'>
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#quote-carousel" data-slide-to="1"></li>
+                        <li data-target="#quote-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner">
+
+                        <!-- Quote 1 -->
+                        <div class="item active">
+                            <blockquote class="p-like">
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <img class="img-circle" src="http://www.novostimira.com.ua/userfiles/21(798).jpg" style="width: 100px;height:100px;">
+                                        <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis!</p>
+                                        <small>Mr Someone Famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 2 -->
+                        <div class="item">
+                            <blockquote class="p-like">
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <img class="img-circle" src="http://p1.pichost.me/i/63/1877323.png" style="width: 100px;height:100px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
+                                        <small>Mr Someone Famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 3 -->
+                        <div class="item">
+                            <blockquote class="p-like">
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <img class="img-circle" src="http://cdn.acidcow.com/pics/20120321/legendary_celebrity_12.jpg" style="width: 100px;height:100px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
+                                        <small>Mr Someone Famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ TESTIMONIALS SECTION -->
+    <div id="map_canvas">
+    </div>
+    <footer>
+        <div class="footer-social-icons">
+            <a class="fb" href="#"></a>
+            <a class="tw" href="#"></a>
+            <a class="goog" href="#"></a>
+        </div>
+        <div class="footer-list">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Solutoins</a></li>
+                <li><a href="">News &amp; Trends</a></li>
+                <li><a href="">Corporate</a></li>
+                <li><a href="">About us</a></li>
+            </ul>
+            <p>Copyright © 2015 Quantum All rights reserved</p>
+        </div>
+        <div class="footer-logo"></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="mdl/material.js"></script>
+    <script src="modal.js"></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>

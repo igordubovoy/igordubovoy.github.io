@@ -1,0 +1,477 @@
+@charset "UTF-8";
+/*fonts preloading*/
+@font-face {
+  font-family: "GothamProLight";
+  src: url("../fonts/GothamProLight/GothamProLight.eot");
+  src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProLight/GothamProLight.woff") format("woff"), url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+/*fonts tuning*/
+/* line 24, ../sass/_technology1.scss */
+.p-like {
+  font: 1em GothamProLight, sans-serif;
+}
+
+/* line 28, ../sass/_technology1.scss */
+.h1-like {
+  font: 1em GothamProBold, sans-serif;
+}
+
+/* line 32, ../sass/_technology1.scss */
+.h2-like {
+  font: 1em GothamProBold, sans-serif;
+}
+
+/* line 36, ../sass/_technology1.scss */
+.h3-like {
+  font: 1.9285em GothamProBold, sans-serif;
+}
+
+/* line 40, ../sass/_technology1.scss */
+.h4-like {
+  font: bold 1.2857em GothamProLight, sans-serif;
+}
+
+/* line 45, ../sass/_technology1.scss */
+.graycolor {
+  color: #7f868d;
+}
+
+/*╨╝╨░╤А╨┤╨╢╨╕╨╜╤Л ╨┤╨╗╤П ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░ ╤Б╨╡╨║╤Ж╨╕╨╕*/
+/* line 51, ../sass/_technology1.scss */
+.buffer-top-bottom {
+  padding: 32px 0;
+}
+
+/*╨┐╨░╨┤╨┤╨╕╨╜╨│╨╕ ╨┤╨╗╤П ╨║╨╛╨╗╨╛╨╜╨╛╨║ */
+/* line 56, ../sass/_technology1.scss */
+.padd-top-bottom {
+  padding: 8px 0;
+}
+
+/*╤Ж╨╡╨╜╤В╤А╨╛╨▓╨║╨░ ╨║╨░╤А╤В╨╕╨╜╨║╨╕ ╨┐╨╛╨┤ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨╛╨╝ ╤Б╨╡╨║╤Ж╨╕╨╕*/
+/* line 61, ../sass/_technology1.scss */
+.img-centered {
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 14, ../sass/_header-style.scss */
+header.navbar.navbar-default {
+  font-family: GothamProBold;
+  opacity: 0.9;
+  background-image: none;
+  background-color: #fff;
+  box-shadow: none;
+  border-bottom: none;
+}
+/* line 26, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+  text-align: center;
+  color: #515151;
+}
+/* line 30, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a:hover {
+  border-left: solid 3px #f47108;
+  border-right: solid 3px #f47108;
+  color: #df1f29;
+}
+/* line 39, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.navbar-header a.navbar-brand {
+  padding-top: 0;
+}
+/* line 41, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.navbar-header a.navbar-brand img {
+  display: inline-block;
+  height: 50px;
+}
+/* line 46, ../sass/_header-style.scss */
+header.navbar.navbar-default div.container div.navbar-header a.navbar-brand p {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+  color: #515151;
+  font-size: 36px;
+}
+
+/* line 58, ../sass/_header-style.scss */
+section.carousel.slide {
+  margin-top: 50px;
+}
+
+@media (min-width: 767px) {
+  /* line 62, ../sass/_header-style.scss */
+  header.navbar.navbar-default {
+    font-family: "GothamProBold";
+    font-weight: bold;
+    opacity: 0.9;
+    background-image: none;
+    background-color: #fff;
+    box-shadow: none;
+  }
+  /* line 72, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse {
+    float: right;
+  }
+  /* line 75, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li.li-margin {
+    margin-right: 50px;
+  }
+  /* line 79, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+    position: relative;
+    color: #515151;
+    padding: 42px 0 44px 0;
+  }
+  /* line 85, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav li a:hover {
+    border-top: solid 3px #f47108;
+    border-right: none;
+    border-left: none;
+  }
+  /* line 93, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header {
+    height: 110px;
+  }
+  /* line 95, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header a.navbar-brand {
+    padding-top: 28px;
+    padding-bottom: 83px;
+  }
+  /* line 98, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header a.navbar-brand img {
+    display: inline-block;
+    height: 50px;
+  }
+  /* line 103, ../sass/_header-style.scss */
+  header.navbar.navbar-default div.container div.navbar-header a.navbar-brand p {
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+    color: #515151;
+    font-size: 36px;
+  }
+
+  /* line 115, ../sass/_header-style.scss */
+  section.carousel.slide {
+    margin-top: 110px;
+  }
+}
+/* line 123, ../sass/_header-style.scss */
+section.carousel.slide div.carousel-inner div.item img {
+  width: 100%;
+}
+
+/*fonts preloading*/
+@font-face {
+  font-family: "GothamProLight";
+  src: url("../fonts/GothamProLight/GothamProLight.eot");
+  src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProLight/GothamProLight.woff") format("woff"), url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+/*fonts tuning*/
+/* line 24, ../sass/_custom1.scss */
+.p-like {
+  font: 1em GothamProLight, sans-serif;
+}
+
+/* line 28, ../sass/_custom1.scss */
+.h1-like {
+  font: 1em GothamProBold, sans-serif;
+}
+
+/* line 32, ../sass/_custom1.scss */
+.h2-like {
+  font: 1em GothamProBold, sans-serif;
+}
+
+/* line 36, ../sass/_custom1.scss */
+.h3-like {
+  font: 1.9285em GothamProBold, sans-serif;
+}
+
+/* line 40, ../sass/_custom1.scss */
+.h4-like {
+  font: bold 1.2857em GothamProLight, sans-serif;
+}
+
+/* line 45, ../sass/_custom1.scss */
+.graycolor {
+  color: #7f868d;
+}
+
+/*╨┐╨░╨┤╨┤╨╕╨╜╨│╨╕ ╨┤╨╗╤П ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░ ╤Б╨╡╨║╤Ж╨╕╨╕*/
+/* line 51, ../sass/_custom1.scss */
+.buffer-top-bottom {
+  padding: 32px 0;
+}
+
+/*╤Ж╨╡╨╜╤В╤А╨╛╨▓╨║╨░ ╨║╨░╤А╤В╨╕╨╜╨║╨╕ ╨┐╨╛╨┤ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨╛╨╝ ╤Б╨╡╨║╤Ж╨╕╨╕*/
+/* line 56, ../sass/_custom1.scss */
+.subline:after {
+  content: "";
+  width: 45px;
+  height: 4px;
+  margin: 0 auto;
+  background: #ff0000;
+  position: absolute;
+  top: 100%;
+  left: 47%;
+}
+
+/* line 66, ../sass/_custom1.scss */
+.container-buffer {
+  padding: 24px 0;
+}
+
+/* line 70, ../sass/_custom1.scss */
+.p-media {
+  padding-right: 10px;
+}
+
+/* carousel */
+/* line 75, ../sass/_custom1.scss */
+#quote-carousel {
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+/* line 82, ../sass/_custom1.scss */
+#quote-carousel .carousel-control {
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+
+/* Previous button  */
+/* line 91, ../sass/_custom1.scss */
+#quote-carousel .carousel-control.left {
+  left: -30px;
+}
+
+/* Next button  */
+/* line 96, ../sass/_custom1.scss */
+#quote-carousel .carousel-control.right {
+  right: -30px !important;
+}
+
+/* Changes the position of the indicators */
+/* line 101, ../sass/_custom1.scss */
+#quote-carousel .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+
+/* Changes the color of the indicators */
+/* line 109, ../sass/_custom1.scss */
+#quote-carousel .carousel-indicators li {
+  background: #c0c0c0;
+}
+
+/* line 113, ../sass/_custom1.scss */
+#quote-carousel .carousel-indicators .active {
+  background: #333333;
+}
+
+/* line 117, ../sass/_custom1.scss */
+#quote-carousel img {
+  width: 250px;
+  height: 100px;
+}
+
+/* End carousel */
+/* line 124, ../sass/_custom1.scss */
+.item blockquote {
+  border-left: none;
+  margin: 0;
+}
+
+/* line 129, ../sass/_custom1.scss */
+.item blockquote img {
+  margin-bottom: 10px;
+}
+
+/* line 133, ../sass/_custom1.scss */
+.item blockquote p:before {
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  float: left;
+  margin-right: 10px;
+  color: #ff0000;
+}
+
+/* line 5, ../sass/main.scss */
+#map_canvas,
+footer {
+  width: 100%;
+  margin: auto;
+}
+
+/* line 10, ../sass/main.scss */
+#map_canvas {
+  height: 460px;
+}
+
+/* line 14, ../sass/main.scss */
+footer {
+  height: 358px;
+  background-color: #343434;
+  position: relative;
+  color: #ababab;
+  font-family: "GothamProLight";
+  font-size: 14px;
+}
+/* line 21, ../sass/main.scss */
+footer .footer-social-icons {
+  width: 312px;
+  height: 90px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -156px;
+}
+/* line 28, ../sass/main.scss */
+footer .footer-social-icons a {
+  display: block;
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  left: 111px;
+}
+/* line 35, ../sass/main.scss */
+footer .footer-social-icons a.fb {
+  float: left;
+  position: static;
+  background-image: url(../img/fb.png);
+}
+/* line 40, ../sass/main.scss */
+footer .footer-social-icons a.goog {
+  float: right;
+  position: static;
+  background-image: url(../img/google.png);
+}
+/* line 45, ../sass/main.scss */
+footer .footer-social-icons a.tw {
+  background-image: url(../img/tw.png);
+}
+/* line 49, ../sass/main.scss */
+footer ul {
+  display: block;
+  margin: auto;
+  height: 17px;
+  max-width: 583px;
+  padding: 204px 0 0 0;
+}
+/* line 55, ../sass/main.scss */
+footer ul li {
+  list-style: none;
+  float: left;
+  padding: 0 15px 0 15px;
+  border-right: 1px #ababab solid;
+}
+/* line 60, ../sass/main.scss */
+footer ul li a {
+  color: #ababab;
+}
+/* line 63, ../sass/main.scss */
+footer ul li a:hover {
+  text-decoration: none;
+}
+/* line 67, ../sass/main.scss */
+footer ul li:last-child {
+  border-right: none;
+}
+/* line 71, ../sass/main.scss */
+footer p {
+  clear: both;
+  text-align: center;
+  padding-top: 5px;
+}
+/* line 76, ../sass/main.scss */
+footer .footer-logo {
+  height: 85px;
+  width: 168px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -84px;
+  background-image: url(../img/logofooter.png);
+}
+
+/* line 86, ../sass/main.scss */
+.modal-form {
+  width: 300px;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  margin-top: -184px;
+  margin-left: -160px;
+  background: white;
+}
+
+/* line 98, ../sass/main.scss */
+form button {
+  display: block !important;
+  margin: auto !important;
+}
+
+/* line 102, ../sass/main.scss */
+button {
+  font-family: "GothamProBold" !important;
+  color: #df1f29 !important;
+}
+
+/* line 107, ../sass/main.scss */
+.dark_monitor {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 1;
+}
+
+/* line 119, ../sass/main.scss */
+.mdl-textfield__input {
+  border: none !important;
+  font-family: "GothamProLight";
+}
+
+@media (max-width: 420px) {
+  /* line 126, ../sass/main.scss */
+  .map {
+    height: 320px;
+  }
+}

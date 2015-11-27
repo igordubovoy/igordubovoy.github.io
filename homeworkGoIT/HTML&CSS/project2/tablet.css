@@ -1,0 +1,107 @@
+.logo,
+.banner-text-header,
+.banner-text,
+.about-company-header,
+.about-company-text1,
+.about-company-text2,
+.company-offers-header,
+.offer._1,
+.offer._2,
+.offer._3,
+.comments-header,
+.comments.bracket_1,
+.comments-text,
+.button-started,
+.footer-logo {
+    margin-left: 22px;
+}
+
+.comments-button_1 {
+    right: 64px;
+}
+.top-contacts,
+.registration-form,
+.comments-button_2 {
+    right: 21px;
+}
+
+.banner-text {
+    max-width: 50%;
+}
+
+.offer {
+    width: 90%;
+    height: 178px;
+}
+
+.offer._1,
+.offer._2,
+.offer._3 {
+    background-position: top left;
+}
+
+.offer-header {
+    padding: 0 0 0 309px;
+    text-align: left;
+}
+
+.offer-text {
+    max-width: 440px;
+    width: 100%;
+    text-align: left;
+    padding: 15px 0 0 309px;
+}
+
+.offer-view {
+    margin: 0;
+    margin-left: 309px;
+    margin-top: 112px;
+}
+
+
+.offer._3 {
+    margin-bottom: 30px;
+}
+
+.about-company-text1,
+.about-company-text2 {
+    max-width:50%;
+}
+
+#comments-man {
+    right: 21px;
+}
+.company-comments {
+    height: 100%;
+}
+
+.comments-text {
+    max-width: 70%;
+}
+
+.comment-client-name, .comments.bracket_2 {
+    text-align: right;
+    margin-right: 31%;
+    margin-left: 0;
+}
+
+.button-started {
+    width: 470px;
+    font-size: 20px;
+    background-position: 405px 50%;
+}
+.footer-company-name {
+    left: 98px;
+}
+.footer-contacts {
+    left: 275px;
+}
+.footer-social-icons {
+    padding-top: 0;
+}
+
+.footer-company-information {
+    padding-top: 5px;
+    line-height: 1.4em;
+    width: 90%;
+}

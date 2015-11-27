@@ -1,0 +1,24 @@
+/*
+@font-face {
+    font-family: "universalia";
+    src: url("../../fonts/universalia/Universalia.ttf");
+}
+*/
+
+a[href*=ru],
+a[href*=http],
+a[href*=ya] {
+    color: #f70;
+}
+
+a[href*=google] {
+    color: gray;
+}
+
+a[target="_blank"]::after {
+    content: '\21F1';
+    margin-left: 5px;
+    display: inline-block;
+    transform: scaleX(-1);
+    font-family: "Cambria";
+}
