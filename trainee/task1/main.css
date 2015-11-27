@@ -1,0 +1,130 @@
+body {
+  font-family: cursive
+}
+
+header {
+  height: 50px;
+}
+
+.basket,
+.wish {
+  float: right;
+  height: 50px;
+  width: 80px;
+}
+
+.basket a,
+.wish a {
+  text-decoration: none;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  border: solid 1px transparent;
+}
+
+.basket a:hover,
+.wish a:hover {
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+
+.sorting__sort,
+.sorting__quantity {
+  float: right;
+}
+
+.sorting__quantity {
+  margin-left: 5px;
+}
+
+.sorting__sort span,
+.sorting__quantity span {
+  display: block;
+  color: gray;
+  font-size: 12px
+}
+
+#quantity {
+  width: 100%
+}
+
+.sorting form {
+  padding-right: 10px;
+  height: 43px;
+}
+
+.content,
+header,
+.sorting {
+  max-width: 960px;
+  margin: auto;
+}
+
+.content {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  height: 420px;
+  width: 231px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.item_span {
+  display: block;
+  position: absolute;
+  width: 100%
+}
+.item_span_price {
+  top: 252px;
+}
+
+.item_button {
+  padding-bottom: 5px;
+  height: 30px;
+  width: 120px;
+  border: none;
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  margin-left: -60px;
+  border-radius: 2px;
+  outline: none;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+  color: white;
+  font-weight: bold;
+}
+.item_button:hover {
+  background: rgb(53, 167, 110);
+}
+.item_button:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+.pager_tab {
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  border: 1px solid darkgreen;
+  display: inline-block;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.active_pager_tab {
+  background: rgb(33,147,90);
+  cursor: default;
+}
+
+.pager_tab:hover {
+  background: rgb(33,147,90)
+}

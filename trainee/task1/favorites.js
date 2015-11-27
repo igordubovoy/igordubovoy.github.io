@@ -1,0 +1,3 @@
+shop.Favorite = function () {
+
+}
