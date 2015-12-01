@@ -8,11 +8,11 @@ shop.ProductsBase = function () {
   this._pageNo = 1;
 
   this.container = document.getElementById('container');
-}
+};
 
 shop.ProductsBase.prototype.calculatePageCount = function () {
   this._pageCount = Math.ceil(this._productsList.length / this._limit);
-}
+};
 
 shop.ProductsBase.prototype.changeLimit = function (limit) {
   this.setLimit(limit);
@@ -41,15 +41,15 @@ shop.ProductsBase.prototype.limitProducts = function () {
 
 shop.ProductsBase.prototype.setLimit = function (limit) {
   this._limit = limit;
-}
+};
 
 shop.ProductsBase.prototype.setOrder = function (order) {
   this._order = order;
-}
+};
 
 shop.ProductsBase.prototype.setPageNo = function (pageNo) {
   this._pageNo = pageNo;
-}
+};
 
 shop.ProductsBase.prototype.sort = function (sortType) {
   switch (sortType) {
@@ -65,7 +65,7 @@ shop.ProductsBase.prototype.sort = function (sortType) {
       if (productA.data.name > productB.data.name) return 1;
       if (productA.data.name < productB.data.name) return -1;
       return 0;
-    }
+    };
     this._productsList.sort(sortByName);
     break;
 
@@ -78,7 +78,7 @@ shop.ProductsBase.prototype.sort = function (sortType) {
 
   default:
     console.log('error in orderType, ' + sortType + '- is not define');
-  };
+  }
 };
 
 shop.ProductsBase.prototype.write = function () {
@@ -86,7 +86,7 @@ shop.ProductsBase.prototype.write = function () {
   this.writeSortingMenu();
   this.writeProducts();
   this.writePager();
-}
+};
 
 shop.ProductsBase.prototype.writePager = function () {
 
@@ -113,7 +113,7 @@ shop.ProductsBase.prototype.writePager = function () {
       setOnClick(tab, i);
     } else {
       tab.classList.add('active_pager_tab');
-    }
+    };
 
     sectionForPager.appendChild(tab);
     i++;
@@ -212,6 +212,6 @@ shop.ProductsBase.prototype.writeSortingMenu = function () {
     self.changeLimit(parseInt(this.value));
   }
   selectSort.onchange = function () {
-    self.changeOrder(this.value)
+    self.changeOrder(this.value);
   };
 };
