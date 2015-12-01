@@ -8,6 +8,16 @@ shop.Core.prototype.process = function() {
   this.products.initProducts();
   this.products.limitProducts();
   this.products.calculatePageCount();
-
   this.products.write();
+  var arr = [];
+  for(var prop in this.products) {
+    arr.push(prop)
+  }
+  function sortProp(propA, propB){
+    if(propA > propB) return 1;
+    if(propA < propB) return -1;
+    return 0
+  }
+
+  console.log(arr.sort(sortProp))
 }

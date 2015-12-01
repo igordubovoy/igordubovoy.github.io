@@ -41,11 +41,12 @@ header {
 .sorting__quantity span {
   display: block;
   color: gray;
-  font-size: 12px
+  font-size: 12px;
+  text-align: left;
 }
 
 #quantity {
-  width: 100%
+  width: 100%;
 }
 
 .sorting form {
@@ -98,6 +99,7 @@ header,
   transition: 0.2s;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 .item_button:hover {
   background: rgb(53, 167, 110);
