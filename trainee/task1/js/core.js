@@ -1,3 +1,4 @@
+'use strict'
 shop.Core = function() {
   this.products = new shop.Products();
   this.favorite = new shop.Favorite();
@@ -9,6 +10,7 @@ shop.Core.prototype.process = function() {
   this.products.limitProducts();
   this.products.calculatePageCount();
   this.products.write();
+
 //  var arr = [];
 //  for(var prop in this.products) {
 //    arr.push(prop)
@@ -20,4 +22,5 @@ shop.Core.prototype.process = function() {
 //  }
 //
 //  console.log(arr.sort(sortProp))
+
 }

@@ -1,3 +1,4 @@
+'use strict'
 shop.productsData = [
   {
     id: 1,

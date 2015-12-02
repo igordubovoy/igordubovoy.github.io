@@ -1,3 +1,4 @@
+'use strict'
 shop.Products = function () {
   shop.ProductsBase.call(this);
 };

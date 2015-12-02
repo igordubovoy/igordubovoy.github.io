@@ -1,0 +1,21 @@
+.pager_tab {
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  border: 1px solid darkgreen;
+  display: inline-block;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.active_pager_tab {
+  background: rgb(33,147,90);
+  cursor: default;
+}
+
+.pager_tab:hover {
+  background: rgb(33,147,90)
+}

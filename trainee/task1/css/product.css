@@ -1,0 +1,37 @@
+.product {
+  display: inline-block;
+  width: 231px;
+  margin-top: 5px;
+}
+
+.product_name {
+  height: 46px;
+  padding-top: 5px;
+  overflow: hidden;
+}
+.product_price {
+  padding-top: 5px;
+}
+
+.product_cart_btn {
+  margin-top: 10px;
+  padding-bottom: 5px;
+  height: 30px;
+  width: 120px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.product_cart_btn:hover {
+  background: rgb(53, 167, 110);
+}
+.product_cart_btn:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}

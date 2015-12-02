@@ -1,0 +1,44 @@
+body {
+  font-family: cursive
+}
+
+header {
+  height: 50px;
+}
+
+.shopping_cart,
+.wish {
+  float: right;
+  height: 50px;
+  width: 80px;
+}
+
+.shopping_cart a,
+.wish a {
+  text-decoration: none;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  border: solid 1px transparent;
+}
+
+.shopping_cart a:hover,
+.wish a:hover {
+  border: solid 1px gray;
+  border-radius: 3px;
+}
+
+.content,
+header,
+.sorting {
+  max-width: 960px;
+  margin: auto;
+}
+
+.content {
+  padding-top: 10px;
+  text-align: center;
+}
+
+
+
