@@ -3,27 +3,26 @@ body {
 }
 
 header {
-  height: 50px;
+  height: 52px;
 }
 
 .shopping_cart,
-.wish {
+.wish_list {
   float: right;
   height: 50px;
   width: 80px;
-}
-
-.shopping_cart a,
-.wish a {
-  text-decoration: none;
   line-height: 50px;
-  display: block;
   text-align: center;
   border: solid 1px transparent;
+  cursor: pointer;
 }
 
-.shopping_cart a:hover,
-.wish a:hover {
+.shopping_cart {
+  margin-right: 30px;
+}
+
+.shopping_cart:hover,
+.wish_list:hover {
   border: solid 1px gray;
   border-radius: 3px;
 }

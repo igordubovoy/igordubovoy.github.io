@@ -1,8 +1,8 @@
 'use strict'
-shop.ProductsBase = function () {
-  this._productsList = [];
+shop.ProductsBase = function (dataSource, core) {
+  this._core = core;
+  this._dataSource = dataSource;
   this._productsForView = [];
-
   this._limit = shop.limitValues[0];
   this._order = shop.orderType.id.type;
   this._pageCount = 0;
@@ -12,7 +12,7 @@ shop.ProductsBase = function () {
 };
 
 shop.ProductsBase.prototype.calculatePageCount = function () {
-  this._pageCount = Math.ceil(this._productsList.length / this._limit);
+  this._pageCount = Math.ceil(this._dataSource.getProducts().length / this._limit);
 };
 
 shop.ProductsBase.prototype.changeLimit = function (limit) {
@@ -37,7 +37,7 @@ shop.ProductsBase.prototype.changePageNo = function (pageNo) {
 };
 
 shop.ProductsBase.prototype.limitProducts = function () {
-  this._productsForView = this._productsList.slice(this._pageNo * this._limit - this._limit, this._limit * this._pageNo);
+  this._productsForView = this._dataSource.getProducts().slice(this._pageNo * this._limit - this._limit, this._limit * this._pageNo);
 };
 
 shop.ProductsBase.prototype.setLimit = function (limit) {
@@ -77,14 +77,39 @@ shop.ProductsBase.prototype.sort = function (sortType) {
     console.error('error in orderType, ' + sortType + '- is not define');
   }
 
-  this._productsList.sort(sortFunc);
+  this._dataSource.getProducts().sort(sortFunc);
 };
 
 shop.ProductsBase.prototype.write = function () {
   this.container.innerHTML = '';
+  this.writeHeader();
   this.writeSortingMenu();
   this.writeProducts();
   this.writePager();
+};
+
+shop.ProductsBase.prototype.writeHeader = function() {
+  var
+    self = this,
+    header = document.createElement('header'),
+    shoppingCart = document.createElement('div'),
+    wishList = document.createElement('div');
+
+  shoppingCart.className = 'shopping_cart';
+  wishList.className = 'wish_list';
+  shoppingCart.innerHTML = 'Корзина';
+  wishList.innerHTML = 'Желание'
+
+  header.appendChild(shoppingCart);
+  header.appendChild(wishList);
+  this.container.appendChild(header);
+
+  wishList.onclick = function() {
+    self._core.changeState(shop.state.favorite)
+  }
+  shoppingCart.onclick = function() {
+    self._core.changeState(shop.state.shoppingCart)
+  }
 };
 
 shop.ProductsBase.prototype.writePager = function () {
@@ -154,8 +179,7 @@ shop.ProductsBase.prototype.writeProducts = function () {
 };
 
 shop.ProductsBase.prototype.writeSortingMenu = function () {
-  var
-    sortingMenu = document.createElement('section');
+  var sortingMenu = document.createElement('section');
 
   sortingMenu.className = 'sorting';
 
@@ -168,26 +192,30 @@ shop.ProductsBase.prototype.writeBlockLimit = function(blockMenu) {
   var
     self = this,
     blockLimit = document.createElement('div'),
-    spanLimit = document.createElement('span'),
-    selectLimit = document.createElement('select'),
-    optionElem = null,
-    length = shop.limitValues.length;
+    descriptLimit = document.createElement('span'),
+    selectLimit = document.createElement('select');
 
-  spanLimit.innerHTML = 'Количество';
+  descriptLimit.innerHTML = 'Количество';
   selectLimit.className = 'limit';
   blockLimit.className = 'sorting_limit';
+  descriptLimit.className = 'limit_description';
 
-  for (var i = 0; i < length; i++) {
-    optionElem = document.createElement('option');
-    optionElem.setAttribute('value', shop.limitValues[i]);
-    optionElem.innerHTML = shop.limitValues[i];
+  for (var i = 0; i < shop.limitValues.length; i++) {
+    var
+      optionElem = document.createElement('option'),
+      limitValue = shop.limitValues[i];
+
+    optionElem.setAttribute('value', limitValue);
+    optionElem.innerHTML = limitValue;
+
     if (optionElem.value == this._limit) {
       optionElem.setAttribute('selected', 'selected');
     };
+
     selectLimit.appendChild(optionElem);
   };
 
-  blockLimit.appendChild(spanLimit);
+  blockLimit.appendChild(descriptLimit);
   blockLimit.appendChild(selectLimit);
   blockMenu.appendChild(blockLimit);
 
@@ -200,13 +228,14 @@ shop.ProductsBase.prototype.writeBlockSort = function(blockMenu) {
   var
     self = this,
     blockSort = document.createElement('div'),
-    spanSort = document.createElement('span'),
+    descriptSort = document.createElement('span'),
     selectSort = document.createElement('select'),
     optionElem = null;
 
-  spanSort.innerHTML = 'Сортировка';
+  descriptSort.innerHTML = 'Сортировка';
   selectSort.className = 'sort';
   blockSort.className = 'sorting_sort';
+  descriptSort.className = 'sort_description';
 
   for (var key in shop.orderType) {
     optionElem = document.createElement('option');
@@ -218,7 +247,7 @@ shop.ProductsBase.prototype.writeBlockSort = function(blockMenu) {
     selectSort.appendChild(optionElem);
   };
 
-  blockSort.appendChild(spanSort);
+  blockSort.appendChild(descriptSort);
   blockSort.appendChild(selectSort);
   blockMenu.appendChild(blockSort);
 

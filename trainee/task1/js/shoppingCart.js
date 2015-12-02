@@ -1,4 +1,4 @@
 'use strict'
-shop.ShopinngCart = function () {
-
+shop.ShoppingCart = function (dataSource) {
+  shop.ProductsBase.apply(this, arguments);
 }
