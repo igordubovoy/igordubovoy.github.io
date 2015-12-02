@@ -155,9 +155,6 @@ shop.ProductsBase.prototype.writeProducts = function () {
 
 shop.ProductsBase.prototype.writeSortingMenu = function () {
   var
-    self = this,
-    selectLimit = null,
-    selectSort = null,
     sortingMenu = document.createElement('section');
 
   sortingMenu.className = 'sorting';
@@ -165,13 +162,11 @@ shop.ProductsBase.prototype.writeSortingMenu = function () {
   this.writeBlockLimit(sortingMenu);
   this.writeBlockSort(sortingMenu);
   this.container.appendChild(sortingMenu);
-
-  selectLimit = document.querySelector('.limit')
-  selectSort = document.querySelector('.sort')
 };
 
 shop.ProductsBase.prototype.writeBlockLimit = function(blockMenu) {
   var
+    self = this,
     blockLimit = document.createElement('div'),
     spanLimit = document.createElement('span'),
     selectLimit = document.createElement('select'),
@@ -203,6 +198,7 @@ shop.ProductsBase.prototype.writeBlockLimit = function(blockMenu) {
 
 shop.ProductsBase.prototype.writeBlockSort = function(blockMenu) {
   var
+    self = this,
     blockSort = document.createElement('div'),
     spanSort = document.createElement('span'),
     selectSort = document.createElement('select'),
