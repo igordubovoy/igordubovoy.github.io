@@ -7,6 +7,7 @@ header {
 }
 
 .shopping_cart,
+.main_list,
 .wish_list {
   float: right;
   height: 50px;
@@ -17,14 +18,23 @@ header {
   cursor: pointer;
 }
 
-.shopping_cart {
-  margin-right: 30px;
-}
-
 .shopping_cart:hover,
+.main_list:hover,
 .wish_list:hover {
   border: solid 1px gray;
   border-radius: 3px;
+  color: gray;
+}
+
+.active {
+  float: right;
+  height: 50px;
+  width: 80px;
+  line-height: 50px;
+  text-align: center;
+  border: solid 1px red;
+  border-radius: 3px;
+  color: red;
 }
 
 .content,
@@ -35,9 +45,10 @@ header,
 }
 
 .content {
-  padding-top: 10px;
   text-align: center;
 }
 
-
+.container_for_products {
+  margin-top: 5px;
+}
 

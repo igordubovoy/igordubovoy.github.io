@@ -1,3 +1,7 @@
+.container_for_pager {
+  margin-top: 20px;
+}
+
 .pager_tab {
   height: 50px;
   width: 50px;

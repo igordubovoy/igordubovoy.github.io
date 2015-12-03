@@ -6,10 +6,10 @@ shop.orderType = {
   },
   name: {
     type: 'name',
-    text: 'По имени'
+    text: 'По імені'
   },
   price: {
     type: 'price',
-    text: 'По цене'
+    text: 'По ціні'
   }
 }

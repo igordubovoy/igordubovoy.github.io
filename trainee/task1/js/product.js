@@ -1,11 +1,13 @@
 'use strict'
-shop.Product = function (productData, productBase) {
-  this.productBase = productBase;
+shop.Product = function (productData, favorite, shoppingCart) {
   this.data = productData;
-  this.addToFavorites = function () {
 
-  }
-  this.addToShoppingCart = function () {
-
-  }
 }
+
+shop.Product.prototype.addToFavorites = function() {
+
+}
+shop.Product.prototype.addToShoppingCart = function() {
+
+}
+
