@@ -4,7 +4,7 @@ shop.Core = function() {
   this.products = new shop.Products(this.dataSource, this);
   this.favorite = new shop.Favorite(this.dataSource, this);
   this.shoppingCart = new shop.ShoppingCart(this.dataSource, this);
-
+  this.productsObject = null;
   this._state = shop.state.products;
 }
 
@@ -27,28 +27,23 @@ shop.Core.prototype.process = function() {
 }
 
 shop.Core.prototype.changeState = function (state) {
-  var productsObject = null;
   this._state = state;
 
   switch(state) {
     case shop.state.products:
-      productsObject = this.products;
+      this.productsObject = this.products;
       break;
     case shop.state.favorite:
-      productsObject = this.favorite;
+      this.productsObject = this.favorite;
       break;
     case shop.state.shoppingCart:
-      productsObject = this.shoppingCart;
+      this.productsObject = this.shoppingCart;
       break;
     default:
       console.error('State is not define', state);
   }
 
-  productsObject.filterProducts();
-  productsObject.sort(shop.orderType.id.type)
-  productsObject.limitProducts();
-  productsObject.calculatePageCount();
-  productsObject.write();
+  this.productsObject.process();
 }
 
 shop.Core.prototype.writeHeader = function() {
@@ -64,7 +59,9 @@ shop.Core.prototype.writeHeader = function() {
     button.innerHTML = title;
 
     if (state === self._state) {
-      button.className = 'active';
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
     }
 
     container.appendChild(button);

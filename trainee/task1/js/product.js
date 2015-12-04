@@ -1,30 +1,28 @@
 'use strict'
-shop.Product = function (productData, favorite, shoppingCart) {
+shop.Product = function (productData, core) {
+  this._core = core;
+  this._favorite = core.favorite;
+  this._shoppingCart = core.shoppingCart;
+
   this.data = productData;
-  this.favorite = favorite;
-  this.shoppingCart = shoppingCart;
-
 };
 
-shop.Product.prototype.toggleFavorites = function(button) {
-  if (this.favorite.existIdsInFavorites(this.data.id)) {
-    this.favorite.addToFavoritesIds(this.data.id);
-    button.className = 'product_favorite_btn_active';
+shop.Product.prototype.toggleFavorites = function() {
+  if (this._favorite.existIdsInFavorites(this.data.id)) {
+    this._favorite.addToFavoritesIds(this.data.id);
   } else {
-    this.favorite.removeFromFavoritesIds(this.data.id);
-    button.className = 'product_favorite_btn';
+    this._favorite.removeFromFavoritesIds(this.data.id);
   }
+
+  this._core.productsObject.process();
 };
 
-shop.Product.prototype.toggleShoppingCart = function(button) {
-  if (this.shoppingCart.existIdsInShoppingCart(this.data.id)) {
-    this.shoppingCart.addToShoppingCartIds(this.data.id);
-    button.className = 'product_cart_btn_active';
-    button.innerHTML = 'В кошику';
+shop.Product.prototype.toggleShoppingCart = function() {
+  if (this._shoppingCart.existIdsInShoppingCart(this.data.id)) {
+    this._shoppingCart.addToShoppingCartIds(this.data.id);
+    this._core.productsObject.process();
   } else {
-    this.shoppingCart.removeFromShoppingCartIds(this.data.id);
-    button.className = 'product_cart_btn';
-    button.innerHTML = 'В кошик';
+    this._core.changeState(shop.state.shoppingCart)
   }
 };
 
@@ -40,7 +38,6 @@ shop.Product.prototype.write = function (container) {
 
   priceElement.innerHTML = this.data.price + ' грн';
   nameElement.innerHTML = this.data.name;
-  cartBtn.innerHTML = 'В кошик';
 
   img.setAttribute('src', 'images/small/small_' + this.data.id + '.jpg');
 
@@ -50,12 +47,14 @@ shop.Product.prototype.write = function (container) {
   cartBtn.className = 'product_cart_btn';
   favoriteBtn.className = 'product_favorite_btn';
 
-  if (this.favorite.getFavoriteIds().indexOf(this.data.id) !== -1) {
-    favoriteBtn.className = 'product_favorite_btn_active';
+  if (this._favorite.getFavoriteIds().indexOf(this.data.id) !== -1) {
+    favoriteBtn.classList.add('active');
   }
-  if (this.shoppingCart.getShopingCartIds().indexOf(this.data.id) !== -1) {
-    cartBtn.className = 'product_cart_btn_active';
+  if (this._shoppingCart.getShopingCartIds().indexOf(this.data.id) !== -1) {
+    cartBtn.classList.add('active');
     cartBtn.innerHTML = 'В кошику';
+  } else {
+    cartBtn.innerHTML = 'В кошик';
   }
 
   productContainer.appendChild(img);
@@ -66,10 +65,10 @@ shop.Product.prototype.write = function (container) {
   container.appendChild(productContainer);
 
   cartBtn.onclick = function () {
-    self.toggleShoppingCart(this);
+    self.toggleShoppingCart();
 
   }
   favoriteBtn.onclick = function() {
-    self.toggleFavorites(this);
+    self.toggleFavorites();
   }
 };

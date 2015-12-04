@@ -16,15 +16,13 @@ header {
   cursor: pointer;
 }
 
-.shopping_cart:hover,
-.main_list:hover,
-.wish_list:hover {
+.product_list_btn:hover {
   border: solid 1px gray;
   border-radius: 3px;
   color: gray;
 }
 
-.active {
+.product_list_btn.active {
   float: right;
   height: 50px;
   width: 80px;

@@ -30,7 +30,7 @@ shop.ProductsBase.prototype.changeLimit = function (limit) {
 
 shop.ProductsBase.prototype.changeOrder = function (order) {
   this.setOrder(order);
-  this.sort(order);
+  this.sort();
   this.limitProducts();
   this.write();
 };
@@ -45,6 +45,14 @@ shop.ProductsBase.prototype.limitProducts = function () {
   this._limitedProducts = this._sortedProducts.slice(this._pageNo * this._limit - this._limit, this._limit * this._pageNo);
 };
 
+shop.ProductsBase.prototype.process = function() {
+  this.filterProducts();
+  this.sort()
+  this.limitProducts();
+  this.calculatePageCount();
+  this.write();
+};
+
 shop.ProductsBase.prototype.setLimit = function (limit) {
   this._limit = limit;
 };
@@ -57,10 +65,10 @@ shop.ProductsBase.prototype.setPageNo = function (pageNo) {
   this._pageNo = pageNo;
 };
 
-shop.ProductsBase.prototype.sort = function (sortType) {
+shop.ProductsBase.prototype.sort = function () {
   var sortFunc = null;
 
-  switch (sortType) {
+  switch (this._order) {
   case shop.orderType.id.type:
     sortFunc = function sortById(productA, productB) {
       return productA.data.id - productB.data.id;
@@ -79,7 +87,7 @@ shop.ProductsBase.prototype.sort = function (sortType) {
     };
     break;
   default:
-    console.error('error in orderType, ' + sortType + '- is not define');
+    console.error('error in orderType, ' + this._order + '- is not define');
   }
 
   this._sortedProducts = this._filteredProducts.sort(sortFunc);

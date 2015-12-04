@@ -31,18 +31,8 @@
 .product_cart_btn:hover {
   background: rgb(53, 167, 110);
 }
-.product_cart_btn_active {
-  margin-top: 10px;
-  padding-bottom: 5px;
-  height: 30px;
-  width: 120px;
-  border: none;
-  border-radius: 2px;
-  outline: none;
-  transition: 0.2s;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+
+.product_cart_btn.active {
   background: rgb(33,147,90);
   box-shadow: 0 3px rgb(33,147,90) inset;
 }
@@ -57,12 +47,6 @@
   cursor: pointer;
 }
 
-.product_favorite_btn_active {
-  margin: auto;
-  margin-top: 10px;
-  height: 20px;
-  width: 20px;
-  background-image: url(../images/icons/example_sprite_sheet.png);
+.product_favorite_btn.active {
   background-position: -145px -112px;
-  cursor: pointer;
 }
