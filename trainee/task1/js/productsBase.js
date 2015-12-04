@@ -129,43 +129,15 @@ shop.ProductsBase.prototype.writePager = function () {
 };
 
 shop.ProductsBase.prototype.writeProducts = function () {
-  var
-    containerForProducts = document.createElement('div'),
-    self = this;
+  var containerForProducts = document.createElement('div');
 
   containerForProducts.className = "container_for_products"
   this.container.className = 'content';
 
   this._limitedProducts.forEach(function (product) {
-    var
-      productContainer = document.createElement('div'),
-      img = document.createElement('img'),
-      nameElement = document.createElement('div'),
-      priceElement = document.createElement('div'),
-      cartBtn = document.createElement('button');
-
-    priceElement.innerHTML = product.data.price + ' грн';
-    nameElement.innerHTML = product.data.name;
-    cartBtn.innerHTML = 'В корзину';
-
-    img.setAttribute('src', 'images/small/small_' + product.data.id + '.jpg');
-
-    nameElement.className = 'product_name';
-    priceElement.className = 'product_price';
-    productContainer.className = 'product';
-    cartBtn.className = 'product_cart_btn';
-
-    productContainer.appendChild(img);
-    productContainer.appendChild(nameElement);
-    productContainer.appendChild(priceElement);
-    productContainer.appendChild(cartBtn);
-    containerForProducts.appendChild(productContainer);
-
-    cartBtn.onclick = function () {
-      self._shoppingCartIds.push(product.data.id);
-      console.log(self._shoppingCartIds)
-    }
+    product.write(containerForProducts);
   });
+
   this.container.appendChild(containerForProducts);
 };
 

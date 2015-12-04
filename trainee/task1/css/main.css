@@ -6,9 +6,7 @@ header {
   height: 52px;
 }
 
-.shopping_cart,
-.main_list,
-.wish_list {
+.product_list_btn {
   float: right;
   height: 50px;
   width: 80px;

@@ -55,51 +55,30 @@ shop.Core.prototype.writeHeader = function() {
   var
     self = this,
     header = document.createElement('header'),
-    shoppingCart = document.createElement('div'),
-    wishList = document.createElement('div'),
-    mainList = document.createElement('div'),
     container = document.getElementById('container');
 
-  switch(this._state) {
-    case shop.state.products:
-      mainList.className = "active";
-      shoppingCart.className = 'shopping_cart';
-      wishList.className = 'wish_list';
-      break;
+  function writeButton(state, title, container){
+    var button = document.createElement('div');
 
-    case shop.state.favorite:
-      wishList.className = 'active';
-      shoppingCart.className = 'shopping_cart';
-      mainList.className = 'main_list';
-      break;
+    button.className = 'product_list_btn';
+    button.innerHTML = title;
 
-    case shop.state.shoppingCart:
-      shoppingCart.className = 'active';
-      wishList.className = 'wish_list';
-      mainList.className = 'main_list';
-    break;
-  }
+    if (state === self._state) {
+      button.className = 'active';
+    }
 
-  shoppingCart.innerHTML = 'Кошик';
-  wishList.innerHTML = 'Вибране';
-  mainList.innerHTML = 'Головна';
+    container.appendChild(button);
 
-  header.appendChild(shoppingCart);
-  header.appendChild(wishList);
-  header.appendChild(mainList);
+    button.onclick = function() {
+      self.changeState(state);
+    }
+  };
+
+
+  writeButton(shop.state.shoppingCart, 'Кошик', header);
+  writeButton(shop.state.favorite, 'Вибране', header);
+  writeButton(shop.state.products, 'Головна', header);
+
   container.appendChild(header);
-
-  wishList.onclick = function() {
-    self.changeState(shop.state.favorite)
-  }
-
-  shoppingCart.onclick = function() {
-    self.changeState(shop.state.shoppingCart)
-  }
-
-  mainList.onclick = function() {
-    self.changeState(shop.state.products)
-  }
-
 };
 
