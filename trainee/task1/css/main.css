@@ -48,5 +48,6 @@ header,
 
 .container_for_products {
   margin-top: 5px;
+  min-height: 738px;
 }
 
