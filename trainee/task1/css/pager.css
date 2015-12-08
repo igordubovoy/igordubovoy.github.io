@@ -1,9 +1,9 @@
-.container_for_pager {
+.container_for_pager {/*-> pager_container*/
   margin-top: 20px;
 }
 
 .pager_tab {
-  height: 50px;
+  height: 50px;/*!!delete*/
   width: 50px;
   border-radius: 3px;
   border: 1px solid darkgreen;
@@ -15,7 +15,7 @@
   transition: 0.3s;
 }
 
-.active_pager_tab {
+.active_pager_tab {/*use .pager_tab .active*/
   background: rgb(33,147,90);
   cursor: default;
 }

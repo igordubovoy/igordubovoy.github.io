@@ -8,7 +8,7 @@ header {
 
 .product_list_btn {
   float: right;
-  height: 50px;
+  height: 50px;/*!!delete*/
   width: 80px;
   line-height: 50px;
   text-align: center;
@@ -18,11 +18,11 @@ header {
 }
 
 .product_list_btn:hover {
-  border-radius: 3px;
+  border-radius: 3px;/*!!delete*/
   color: gray;
 }
 
-.product_list_btn.active {
+.product_list_btn.active {/*!!delete duplication with product_list_btn*/
   float: right;
   height: 50px;
   width: 80px;
@@ -35,28 +35,28 @@ header {
 
 .content,
 header,
-.sorting {
+.sorting {/*set only for .content*/
   max-width: 960px;
   margin: auto;
 }
 
 .content {
-  text-align: center;
+  text-align: center;/*!!delete*/
 }
 
 .container_for_products {
-  min-height: 410px;
+  min-height: 410px;/*!!bad implementation*/
 }
 
 .count_shop_cart {
   position: absolute;
-  height: 20px;
+  height: 20px;/*!!delete*/
   width: 20px;
   background: rgb(64,199,129);
   line-height: 20px;
   border-radius: 50%;
   right: -6px;
-  top: 36px;
+  top: 36px;/*use bottom*/
   font-size: 12px;
   color: white;
 }
