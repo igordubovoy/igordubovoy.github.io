@@ -64,7 +64,28 @@ shop.Core.prototype.writeHeader = function() {
       button.classList.remove('active');
     }
 
+    if(state === shop.state.shoppingCart &&
+       self.shoppingCart.getIds().length > 0) {
+      writeCount();
+    }
+
     container.appendChild(button);
+
+    function writeCount(){
+      var
+        count = document.createElement('div'),
+        length = self.shoppingCart.getIds().length;
+
+      count.className = 'count_shop_cart'
+
+      if(length > 0 && length < 10) {
+        count.innerHTML = length;
+      } else {
+        count.innerHTML = "9+"
+      }
+
+      button.appendChild(count);
+    };
 
     button.onclick = function() {
       self.changeState(state);

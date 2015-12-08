@@ -6,12 +6,12 @@ shop.Favorite = function (dataSource, core) {
 
 shop.Favorite.prototype = Object.create(shop.ProductsBase.prototype);
 
-shop.Favorite.prototype.addToFavoritesIds = function(id) {
-    this._favoritesIds.push(id);
+shop.Favorite.prototype.addIds = function(product) {
+  this._favoritesIds.push(product.data.id);
 };
 
-shop.Favorite.prototype.existIdsInFavorites = function(id) {
-  return this._favoritesIds.indexOf(id) === -1;
+shop.Favorite.prototype.existIds = function(product) {
+  return this._favoritesIds.indexOf(product.data.id) === -1;
 };
 
 shop.Favorite.prototype.filterProducts = function() {
@@ -25,7 +25,7 @@ shop.Favorite.prototype.getFavoriteIds = function() {
   return this._favoritesIds;
 }
 
-shop.Favorite.prototype.removeFromFavoritesIds = function(id) {
-  var index = this._favoritesIds.indexOf(id);
+shop.Favorite.prototype.removeId = function(product) {
+  var index = this._favoritesIds.indexOf(product.data.id);
   this._favoritesIds.splice(index, 1);
 };

@@ -47,7 +47,7 @@ shop.ProductsBase.prototype.limitProducts = function () {
 
 shop.ProductsBase.prototype.process = function() {
   this.filterProducts();
-  this.sort()
+  this.sort();
   this.limitProducts();
   this.calculatePageCount();
   this.write();
@@ -98,6 +98,10 @@ shop.ProductsBase.prototype.write = function () {
   this._core.writeHeader();
   this.writeSortingMenu();
   this.writeProducts();
+  if(this === this._core.shoppingCart){
+    this._core.shoppingCart.calculateTotalResult();
+    this._core.shoppingCart.writeTotalBlock();
+  }
   this.writePager();
 };
 
@@ -114,32 +118,34 @@ shop.ProductsBase.prototype.writePager = function () {
     i = 1,
     self = this;
 
-  do {
-    var
-      tab = document.createElement('div'),
-      isActive = i === this._pageNo;
+  if (this._sortedProducts.length > 0) {
+    do {
+      var
+        tab = document.createElement('div'),
+        isActive = i === this._pageNo;
 
-    tab.innerHTML = i;
-    tab.className = 'pager_tab';
+      tab.innerHTML = i;
+      tab.className = 'pager_tab';
 
-    if (!isActive) {
-      setOnClick(tab, i);
-    } else {
-      tab.classList.add('active_pager_tab');
-    };
+      if (!isActive) {
+        setOnClick(tab, i);
+      } else {
+        tab.classList.add('active_pager_tab');
+      };
 
-    sectionForPager.appendChild(tab);
-    i++;
-  } while (i <= this._pageCount);
+      sectionForPager.appendChild(tab);
+      i++;
+    } while (i <= this._pageCount);
+  }
 
-  sectionForPager.className = 'container_for_pager'
+  sectionForPager.className = 'container_for_pager';
   this.container.appendChild(sectionForPager);
 };
 
 shop.ProductsBase.prototype.writeProducts = function () {
   var containerForProducts = document.createElement('div');
 
-  containerForProducts.className = "container_for_products"
+  containerForProducts.className = "container_for_products";
   this.container.className = 'content';
 
   this._limitedProducts.forEach(function (product) {

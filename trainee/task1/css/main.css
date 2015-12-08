@@ -14,10 +14,10 @@ header {
   text-align: center;
   border: solid 1px transparent;
   cursor: pointer;
+  position: relative;
 }
 
 .product_list_btn:hover {
-  border: solid 1px gray;
   border-radius: 3px;
   color: gray;
 }
@@ -45,7 +45,19 @@ header,
 }
 
 .container_for_products {
-  margin-top: 5px;
-  min-height: 738px;
+  min-height: 410px;
+}
+
+.count_shop_cart {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: rgb(64,199,129);
+  line-height: 20px;
+  border-radius: 50%;
+  right: -6px;
+  top: 36px;
+  font-size: 12px;
+  color: white;
 }
 

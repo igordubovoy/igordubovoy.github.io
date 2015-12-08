@@ -40,13 +40,78 @@
 .product_favorite_btn {
   margin: auto;
   margin-top: 10px;
-  height: 20px;
-  width: 20px;
-  background-image: url(../images/icons/example_sprite_sheet.png);
-  background-position: -85px -112px;
+  height: 26px;
+  width: 26px;
+  background-image: url(../images/icons/icon.png);
+  background-position: -257px -93px;
   cursor: pointer;
 }
 
 .product_favorite_btn.active {
-  background-position: -145px -112px;
+  background-position: -303px -93px;
 }
+
+.product_shop_cart {
+  margin-top: 10px;
+  height: 200px;
+  position: relative;
+}
+
+.img_shop_cart {
+  float: left;
+  margin-right: 20px;
+}
+
+.name_shop_cart {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.descr_shop_cart {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 0.9em;
+  color: gray;
+}
+
+.input_shop_cart {
+  width: 30px;
+  margin: 30px 5px 0 5px;
+  padding-left: 12px;
+  text-align: center;
+}
+.price_shop_cart {
+  display: inline-block;
+  color: green;
+}
+
+.close_shop_cart {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: -5px;
+  top: -2px;
+  cursor: pointer;
+  background-image: url(../images/icons/close.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.close_shop_cart:hover {
+  transform: rotate(90deg);
+}
+
+.total {
+  height: 50px;
+  border-top: 1px solid;
+  margin-top: 20px;
+}
+
+.total_content {
+  margin-top: 10px;
+  color: green;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
