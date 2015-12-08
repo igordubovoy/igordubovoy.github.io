@@ -4,7 +4,7 @@
 }
 
 .sorting_limit {
-  margin: 0 30px 0 5px;
+  margin: 0 30px 0 5px;/*5px set in sorting_sort*/
 }
 
 .sorting_limit_label,

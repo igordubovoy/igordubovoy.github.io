@@ -1,7 +1,7 @@
 .product {
   display: inline-block;
   width: 231px;
-  margin-top: 15px;
+  margin-top: 15px;/*add common margin*/
 }
 
 .product_name {
@@ -13,15 +13,15 @@
   padding-top: 5px;
 }
 
-.product_cart_btn {
+.product_cart_btn {/*alphabetical order*/
   margin-top: 10px;
-  padding-bottom: 5px;
-  height: 30px;
+  padding-bottom: 5px;/*?*/
+  height: 30px;/*use padding*/
   width: 120px;
   border: none;
   border-radius: 2px;
   outline: none;
-  background: rgb(64,199,129);
+  background: rgb(64,199,129);/*convert to #FFFFFF format*/
   box-shadow: 0 -3px rgb(53,167,110) inset;
   transition: 0.2s;
   color: white;
@@ -31,7 +31,7 @@
 .product_cart_btn:hover {
   background: rgb(53, 167, 110);
 }
-
+/*delete empty lines*/
 .product_cart_btn.active {
   background: rgb(33,147,90);
   box-shadow: 0 3px rgb(33,147,90) inset;
@@ -50,41 +50,41 @@
 .product_favorite_btn.active {
   background-position: -303px -93px;
 }
-
+/*split files*/
 .product_shop_cart {
   margin-top: 10px;
-  height: 200px;
-  position: relative;
+  height: 200px;/*!!delete*/
+  position: relative;/*?*/
 }
 
 .img_shop_cart {
-  float: left;
+  float: left;/*?*/
   margin-right: 20px;
 }
 
 .name_shop_cart {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.2em;/*em?*/
 }
 .descr_shop_cart {
   margin-top: 20px;
-  text-align: left;
+  text-align: left;/*!!delete*/
   font-size: 0.9em;
   color: gray;
 }
 
-.input_shop_cart {
+.input_shop_cart {/*-> count*/
   width: 30px;
-  margin: 30px 5px 0 5px;
-  padding-left: 12px;
+  margin: 30px 5px 0 5px;/*?*/
+  padding-left: 12px;/*?*/
   text-align: center;
 }
-.price_shop_cart {
+.price_shop_cart {/*div -> span*/
   display: inline-block;
   color: green;
 }
 
-.close_shop_cart {
+.close_shop_cart {/*-> remove*/
   height: 35px;
   width: 35px;
   position: absolute;
@@ -93,7 +93,7 @@
   cursor: pointer;
   background-image: url(../images/icons/close.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain;/*?*/
   background-position: center;
   transition: 0.5s;
 }
@@ -103,15 +103,15 @@
 }
 
 .total {
-  height: 50px;
+  height: 50px;/*!!delete*/
   border-top: 1px solid;
   margin-top: 20px;
 }
 
-.total_content {
+.total_content {/*remove?*/
   margin-top: 10px;
   color: green;
   font-size: 1.1em;
   font-weight: bold;
 }
-
+/*remove last lines*/
