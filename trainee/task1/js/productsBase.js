@@ -98,10 +98,6 @@ shop.ProductsBase.prototype.write = function () {
   this._core.writeHeader();
   this.writeSortingMenu();
   this.writeProducts();
-  if(this === this._core.shoppingCart){
-    this._core.shoppingCart.calculateTotalResult();
-    this._core.shoppingCart.writeTotalBlock();
-  }
   this.writePager();
 };
 
@@ -130,7 +126,7 @@ shop.ProductsBase.prototype.writePager = function () {
       if (!isActive) {
         setOnClick(tab, i);
       } else {
-        tab.classList.add('active_pager_tab');
+        tab.classList.add('active');
       };
 
       sectionForPager.appendChild(tab);
@@ -138,7 +134,7 @@ shop.ProductsBase.prototype.writePager = function () {
     } while (i <= this._pageCount);
   }
 
-  sectionForPager.className = 'container_for_pager';
+  sectionForPager.className = 'pager_container';
   this.container.appendChild(sectionForPager);
 };
 

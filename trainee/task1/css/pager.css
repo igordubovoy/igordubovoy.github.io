@@ -1,25 +1,22 @@
-.container_for_pager {/*-> pager_container*/
+.pager_container {/*-> pager_container*/
   margin-top: 20px;
-}
-
-.pager_tab {
-  height: 50px;/*!!delete*/
-  width: 50px;
-  border-radius: 3px;
-  border: 1px solid darkgreen;
-  display: inline-block;
   text-align: center;
-  margin: 0 5px;
-  line-height: 50px;
-  cursor: pointer;
-  transition: 0.3s;
 }
-
-.active_pager_tab {/*use .pager_tab .active*/
-  background: rgb(33,147,90);
+.pager_tab {
+  border-radius: 3px;
+  border: 1px solid #144700;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  text-align: center;
+  transition: 0.3s;
+  width: 50px;
+}
+.pager_tab.active {/*use .pager_tab .active*/
+  background: #21935a;
   cursor: default;
 }
-
 .pager_tab:hover {
-  background: rgb(33,147,90)
+  background: #21935a;
 }

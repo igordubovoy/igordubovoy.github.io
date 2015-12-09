@@ -1,9 +1,8 @@
 .product {
   display: inline-block;
   width: 231px;
-  margin-top: 15px;/*add common margin*/
+  margin: 15px 0 0 0;
 }
-
 .product_name {
   height: 46px;
   padding-top: 5px;
@@ -12,106 +11,36 @@
 .product_price {
   padding-top: 5px;
 }
-
-.product_cart_btn {/*alphabetical order*/
-  margin-top: 10px;
-  padding-bottom: 5px;/*?*/
-  height: 30px;/*use padding*/
-  width: 120px;
+.product_cart_btn {
+  background: #40c781;
   border: none;
   border-radius: 2px;
-  outline: none;
-  background: rgb(64,199,129);/*convert to #FFFFFF format*/
-  box-shadow: 0 -3px rgb(53,167,110) inset;
-  transition: 0.2s;
-  color: white;
-  font-weight: bold;
+  box-shadow: 0 -3px #35a86e inset;
+  color: #fff;
   cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  outline: none;
+  padding: 7px 0px 10px 0px;
+  transition: 0.2s;
+  width: 120px;
 }
 .product_cart_btn:hover {
-  background: rgb(53, 167, 110);
+  background: #35a76e;
 }
-/*delete empty lines*/
 .product_cart_btn.active {
-  background: rgb(33,147,90);
-  box-shadow: 0 3px rgb(33,147,90) inset;
+  background: #21935a;
+  box-shadow: 0 3px #21935a inset;
 }
-
 .product_favorite_btn {
-  margin: auto;
-  margin-top: 10px;
-  height: 26px;
-  width: 26px;
   background-image: url(../images/icons/icon.png);
   background-position: -257px -93px;
   cursor: pointer;
+  height: 26px;
+  margin: auto;
+  margin-top: 10px;
+  width: 26px;
 }
-
 .product_favorite_btn.active {
   background-position: -303px -93px;
 }
-/*split files*/
-.product_shop_cart {
-  margin-top: 10px;
-  height: 200px;/*!!delete*/
-  position: relative;/*?*/
-}
-
-.img_shop_cart {
-  float: left;/*?*/
-  margin-right: 20px;
-}
-
-.name_shop_cart {
-  font-weight: bold;
-  font-size: 1.2em;/*em?*/
-}
-.descr_shop_cart {
-  margin-top: 20px;
-  text-align: left;/*!!delete*/
-  font-size: 0.9em;
-  color: gray;
-}
-
-.input_shop_cart {/*-> count*/
-  width: 30px;
-  margin: 30px 5px 0 5px;/*?*/
-  padding-left: 12px;/*?*/
-  text-align: center;
-}
-.price_shop_cart {/*div -> span*/
-  display: inline-block;
-  color: green;
-}
-
-.close_shop_cart {/*-> remove*/
-  height: 35px;
-  width: 35px;
-  position: absolute;
-  right: -5px;
-  top: -2px;
-  cursor: pointer;
-  background-image: url(../images/icons/close.png);
-  background-repeat: no-repeat;
-  background-size: contain;/*?*/
-  background-position: center;
-  transition: 0.5s;
-}
-
-.close_shop_cart:hover {
-  transform: rotate(90deg);
-}
-
-.total {
-  height: 50px;/*!!delete*/
-  border-top: 1px solid;
-  margin-top: 20px;
-}
-
-.total_content {/*remove?*/
-  margin-top: 10px;
-  color: green;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-/*remove last lines*/

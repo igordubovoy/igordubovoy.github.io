@@ -1,63 +1,42 @@
 body {
   font-family: cursive
 }
-
 header {
   height: 52px;
 }
-
 .product_list_btn {
-  float: right;
-  height: 50px;/*!!delete*/
-  width: 80px;
-  line-height: 50px;
-  text-align: center;
   border: solid 1px transparent;
   cursor: pointer;
-  position: relative;
-}
-
-.product_list_btn:hover {
-  border-radius: 3px;/*!!delete*/
-  color: gray;
-}
-
-.product_list_btn.active {/*!!delete duplication with product_list_btn*/
   float: right;
-  height: 50px;
-  width: 80px;
   line-height: 50px;
+  position: relative;
   text-align: center;
-  border: solid 1px red;
-  border-radius: 3px;
-  color: red;
+  width: 80px;
 }
-
-.content,
-header,
-.sorting {/*set only for .content*/
+.product_list_btn:hover {
+  color: #6e6e6e;
+}
+.product_list_btn.active {/*!!delete duplication with product_list_btn*/
+  border: solid 1px;
+  border-radius: 3px;
+  color: #f00;
+}
+.content {/*set only for .content*/
   max-width: 960px;
   margin: auto;
 }
-
-.content {
-  text-align: center;/*!!delete*/
-}
-
 .container_for_products {
   min-height: 410px;/*!!bad implementation*/
+  text-align: center
 }
-
 .count_shop_cart {
-  position: absolute;
-  height: 20px;/*!!delete*/
-  width: 20px;
-  background: rgb(64,199,129);
-  line-height: 20px;
+  background: #40c781;
   border-radius: 50%;
-  right: -6px;
-  top: 36px;/*use bottom*/
+  bottom: -6px;/*use bottom*/
+  color: #fff;
   font-size: 12px;
-  color: white;
+  line-height: 20px;
+  position: absolute;
+  right: -6px;
+  width: 20px;
 }
-

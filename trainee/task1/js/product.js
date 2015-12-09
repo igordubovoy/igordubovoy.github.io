@@ -46,27 +46,33 @@ shop.Product.prototype.write = function (container) {
 
   if(this._core._state === shop.state.products ||
      this._core._state === shop.state.favorite) {
-
-  var
-    cartBtn = document.createElement('button'),
-    favoriteBtn = document.createElement('div');
-
-
-  nameElement.className = 'product_name';
-  priceElement.className = 'product_price';
-  productContainer.className = 'product';
-  cartBtn.className = 'product_cart_btn';
-  favoriteBtn.className = 'product_favorite_btn';
-
-  if (!this._favorite.existIds(this)) {
-    favoriteBtn.classList.add('active');
+    writeForFavAndProd();
   }
-  if (this._shoppingCart.existIds(this)) {
-    cartBtn.innerHTML = 'В кошик';
-  } else {
-    cartBtn.classList.add('active');
-    cartBtn.innerHTML = 'В кошику';
+  if(this._core._state === shop.state.shoppingCart){
+    writeForShopCart()
   }
+
+  function writeForFavAndProd() {
+    var
+      cartBtn = document.createElement('button'),
+      favoriteBtn = document.createElement('div');
+
+    nameElement.className = 'product_name';
+    priceElement.className = 'product_price';
+    productContainer.className = 'product';
+    cartBtn.className = 'product_cart_btn';
+    favoriteBtn.className = 'product_favorite_btn';
+
+    if (!self._favorite.existIds(self)) {
+      favoriteBtn.classList.add('active');
+    }
+    if (self._shoppingCart.existIds(self)) {
+      cartBtn.innerHTML = 'В кошик';
+    } else {
+      cartBtn.classList.add('active');
+      cartBtn.innerHTML = 'В кошику';
+    }
+
     productContainer.appendChild(img);
     productContainer.appendChild(favoriteBtn);
     productContainer.appendChild(nameElement);
@@ -75,24 +81,24 @@ shop.Product.prototype.write = function (container) {
 
     cartBtn.onclick = function () {
       self.toggleShoppingCart();
+    };
 
-    }
     favoriteBtn.onclick = function() {
       self.toggleFavorites();
-    }
+    };
+  };
 
-  }
-  if(this._core._state === shop.state.shoppingCart){
+  function writeForShopCart() {
     var
       result = document.createElement('span'),
-      close = document.createElement('div');
+      removeProduct = document.createElement('div');
 
-    self.changeTotalPrice()
+    self.changeTotalPrice();
 
-    result.innerHTML = '= ' + this.data.price + ' грн';
-    quantityInput.value = this._count;
-    descrElement.innerHTML = this.data.description;
-    priceElement.innerHTML = 'Ціна: ' + this.data.price + ' x';
+    result.innerHTML = '= ' + self.data.price + ' грн';
+    quantityInput.value = self._count;
+    descrElement.innerHTML = self.data.description;
+    priceElement.innerHTML = 'Ціна: ' + self.data.price + ' x';
     result.innerHTML = '= ' + self._totalPrice + ' грн';
     quantityInput.setAttribute('type', 'number');
     quantityInput.setAttribute('min', '1');
@@ -101,9 +107,9 @@ shop.Product.prototype.write = function (container) {
     productContainer.className = 'product_shop_cart';
     nameElement.className = 'name_shop_cart';
     descrElement.className = 'descr_shop_cart';
-    quantityInput.className = 'input_shop_cart';
-    priceElement.className = 'price_shop_cart';
-    close.className = 'close_shop_cart';
+    quantityInput.className = 'count';
+    priceElement.className = 'price';
+    removeProduct.className = 'remove';
 
     productContainer.appendChild(img);
     productContainer.appendChild(nameElement);
@@ -111,7 +117,7 @@ shop.Product.prototype.write = function (container) {
     productContainer.appendChild(priceElement);
     productContainer.appendChild(quantityInput);
     productContainer.appendChild(result);
-    productContainer.appendChild(close);
+    productContainer.appendChild(removeProduct);
 
     quantityInput.oninput = function() {
       self.changeCount(this.value);
@@ -119,12 +125,12 @@ shop.Product.prototype.write = function (container) {
       self._core.shoppingCart.process();
     }
 
-    close.onclick = function () {
+    removeProduct.onclick = function () {
       self._shoppingCart.removeId(self);
-      self._core.productsObject.process()
+      self._core.productsObject.process();
     }
+  };
 
-  }
   container.appendChild(productContainer);
 };
 

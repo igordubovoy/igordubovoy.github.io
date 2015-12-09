@@ -4,6 +4,7 @@ shop.ShoppingCart = function (dataSource, core) {
 
   this._shoppingCartIds = []
   this._totalResult = 0;
+  this.container = document.getElementById('container');
 };
 
 shop.ShoppingCart.prototype = Object.create(shop.ProductsBase.prototype);
@@ -35,7 +36,6 @@ shop.ShoppingCart.prototype.removeId = function(product) {
 shop.ShoppingCart.prototype.writeTotalBlock = function() {
   var
     totalBlock = document.createElement('div'),
-    container = document.getElementById('container'),
     total = document.createElement('div');
 
     totalBlock.className = 'total';
@@ -44,14 +44,27 @@ shop.ShoppingCart.prototype.writeTotalBlock = function() {
     total.innerHTML = 'Загальна сума до сплати: ' + this._totalResult + ' грн';
 
     totalBlock.appendChild(total);
-    container.appendChild(totalBlock);
+    this.container.appendChild(totalBlock);
 };
 
 shop.ShoppingCart.prototype.calculateTotalResult = function() {
-  this._totalResult = 0;
   var self = this;
+  this._totalResult = 0;
+
   this._filteredProducts.forEach(function(product){
     self._totalResult += product._totalPrice;
   });
-}
+};
+
+shop.ShoppingCart.prototype.write = function() {
+  this.container.innerHTML = '';
+  this._core.writeHeader();
+  this.writeSortingMenu();
+  this.writeProducts();
+  if(this === this._core.shoppingCart){
+    this._core.shoppingCart.calculateTotalResult();
+    this._core.shoppingCart.writeTotalBlock();
+  }
+  this.writePager();
+};
 

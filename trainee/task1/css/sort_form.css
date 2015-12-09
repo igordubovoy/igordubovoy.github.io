@@ -2,11 +2,12 @@
 .sorting_limit {
   float: right;
 }
-
-.sorting_limit {
-  margin: 0 30px 0 5px;/*5px set in sorting_sort*/
+.sorting_sort {
+  margin-right: 5px;
 }
-
+.sorting_limit {
+  margin-right: 30px;/*5px set in sorting_sort*/
+}
 .sorting_limit_label,
 .sorting_sort_label {
   display: block;
@@ -14,11 +15,9 @@
   font-size: 12px;
   text-align: left;
 }
-
 .sorting_limit_select {
   width: 100%;
 }
-
 .sorting {
   height: 43px;
 }
