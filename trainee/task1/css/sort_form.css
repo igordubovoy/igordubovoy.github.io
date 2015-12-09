@@ -11,7 +11,7 @@
 .sorting_limit_label,
 .sorting_sort_label {
   display: block;
-  color: gray;
+  color: #6e6e6e;
   font-size: 12px;
   text-align: left;
 }

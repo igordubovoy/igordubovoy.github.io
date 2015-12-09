@@ -16,6 +16,7 @@
 .pager_tab.active {/*use .pager_tab .active*/
   background: #21935a;
   cursor: default;
+  color: #fff;
 }
 .pager_tab:hover {
   background: #21935a;

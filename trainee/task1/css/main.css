@@ -17,9 +17,10 @@ header {
   color: #6e6e6e;
 }
 .product_list_btn.active {/*!!delete duplication with product_list_btn*/
-  border: solid 1px;
+  background: #40c781;
+  border: solid 1px #144700;
   border-radius: 3px;
-  color: #f00;
+  color: #fff;
 }
 .content {/*set only for .content*/
   max-width: 960px;
@@ -32,6 +33,7 @@ header {
 .count_shop_cart {
   background: #40c781;
   border-radius: 50%;
+  border: 1px solid #144700;
   bottom: -6px;/*use bottom*/
   color: #fff;
   font-size: 12px;
