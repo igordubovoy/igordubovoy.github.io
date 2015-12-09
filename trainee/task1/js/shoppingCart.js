@@ -60,9 +60,9 @@ shop.ShoppingCart.prototype.write = function() {
   this.container.innerHTML = '';
   this._core.writeHeader();
   this.writeSortingMenu();
-  this.calculateTotalResult();
   if(this._shoppingCartIds.length){
     this.writeProducts();
+    this.calculateTotalResult();
     this.writeTotalBlock();
   } else {
     this.writeEmpty(this.container)
