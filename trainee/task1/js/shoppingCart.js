@@ -60,10 +60,12 @@ shop.ShoppingCart.prototype.write = function() {
   this.container.innerHTML = '';
   this._core.writeHeader();
   this.writeSortingMenu();
-  this.writeProducts();
-  if(this === this._core.shoppingCart){
-    this._core.shoppingCart.calculateTotalResult();
-    this._core.shoppingCart.writeTotalBlock();
+  this.calculateTotalResult();
+  if(this._shoppingCartIds.length){
+    this.writeProducts();
+    this.writeTotalBlock();
+  } else {
+    this.writeEmpty(this.container)
   }
   this.writePager();
 };

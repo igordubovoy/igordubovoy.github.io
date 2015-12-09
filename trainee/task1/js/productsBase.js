@@ -232,3 +232,10 @@ shop.ProductsBase.prototype.writeBlockSort = function(blockMenu) {
     self.changeOrder(this.value);
   };
 };
+
+shop.ProductsBase.prototype.writeEmpty = function(container) {
+  var empty = document.createElement('div');
+  empty.className = 'empty';
+  empty.innerHTML = 'Пусто';
+  container.appendChild(empty)
+}

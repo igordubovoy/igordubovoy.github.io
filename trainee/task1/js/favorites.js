@@ -29,3 +29,15 @@ shop.Favorite.prototype.removeId = function(product) {
   var index = this._favoritesIds.indexOf(product.data.id);
   this._favoritesIds.splice(index, 1);
 };
+
+shop.Favorite.prototype.write = function() {
+  this.container.innerHTML = '';
+  this._core.writeHeader();
+  this.writeSortingMenu();
+  if(this._favoritesIds.length){
+    this.writeProducts();
+  } else {
+    this.writeEmpty(this.container)
+  }
+  this.writePager();
+};

@@ -44,3 +44,9 @@
 .product_favorite_btn.active {
   background-position: -303px -93px;
 }
+.empty {
+  margin-top: 150px;
+  color: #6e6e6e;
+  font-size: 50px;
+  text-align: center
+}

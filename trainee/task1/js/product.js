@@ -136,8 +136,8 @@ shop.Product.prototype.write = function (container) {
 
 shop.Product.prototype.changeCount = function(num) {
   this._count = num;
-}
+};
 
 shop.Product.prototype.changeTotalPrice = function() {
   this._totalPrice = this._count * this.data.price;
-}
+};
