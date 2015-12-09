@@ -12,6 +12,7 @@ shop.Core.prototype.process = function() {
   this.dataSource.initProducts();
   this.changeState(this._state);
 
+/*delete*/
 //  var arr = [];
 //  for(var prop in this.products) {
 //    arr.push(prop)
@@ -26,7 +27,7 @@ shop.Core.prototype.process = function() {
 
 }
 
-shop.Core.prototype.changeState = function (state) {
+shop.Core.prototype.changeState = function(state) {
   this._state = state;
 
   switch(state) {
@@ -52,7 +53,7 @@ shop.Core.prototype.writeHeader = function() {
     header = document.createElement('header'),
     container = document.getElementById('container');
 
-  function writeButton(state, title, container){
+  function writeButton(state, title, container) {
     var button = document.createElement('div');
 
     button.className = 'product_list_btn';
@@ -99,4 +100,3 @@ shop.Core.prototype.writeHeader = function() {
 
   container.appendChild(header);
 };
-
