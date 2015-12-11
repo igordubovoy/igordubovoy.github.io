@@ -121,6 +121,7 @@ shop.ProductsBase.prototype.writePager = function () {
   };
 
   var
+    self = this,
     sectionForPager = document.createElement('div'),
     i = 1;
 
