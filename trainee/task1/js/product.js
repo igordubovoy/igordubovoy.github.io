@@ -4,11 +4,11 @@ shop.Product = function (productData, core) {
   this._favorite = core.favorite;
   this._shoppingCart = core.shoppingCart;
 
-  this._count = 1;
-  this._totalPrice = 0;
-
   this.data = productData;
-
+  
+  this._count = 1;
+  this._totalPrice = this.data.price;
+  
   this.container = document.getElementById('container');
 
 };
@@ -151,20 +151,28 @@ shop.Product.prototype.writeToContainer = function (container) {
       self.changeCount(this.value);
       self.changeTotalPrice();
       self._core.shoppingCart.process();
-    }
+    };
 
     removeProduct.onclick = function () {
       self._shoppingCart.removeId(self);
       self._core.productsObject.process();
-    }
+    };
+    
+    productContainer.onclick = function() {
+      self._core.changeStateToProduct(self);
+    };
   };
 
   function writeForProduct() {
     var
+      rightBackBlock = document.createElement('div'),
+      leftBackBlock = document.createElement('div'),
       photoSection = document.createElement('div'),
       infoSection = document.createElement('div');
-    productContainer.className = 'product_info';
-    infoSection.className = 'info_section'
+    rightBackBlock.className = 'right_back';
+    leftBackBlock.className = 'left_back';
+    infoSection.className = 'info_section';
+    photoSection.className = 'photo_section';
 
     img.setAttribute('src', 'images/big/big_' + self.data.id + '.jpg');
 
@@ -177,16 +185,17 @@ shop.Product.prototype.writeToContainer = function (container) {
       cartBtn.classList.add('active');
       cartBtn.innerHTML = 'В кошику';
     }
-
+    
     photoSection.appendChild(img);
-    productContainer.appendChild(photoSection);
     infoSection.appendChild(favoriteBtn);
     infoSection.appendChild(nameElement);
     infoSection.appendChild(descrElement);
     infoSection.appendChild(priceElement);
     infoSection.appendChild(cartBtn);
-    productContainer.appendChild(infoSection)
-    productContainer.appendChild(removeProduct);
+    infoSection.appendChild(removeProduct);
+  
+    productContainer.appendChild(photoSection);
+    productContainer.appendChild(infoSection);
 
     cartBtn.onclick = function (event) {
       event.stopPropagation();
@@ -204,8 +213,6 @@ shop.Product.prototype.writeToContainer = function (container) {
       self._core.changeState(self._core._stateBeforeChange)
     }
   };
-
-
   container.appendChild(productContainer);
 };
 

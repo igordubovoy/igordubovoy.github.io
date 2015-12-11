@@ -184,6 +184,7 @@ shop.ProductsBase.prototype.writeBlockLimit = function(blockMenu) {
 
   for (var i = 0; i < shop.limitValues.length; i++) {
     var
+      self = this,
       optionElem = document.createElement('option'),
       limitValue = shop.limitValues[i];
 
@@ -208,6 +209,7 @@ shop.ProductsBase.prototype.writeBlockLimit = function(blockMenu) {
 
 shop.ProductsBase.prototype.writeBlockSort = function(blockMenu) {
   var
+    self = this,
     blockSort = document.createElement('div'),
     labelSort = document.createElement('span'),
     selectSort = document.createElement('select');
