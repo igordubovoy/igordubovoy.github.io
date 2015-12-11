@@ -23,7 +23,7 @@ shop.ShoppingCart.prototype.existIds = function(product) {
 shop.ShoppingCart.prototype.filterProducts = function() {
   var self = this;
   this._filteredProducts = this._dataSource.getProducts().filter(function(product) {
-    return self._shoppingCartIds.indexOf(product.data.id) !== -1;
+    return self.existIds(product);
   });
 };
 
