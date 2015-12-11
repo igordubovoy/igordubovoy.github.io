@@ -1,13 +1,13 @@
-'use strict'
+'use strict';
 shop.ShoppingCart = function (dataSource, core) {
   shop.ProductsBase.apply(this, arguments);
 
-  this._shoppingCartIds = []
+  this._shoppingCartIds = [];
   this._totalResult = 0;
   this.container = document.getElementById('container');
 };
 
-shop.ShoppingCart.prototype = Object.create(shop.ProductsBase.prototype);
+shop.ShoppingCart.prototype = Object.create(shop.ProductsBase.prototype)
 
 shop.ShoppingCart.prototype.addIds = function(product) {
   this._shoppingCartIds.push(product.data.id);
@@ -39,7 +39,7 @@ shop.ShoppingCart.prototype.writeTotalBlock = function() {
     total = document.createElement('div');
 
     totalBlock.className = 'total';
-    total.className = 'total_content'
+    total.className = 'total_content';
 
     total.innerHTML = 'Загальна сума до сплати: ' + this._totalResult + ' грн';
 
@@ -56,17 +56,12 @@ shop.ShoppingCart.prototype.calculateTotalResult = function() {
   });
 };
 
-shop.ShoppingCart.prototype.write = function() {
-  this.container.innerHTML = '';
-  this._core.writeHeader();
-  this.writeSortingMenu();
-  if(this._shoppingCartIds.length){
-    this.writeProducts();
-    this.calculateTotalResult();
-    this.writeTotalBlock();
-  } else {
-    this.writeEmpty(this.container)
-  }
-  this.writePager();
+shop.ShoppingCart.prototype.writeAfterProducts = function() {
+  this.writeTotalBlock();
+};
+
+shop.ShoppingCart.prototype.calculate = function() {
+  shop.ProductsBase.prototype.calculate.call(this)
+  this.calculateTotalResult();
 };
 

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 shop.Product = function (productData, core) {
   this._core = core;
   this._favorite = core.favorite;
@@ -9,6 +9,8 @@ shop.Product = function (productData, core) {
 
   this.data = productData;
 
+  this.container = document.getElementById('container');
+
 };
 
 shop.Product.prototype.toggleFavorites = function() {
@@ -18,19 +20,29 @@ shop.Product.prototype.toggleFavorites = function() {
     this._favorite.removeId(this);
   }
 
-  this._core.productsObject.process();
+  if(this._core._state != shop.state.product){
+    this._core.productsObject.process();
+  } else {
+    this.write(this.container)
+  }
 };
 
 shop.Product.prototype.toggleShoppingCart = function() {
   if (this._shoppingCart.existIds(this)) {
     this._shoppingCart.addIds(this);
-    this._core.productsObject.process();
+
+    if(this._core._state != shop.state.product){
+      this._core.productsObject.process();
+    }
+    else {
+      this.write(this.container)
+    }
   } else {
     this._core.changeState(shop.state.shoppingCart);
   }
 };
 
-shop.Product.prototype.write = function (container) {
+shop.Product.prototype.writeToContainer = function (container) {
   var
     self = this,
     productContainer = document.createElement('div'),
@@ -38,30 +50,41 @@ shop.Product.prototype.write = function (container) {
     nameElement = document.createElement('div'),
     descrElement = document.createElement('div'),
     quantityInput = document.createElement('input'),
-    priceElement = document.createElement('div');
+    priceElement = document.createElement('div'),
+    cartBtn = document.createElement('button'),
+    favoriteBtn = document.createElement('div'),
+    removeProduct = document.createElement('div');
+
+
+  cartBtn.className = 'product_cart_btn';
+  favoriteBtn.className = 'product_favorite_btn';
+  removeProduct.className = 'remove';
+
 
   priceElement.innerHTML = this.data.price + ' грн';
   nameElement.innerHTML = this.data.name;
-  img.setAttribute('src', 'images/small/small_' + this.data.id + '.jpg');
+  descrElement.innerHTML = this.data.description;
 
-  if(this._core._state === shop.state.products ||
-     this._core._state === shop.state.favorite) {
-    writeForFavAndProd();
-  }
-  if(this._core._state === shop.state.shoppingCart){
-    writeForShopCart()
+  switch(self._core._state) {
+    case shop.state.shoppingCart:
+      writeForShopCart();
+    break;
+    case shop.state.favorite:
+    case shop.state.products:
+      writeForFavAndProd();
+    break;
+    case shop.state.product:
+      writeForProduct();
+    break;
   }
 
   function writeForFavAndProd() {
-    var
-      cartBtn = document.createElement('button'),
-      favoriteBtn = document.createElement('div');
 
     nameElement.className = 'product_name';
     priceElement.className = 'product_price';
     productContainer.className = 'product';
-    cartBtn.className = 'product_cart_btn';
-    favoriteBtn.className = 'product_favorite_btn';
+
+    img.setAttribute('src', 'images/small/small_' + self.data.id + '.jpg');
 
     if (!self._favorite.existIds(self)) {
       favoriteBtn.classList.add('active');
@@ -79,19 +102,24 @@ shop.Product.prototype.write = function (container) {
     productContainer.appendChild(priceElement);
     productContainer.appendChild(cartBtn);
 
-    cartBtn.onclick = function () {
+    cartBtn.onclick = function (event) {
+      event.stopPropagation();
+      self.changeTotalPrice();
       self.toggleShoppingCart();
     };
 
-    favoriteBtn.onclick = function() {
+    favoriteBtn.onclick = function(event) {
+      event.stopPropagation();
       self.toggleFavorites();
+    };
+
+    productContainer.onclick = function() {
+      self._core.changeStateToProduct(self);
     };
   };
 
   function writeForShopCart() {
-    var
-      result = document.createElement('span'),
-      removeProduct = document.createElement('div');
+    var result = document.createElement('span');
 
     self.changeTotalPrice();
 
@@ -102,6 +130,7 @@ shop.Product.prototype.write = function (container) {
     result.innerHTML = '= ' + self._totalPrice + ' грн';
     quantityInput.setAttribute('type', 'number');
     quantityInput.setAttribute('min', '1');
+    img.setAttribute('src', 'images/small/small_' + self.data.id + '.jpg');
 
     img.className = 'img_shop_cart'
     productContainer.className = 'product_shop_cart';
@@ -109,7 +138,6 @@ shop.Product.prototype.write = function (container) {
     descrElement.className = 'descr_shop_cart';
     quantityInput.className = 'count';
     priceElement.className = 'price';
-    removeProduct.className = 'remove';
 
     productContainer.appendChild(img);
     productContainer.appendChild(nameElement);
@@ -131,6 +159,53 @@ shop.Product.prototype.write = function (container) {
     }
   };
 
+  function writeForProduct() {
+    var
+      photoSection = document.createElement('div'),
+      infoSection = document.createElement('div');
+    productContainer.className = 'product_info';
+    infoSection.className = 'info_section'
+
+    img.setAttribute('src', 'images/big/big_' + self.data.id + '.jpg');
+
+    if (!self._favorite.existIds(self)) {
+      favoriteBtn.classList.add('active');
+    }
+    if (self._shoppingCart.existIds(self)) {
+      cartBtn.innerHTML = 'В кошик';
+    } else {
+      cartBtn.classList.add('active');
+      cartBtn.innerHTML = 'В кошику';
+    }
+
+    photoSection.appendChild(img);
+    productContainer.appendChild(photoSection);
+    infoSection.appendChild(favoriteBtn);
+    infoSection.appendChild(nameElement);
+    infoSection.appendChild(descrElement);
+    infoSection.appendChild(priceElement);
+    infoSection.appendChild(cartBtn);
+    productContainer.appendChild(infoSection)
+    productContainer.appendChild(removeProduct);
+
+    cartBtn.onclick = function (event) {
+      event.stopPropagation();
+      self.changeTotalPrice();
+      self.toggleShoppingCart();
+
+    };
+
+    favoriteBtn.onclick = function(event) {
+      event.stopPropagation();
+      self.toggleFavorites();
+    };
+
+    removeProduct.onclick = function() {
+      self._core.changeState(self._core._stateBeforeChange)
+    }
+  };
+
+
   container.appendChild(productContainer);
 };
 
@@ -141,3 +216,9 @@ shop.Product.prototype.changeCount = function(num) {
 shop.Product.prototype.changeTotalPrice = function() {
   this._totalPrice = this._count * this.data.price;
 };
+
+shop.Product.prototype.write = function() {
+  this.container.innerHTML = '';
+  this._core.writeHeader();
+  this.writeToContainer(this.container);
+}

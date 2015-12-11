@@ -1,5 +1,7 @@
+'use strict';
 shop.state = {
   favorite: 'favorite',
   products: 'products',
-  shoppingCart: 'shoppingCart'
-}
+  shoppingCart: 'shoppingCart',
+  product: 'product'
+};

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 shop.orderType = {
   id: {
     type: 'id',
@@ -12,4 +12,4 @@ shop.orderType = {
     type: 'price',
     text: 'По ціні'
   }
-}
+};

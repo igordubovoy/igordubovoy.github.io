@@ -1,4 +1,4 @@
-.pager_container {/*-> pager_container*/
+.pager_container {
   margin-top: 20px;
   text-align: center;
 }
@@ -13,7 +13,7 @@
   transition: 0.3s;
   width: 50px;
 }
-.pager_tab.active {/*use .pager_tab .active*/
+.pager_tab.active {
   background: #21935a;
   cursor: default;
   color: #fff;

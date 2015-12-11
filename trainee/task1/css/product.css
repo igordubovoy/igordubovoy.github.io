@@ -50,3 +50,11 @@
   font-size: 50px;
   text-align: center
 }
+
+.product_info {
+  position: relative;
+}
+
+.info_section {
+  display: inline-block;
+}

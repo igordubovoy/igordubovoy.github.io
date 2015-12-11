@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 shop.ProductsBase = function (dataSource, core) {
   this._core = core;
   this._dataSource = dataSource;
@@ -12,6 +12,8 @@ shop.ProductsBase = function (dataSource, core) {
   this._pageNo = 1;
 
   this._pageCount = 0;
+
+  this.self = this;
 
   this.container = document.getElementById('container');
 };
@@ -46,11 +48,15 @@ shop.ProductsBase.prototype.limitProducts = function () {
 };
 
 shop.ProductsBase.prototype.process = function() {
+  this.calculate();
+  this.write();
+};
+
+shop.ProductsBase.prototype.calculate = function() {
   this.filterProducts();
   this.sort();
   this.limitProducts();
   this.calculatePageCount();
-  this.write();
 };
 
 shop.ProductsBase.prototype.setLimit = function (limit) {
@@ -97,7 +103,12 @@ shop.ProductsBase.prototype.write = function () {
   this.container.innerHTML = '';
   this._core.writeHeader();
   this.writeSortingMenu();
-  this.writeProducts();
+  if(this._limitedProducts.length){
+    this.writeProducts();
+    this.writeAfterProducts();
+  } else {
+    this.writeEmpty(this.container);
+  }
   this.writePager();
 };
 
@@ -111,8 +122,7 @@ shop.ProductsBase.prototype.writePager = function () {
 
   var
     sectionForPager = document.createElement('div'),
-    i = 1,
-    self = this;
+    i = 1;
 
   if (this._sortedProducts.length > 0) {
     do {
@@ -135,7 +145,7 @@ shop.ProductsBase.prototype.writePager = function () {
   }
 
   sectionForPager.className = 'pager_container';
-  this.container.appendChild(sectionForPager);
+  self.container.appendChild(sectionForPager);
 };
 
 shop.ProductsBase.prototype.writeProducts = function () {
@@ -145,7 +155,7 @@ shop.ProductsBase.prototype.writeProducts = function () {
   this.container.className = 'content';
 
   this._limitedProducts.forEach(function (product) {
-    product.write(containerForProducts);
+    product.writeToContainer(containerForProducts);
   });
 
   this.container.appendChild(containerForProducts);
@@ -158,12 +168,11 @@ shop.ProductsBase.prototype.writeSortingMenu = function () {
 
   this.writeBlockLimit(sortingMenu);
   this.writeBlockSort(sortingMenu);
-  this.container.appendChild(sortingMenu);
+  self.container.appendChild(sortingMenu);
 };
 
 shop.ProductsBase.prototype.writeBlockLimit = function(blockMenu) {
   var
-    self = this,
     blockLimit = document.createElement('div'),
     labelLimit = document.createElement('span'),
     selectLimit = document.createElement('select');
@@ -199,7 +208,6 @@ shop.ProductsBase.prototype.writeBlockLimit = function(blockMenu) {
 
 shop.ProductsBase.prototype.writeBlockSort = function(blockMenu) {
   var
-    self = this,
     blockSort = document.createElement('div'),
     labelSort = document.createElement('span'),
     selectSort = document.createElement('select');
@@ -235,7 +243,10 @@ shop.ProductsBase.prototype.writeBlockSort = function(blockMenu) {
 
 shop.ProductsBase.prototype.writeEmpty = function(container) {
   var empty = document.createElement('div');
+
   empty.className = 'empty';
   empty.innerHTML = 'Пусто';
   container.appendChild(empty)
-}
+};
+
+shop.ProductsBase.prototype.writeAfterProducts = function() {};
