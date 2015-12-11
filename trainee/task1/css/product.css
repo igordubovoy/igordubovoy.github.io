@@ -50,11 +50,12 @@
   font-size: 50px;
   text-align: center
 }
-
-.product_info {
-  position: relative;
+.photo_section {
+  float:left;
+  width:210px;
 }
-
 .info_section {
-  display: inline-block;
+  float:left;
+  position:relative;
+  max-width: 750px;
 }

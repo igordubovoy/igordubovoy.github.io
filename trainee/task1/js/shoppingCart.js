@@ -2,7 +2,9 @@
 shop.ShoppingCart = function (dataSource, core) {
   shop.ProductsBase.apply(this, arguments);
 
-  this._shoppingCartIds = [];
+  this._data = localStorage.dataShopCart;
+  this._shoppingCartIds = this._data ? JSON.parse(this._data) : [];
+  
   this._totalResult = 0;
   this.container = document.getElementById('container');
 };
@@ -11,6 +13,7 @@ shop.ShoppingCart.prototype = Object.create(shop.ProductsBase.prototype)
 
 shop.ShoppingCart.prototype.addIds = function(product) {
   this._shoppingCartIds.push(product.data.id);
+  this.saveData();
 };
 
 shop.ShoppingCart.prototype.existIds = function(product) {
@@ -31,6 +34,7 @@ shop.ShoppingCart.prototype.getIds = function() {
 shop.ShoppingCart.prototype.removeId = function(product) {
   var index = this._shoppingCartIds.indexOf(product.data.id);
   this._shoppingCartIds.splice(index, 1);
+  this.saveData();
 };
 
 shop.ShoppingCart.prototype.writeTotalBlock = function() {
@@ -65,3 +69,7 @@ shop.ShoppingCart.prototype.calculate = function() {
   this.calculateTotalResult();
 };
 
+shop.ShoppingCart.prototype.saveData = function() {
+  var dataStr = JSON.stringify(this._shoppingCartIds);
+  localStorage.dataShopCart = dataStr;
+};

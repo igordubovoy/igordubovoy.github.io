@@ -7,7 +7,10 @@ shop.Core = function() {
   this.product = null;
   this.productsObject = null;
   this._stateBeforeChange = null;
-  this._state = shop.state.products;
+  
+//  this._data = localStorage.dataState
+  this._state =  shop.state.products;
+  
   this._containder = document.getElementById('container')
 };
 
@@ -32,7 +35,8 @@ shop.Core.prototype.process = function() {
 shop.Core.prototype.changeState = function (state) {
   this._stateBeforeChange = this._state;
   this._state = state;
-
+//  this.saveData();
+  
   switch(state) {
     case shop.state.products:
       this.productsObject = this.products;
@@ -115,3 +119,8 @@ shop.Core.prototype.changeStateToProduct = function (product) {
   this.product = product;
   this.changeState(shop.state.product);
 }
+
+//shop.Core.prototype.saveData = function() {
+//  var dataStr = this._state;
+//  localStorage.dataState = dataStr;
+//};

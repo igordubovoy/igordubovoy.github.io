@@ -2,8 +2,8 @@
 shop.Favorite = function (dataSource, core) {
   shop.ProductsBase.apply(this, arguments);
 
-  var s = localStorage.data;
-  this._favoritesIds = s ? JSON.parse(s) : [];
+  this._data = localStorage.dataFavorites;
+  this._favoritesIds = this._data ? JSON.parse(this._data) : [];
 };
 
 
@@ -37,6 +37,5 @@ shop.Favorite.prototype.removeId = function(product) {
 
 shop.Favorite.prototype.saveData = function() {
   var dataStr = JSON.stringify(this._favoritesIds);
-  localStorage.data = dataStr;
-  console.log(dataStr)
+  localStorage.dataFavorites = dataStr;
 }
