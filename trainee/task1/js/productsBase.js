@@ -125,27 +125,23 @@ shop.ProductsBase.prototype.writePager = function () {
 
   var
     self = this,
-    sectionForPager = document.createElement('div'),
-    i = 1;
+    sectionForPager = document.createElement('div');
 
-  if (this._sortedProducts.length > 0) {/*use for*/
-    do {
-      var
-        tab = document.createElement('div'),
-        isActive = i === this._pageNo;
+  for(var i = 1; i <= this._pageCount; i++){
+    var
+      tab = document.createElement('div'),
+      isActive = i === this._pageNo;
 
-      tab.innerHTML = i;
-      tab.className = 'pager_tab';
+    tab.innerHTML = i;
+    tab.className = 'pager_tab';
 
-      if (!isActive) {
-        setOnClick(tab, i);
-      } else {
-        tab.classList.add('active');
-      };
+    if (!isActive) {
+      setOnClick(tab, i);
+    } else {
+      tab.classList.add('active');
+    };
 
-      sectionForPager.appendChild(tab);
-      i++;
-    } while (i <= this._pageCount);
+    sectionForPager.appendChild(tab);
   }
 
   sectionForPager.className = 'pager_container';

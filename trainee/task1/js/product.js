@@ -14,22 +14,22 @@ shop.Product = function (productData, core) {
 };
 
 shop.Product.prototype.toggleFavorites = function() {
-  if (this._favorite.existIds(this)) {
-    this._favorite.addIds(this);
+  if (this._favorite.exist(this)) {
+    this._favorite.add(this);
   } else {
-    this._favorite.removeId(this);
+    this._favorite.remove(this);
   }
 
-  if(this._core._state != shop.state.product){/*change condition to ===*/
-    this._core.productsObject.process();
+  if(this._core._state === shop.state.product) {
+    this.write(this.container)
   } else {
-    this.write(this.container)/*this.container - is it used?*/
+    this._core.productsObject.process();
   }
 };
 
 shop.Product.prototype.toggleShoppingCart = function() {
-  if (this._shoppingCart.existIds(this)) {
-    this._shoppingCart.addIds(this);
+  if (this._shoppingCart.exist(this)) {
+    this._shoppingCart.add(this);
 
     if(this._core._state != shop.state.product){
       this._core.productsObject.process();
@@ -42,50 +42,18 @@ shop.Product.prototype.toggleShoppingCart = function() {
 };
 
 shop.Product.prototype.writeToContainer = function (container) {
-  var
-    self = this,
-    productContainer = document.createElement('div'),
-    img = document.createElement('img'),
-    nameElement = document.createElement('div'),
-    descrElement = document.createElement('div'),
-    quantityInput = document.createElement('input'),
-    priceElement = document.createElement('div'),
-    cartBtn = document.createElement('button'),
-    favoriteBtn = document.createElement('div'),
-    removeProduct = document.createElement('div');
 
-  cartBtn.className = 'product_cart_btn';
-  favoriteBtn.className = 'product_favorite_btn';
-  removeProduct.className = 'remove';
-
-  priceElement.innerHTML = this.data.price + ' грн';
-  nameElement.innerHTML = this.data.name;
-  descrElement.innerHTML = this.data.description;
-
-  switch(self._core._state) {
-    case shop.state.shoppingCart:
-      writeForShopCart();
-    break;
-    case shop.state.favorite:
-    case shop.state.products:
-      writeForFavAndProd();
-    break;
-    case shop.state.product:
-      writeForProduct();
-    break;
-  }
-
-  function writeForFavAndProd() {/*move to top*/
+  function writeForFavAndProd() {
     nameElement.className = 'product_name';
     priceElement.className = 'product_price';
     productContainer.className = 'product';
 
     img.setAttribute('src', 'images/small/small_' + self.data.id + '.jpg');
 
-    if (!self._favorite.existIds(self)) {
+    if (!self._favorite.exist(self)) {
       favoriteBtn.classList.add('active');
     }
-    if (self._shoppingCart.existIds(self)) {
+    if (self._shoppingCart.exist(self)) {
       cartBtn.innerHTML = 'В кошик';
     } else {
       cartBtn.classList.add('active');
@@ -150,15 +118,21 @@ shop.Product.prototype.writeToContainer = function (container) {
     };
 
     removeProduct.onclick = function () {
-      self._shoppingCart.removeId(self);
+      self._shoppingCart.remove(self);
       self._core.productsObject.process();
+    };
+
+    productContainer.onclick = function(event) {
+      var target = event.target;
+      if(target.tagName === 'INPUT') return;
+      self._core.changeStateToProduct(self);
     };
   };
 
   function writeForProduct() {
     var
-      photoSection = document.createElement('div'),
-      infoSection = document.createElement('div');
+    photoSection = document.createElement('div'),
+        infoSection = document.createElement('div');
     productContainer.className = 'info_product'
     infoSection.className = 'info_section';
     photoSection.className = 'photo_section';
@@ -170,10 +144,10 @@ shop.Product.prototype.writeToContainer = function (container) {
     removeProduct.classList.add('remove_info');
     img.setAttribute('src', 'images/big/big_' + self.data.id + '.jpg');
 
-    if (!self._favorite.existIds(self)) {
+    if (!self._favorite.exist(self)) {
       favoriteBtn.classList.add('active');
     }
-    if (self._shoppingCart.existIds(self)) {
+    if (self._shoppingCart.exist(self)) {
       cartBtn.innerHTML = 'В кошик';
     } else {
       cartBtn.classList.add('active');
@@ -206,6 +180,39 @@ shop.Product.prototype.writeToContainer = function (container) {
       self._core.changeState(self._core._stateBeforeChange)
     }
   };
+
+  var
+    self = this,
+    productContainer = document.createElement('div'),
+    img = document.createElement('img'),
+    nameElement = document.createElement('div'),
+    descrElement = document.createElement('div'),
+    quantityInput = document.createElement('input'),
+    priceElement = document.createElement('div'),
+    cartBtn = document.createElement('button'),
+    favoriteBtn = document.createElement('div'),
+    removeProduct = document.createElement('div');
+
+  cartBtn.className = 'product_cart_btn';
+  favoriteBtn.className = 'product_favorite_btn';
+  removeProduct.className = 'remove';
+
+  priceElement.innerHTML = this.data.price + ' грн';
+  nameElement.innerHTML = this.data.name;
+  descrElement.innerHTML = this.data.description;
+
+  switch(self._core._state) {
+    case shop.state.shoppingCart:
+      writeForShopCart();
+    break;
+    case shop.state.favorite:
+    case shop.state.products:
+      writeForFavAndProd();
+    break;
+    case shop.state.product:
+      writeForProduct();
+    break;
+  }
 
   container.appendChild(productContainer);
 };
