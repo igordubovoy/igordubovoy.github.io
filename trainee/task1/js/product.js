@@ -5,10 +5,10 @@ shop.Product = function (productData, core) {
   this._shoppingCart = core.shoppingCart;
 
   this.data = productData;
-  
+
   this._count = 1;
   this._totalPrice = this.data.price;
-  
+
   this.container = document.getElementById('container');
 
 };
@@ -20,10 +20,10 @@ shop.Product.prototype.toggleFavorites = function() {
     this._favorite.removeId(this);
   }
 
-  if(this._core._state != shop.state.product){
+  if(this._core._state != shop.state.product){/*change condition to ===*/
     this._core.productsObject.process();
   } else {
-    this.write(this.container)
+    this.write(this.container)/*this.container - is it used?*/
   }
 };
 
@@ -33,8 +33,7 @@ shop.Product.prototype.toggleShoppingCart = function() {
 
     if(this._core._state != shop.state.product){
       this._core.productsObject.process();
-    }
-    else {
+    } else {
       this.write(this.container)
     }
   } else {
@@ -55,11 +54,9 @@ shop.Product.prototype.writeToContainer = function (container) {
     favoriteBtn = document.createElement('div'),
     removeProduct = document.createElement('div');
 
-
   cartBtn.className = 'product_cart_btn';
   favoriteBtn.className = 'product_favorite_btn';
   removeProduct.className = 'remove';
-
 
   priceElement.innerHTML = this.data.price + ' грн';
   nameElement.innerHTML = this.data.name;
@@ -78,8 +75,7 @@ shop.Product.prototype.writeToContainer = function (container) {
     break;
   }
 
-  function writeForFavAndProd() {
-
+  function writeForFavAndProd() {/*move to top*/
     nameElement.className = 'product_name';
     priceElement.className = 'product_price';
     productContainer.className = 'product';
@@ -183,7 +179,7 @@ shop.Product.prototype.writeToContainer = function (container) {
       cartBtn.classList.add('active');
       cartBtn.innerHTML = 'В кошику';
     }
-    
+
     photoSection.appendChild(img);
     photoSection.appendChild(favoriteBtn);
     infoSection.appendChild(nameElement);
@@ -191,7 +187,7 @@ shop.Product.prototype.writeToContainer = function (container) {
     infoSection.appendChild(priceElement);
     infoSection.appendChild(cartBtn);
     infoSection.appendChild(removeProduct);
-  
+
     productContainer.appendChild(photoSection);
     productContainer.appendChild(infoSection);
 
@@ -199,7 +195,6 @@ shop.Product.prototype.writeToContainer = function (container) {
       event.stopPropagation();
       self.changeTotalPrice();
       self.toggleShoppingCart();
-
     };
 
     favoriteBtn.onclick = function(event) {
@@ -211,11 +206,12 @@ shop.Product.prototype.writeToContainer = function (container) {
       self._core.changeState(self._core._stateBeforeChange)
     }
   };
+
   container.appendChild(productContainer);
 };
 
-shop.Product.prototype.changeCount = function(num) {
-  this._count = num;
+shop.Product.prototype.changeCount = function(count) {
+  this._count = count;
 };
 
 shop.Product.prototype.changeTotalPrice = function() {

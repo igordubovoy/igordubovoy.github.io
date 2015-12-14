@@ -22,7 +22,7 @@ shop.ProductsBase.prototype.calculatePageCount = function () {
   this._pageCount = Math.ceil(this._sortedProducts.length / this._limit);
 };
 
-shop.ProductsBase.prototype.changeLimit = function (limit) {
+shop.ProductsBase.prototype.changeLimit = function(limit) {
   this.setLimit(limit);
   this.calculatePageCount();
   this.setPageNo(1);
@@ -43,8 +43,9 @@ shop.ProductsBase.prototype.changePageNo = function (pageNo) {
   this.write();
 };
 
-shop.ProductsBase.prototype.limitProducts = function () {
-  this._limitedProducts = this._sortedProducts.slice(this._pageNo * this._limit - this._limit, this._limit * this._pageNo);
+shop.ProductsBase.prototype.limitProducts = function() {
+  this._limitedProducts = this._sortedProducts.slice(
+    this._pageNo * this._limit - this._limit, this._limit * this._pageNo);
 };
 
 shop.ProductsBase.prototype.process = function() {
@@ -103,12 +104,14 @@ shop.ProductsBase.prototype.write = function () {
   this.container.innerHTML = '';
   this._core.writeHeader();
   this.writeSortingMenu();
+
   if(this._limitedProducts.length){
     this.writeProducts();
     this.writeAfterProducts();
   } else {
     this.writeEmpty(this.container);
   }
+
   this.writePager();
 };
 
@@ -125,7 +128,7 @@ shop.ProductsBase.prototype.writePager = function () {
     sectionForPager = document.createElement('div'),
     i = 1;
 
-  if (this._sortedProducts.length > 0) {
+  if (this._sortedProducts.length > 0) {/*use for*/
     do {
       var
         tab = document.createElement('div'),
