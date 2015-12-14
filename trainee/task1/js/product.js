@@ -226,4 +226,4 @@ shop.Product.prototype.write = function() {
   this.container.innerHTML = '';
   this._core.writeHeader();
   this.writeToContainer(this.container);
-}
+};

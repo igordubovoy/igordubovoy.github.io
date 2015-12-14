@@ -1,5 +1,5 @@
-
+'use strict';
 window.onload = function() {
-  core = new shop.Core();
+  var core = new shop.Core();
   core.process();
 };

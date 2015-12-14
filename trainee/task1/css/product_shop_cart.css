@@ -18,12 +18,12 @@
   margin-top: 20px;
 }
 .count {
-  margin: 30px 5px 0 5px;/*?*/
-  padding-left: 12px;/*?*/
+  margin: 30px 5px 0 5px;
+  padding-left: 12px;
   text-align: center;
   width: 30px;
 }
-.price {/*div -> span*/
+.price {
   color: #008040;
   display: inline-block;
 }

@@ -118,9 +118,4 @@ shop.Core.prototype.writeHeader = function() {
 shop.Core.prototype.changeStateToProduct = function (product) {
   this.product = product;
   this.changeState(shop.state.product);
-}
-
-//shop.Core.prototype.saveData = function() {
-//  var dataStr = this._state;
-//  localStorage.dataState = dataStr;
-//};
+};
