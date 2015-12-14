@@ -7,10 +7,11 @@ shop.Core = function() {
   this.product = null;
   this.productsObject = null;
   this._stateBeforeChange = null;
-  
+
+/*delete*/
 //  this._data = localStorage.dataState
   this._state =  shop.state.products;
-  
+
   this._containder = document.getElementById('container')
 };
 
@@ -18,6 +19,7 @@ shop.Core.prototype.process = function() {
   this.dataSource.initProducts();
   this.changeState(this._state);
 
+/*delete*/
 //  var arr = [];
 //  for(var prop in this.products) {
 //    arr.push(prop)
@@ -35,8 +37,8 @@ shop.Core.prototype.process = function() {
 shop.Core.prototype.changeState = function (state) {
   this._stateBeforeChange = this._state;
   this._state = state;
-//  this.saveData();
-  
+//  this.saveData();/*delete*/
+
   switch(state) {
     case shop.state.products:
       this.productsObject = this.products;
@@ -58,7 +60,6 @@ shop.Core.prototype.changeState = function (state) {
   } else {
     this.productsObject.process();
   }
-
 };
 
 shop.Core.prototype.writeHeader = function() {
@@ -86,7 +87,7 @@ shop.Core.prototype.writeHeader = function() {
 
     container.appendChild(button);
 
-    function writeCount(){
+    function writeCount(){/*move to top function*/
       var
         count = document.createElement('div'),
         length = self.shoppingCart.getIds().length;
@@ -106,7 +107,6 @@ shop.Core.prototype.writeHeader = function() {
       self.changeState(state);
     };
   };
-
 
   writeButton(shop.state.shoppingCart, 'Кошик', header);
   writeButton(shop.state.favorite, 'Вибране', header);

@@ -39,13 +39,13 @@
   cursor: pointer;
   height: 26px;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 10px;/*?*/
   position: absolute;
   width: 26px;
-  top: -24px;
+  top: -24px;/*-?*/
   left: 33px;
 }
-.info_fav {
+.info_fav {/*?*/
   top: -27px;
   left: -17px;
 }
