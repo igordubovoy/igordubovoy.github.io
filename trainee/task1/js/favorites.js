@@ -10,7 +10,7 @@ shop.Favorite.prototype = Object.create(shop.ProductsBase.prototype);
 
 shop.Favorite.prototype.add = function(product) {
   this._favoritesIds.push(product.data.id);
-  this.saveData()
+  this.saveData();
 };
 
 shop.Favorite.prototype.exist = function(product) {
@@ -27,7 +27,7 @@ shop.Favorite.prototype.filterProducts = function() {
 shop.Favorite.prototype.remove = function(product) {
   var index = this._favoritesIds.indexOf(product.data.id);
   this._favoritesIds.splice(index, 1);
-  this.saveData()
+  this.saveData();
 };
 
 shop.Favorite.prototype.saveData = function() {

@@ -124,7 +124,7 @@ shop.Product.prototype.writeToContainer = function (container) {
 
     productContainer.onclick = function(event) {
       var target = event.target;
-      if(target.tagName === 'INPUT') return;
+      if(target.tagName === 'INPUT' || target.className === 'remove') return;
       self._core.changeStateToProduct(self);
     };
   };
