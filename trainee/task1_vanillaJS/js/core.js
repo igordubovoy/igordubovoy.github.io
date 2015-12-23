@@ -52,8 +52,8 @@ shop.Core.prototype.writeHeader = function () {
 
     function writeCount() {
       var
-      count = document.createElement('div'),
-          length = self.shoppingCart.getIds().length;
+        count = document.createElement('div'),
+        length = self.shoppingCart.getIds().length;
 
       count.className = 'count_shop_cart'
 

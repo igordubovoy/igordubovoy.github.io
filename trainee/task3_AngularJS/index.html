@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pager.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/product_shop_cart.css">
+  <link rel="stylesheet" href="css/sort_form.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+
+<body class="content" ng-controller="mainListCtrl as app">
+  <header>
+    <!--    <buttons>-->
+    <div class="product_list_btn" ng-repeat="button in app.headerNav" ng-click="app.changeState(button)">{{button}}</div>
+  </header>
+  <section class="sorting">
+    <div class="sorting_limit">
+      <span class="sorting_limit_label">{{app.sortingLabels[1]}}</span>
+      <select class="sorting_limit_select" ng-model="app.limitPhones" ng-change="app.calculatePageCount()">
+        <option value={{option}} ng-repeat="option in app.limitValues">{{option}}</option>
+      </select>
+    </div>
+    <div class="sorting_sort">
+      <span class="sorting_sort_label">{{app.sortingLabels[0]}}</span>
+      <select class="sorting_sort_select" ng-model="app.sortPhones">
+        <option value={{option.type}} ng-repeat="option in app.orderType">{{option.text}}</option>
+      </select>
+    </div>
+  </section>
+  <!--  <products>-->
+  <div class="container_for_products">
+    <div class="product" ng-repeat="phone in app.phones | orderBy:app.sortPhones | limitTo: app.limitPhones : (app.pageNo -1) * app.limitPhones">
+      <img ng-src={{phone.url}} alt="">
+      <div ng-class="app.exist(phone) ? 'product_favorite_btn' : 'product_favorite_btn active'" ng-click="app.toggle(phone)"></div>
+      <div class="product_name">{{phone.name}}</div>
+      <div class="product_price">{{phone.price}} грн</div>
+      <button class="product_cart_btn">В кошик</button>
+    </div>
+  </div>
+  <div class="pager_container">
+    <div ng-repeat="tab in app.lengthArr" ng-click="app.changePageNo(tab)" ng-class="tab === app.pageNo ? 'pager_tab active' : 'pager_tab'">{{tab}}</div>
+  </div>
+
+</body>
+
+</html>
