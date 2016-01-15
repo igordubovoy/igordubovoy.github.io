@@ -1,0 +1,15 @@
+<div class="container_for_products" ng-if="app.phones.length">
+  <div class="product_shop_cart" ng-repeat="phone in app.phones | orderBy:app.sortPhones | limitTo: app.limitPhones : (app.pageNo - 1) * app.limitPhones">
+    <img ng-src={{phone.url}} alt="" class="img_shop_cart">
+    <div class="name_shop_cart">{{phone.name}}</div>
+    <div class="descr_shop_cart">{{phone.description}}</div>
+    <div class="price">{{phone.price}} x </div>
+    <input type="number" min="1" class="count" ng-model="count" ng-change="app.changeCount(phone, count)" value={{phone.count}}>
+    <span> = {{phone.totalPrice}} грн</span>
+    <div class="remove" ng-click="app.remove(phone)"></div>
+  </div>
+  <div class="total">
+    <div class="total_content">Загальна сума до сплати: {{app.total}} грн</div>
+  </div>
+</div>
+<div class="empty" ng-if="!app.phones.length">Пусто</div>

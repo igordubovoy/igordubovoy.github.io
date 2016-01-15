@@ -1,0 +1,14 @@
+<section class="sorting">
+  <div class="sorting_limit">
+    <span class="sorting_limit_label">{{app.sortingLabels[1]}}</span>
+    <select class="sorting_limit_select" ng-model="app.limitPhones" ng-change="app.calculatePageCount()">
+      <option value={{option}} ng-repeat="option in app.limitValues">{{option}}</option>
+    </select>
+  </div>
+  <div class="sorting_sort">
+    <span class="sorting_sort_label">{{app.sortingLabels[0]}}</span>
+    <select class="sorting_sort_select" ng-model="app.sortPhones">
+      <option value={{option.type}} ng-repeat="option in app.orderType">{{option.text}}</option>
+    </select>
+  </div>
+</section>

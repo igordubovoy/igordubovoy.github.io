@@ -1,0 +1,15 @@
+<div class="info_product">
+  <div class="photo_section">
+    <img ng-src={{app.phone.urlBig}} alt="">
+    <div ng-class="app.phone.inFavorite ? 'product_favorite_btn info_fav active' : 'product_favorite_btn info_fav'"
+         ng-click="app.toggleFavorite(app.phone)"></div>
+  </div>
+  <div class="info_section">
+    <div class="name_info">{{app.phone.name}}</div>
+    <div class="descr_info">{{app.phone.description}}</div>
+    <div class="price_info">{{app.phone.price}} грн</div>
+    <button ng-class="app.phone.inShopCart ? 'product_cart_btn info_shop active' : 'product_cart_btn info_shop'"
+            ng-click="app.toggleShopCart(app.phone)">{{app.phone.inShopCart ? 'В кошику' : 'В кошик'}}</button>
+    <div class="remove remove_info" ng-click=""></div>
+  </div>
+</div>

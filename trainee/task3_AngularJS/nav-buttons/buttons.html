@@ -1,0 +1,5 @@
+<div  ng-repeat="button in app.headerNav"
+     ng-class="button.type === app.state ? 'product_list_btn active' : 'product_list_btn'"
+      ng-click="app.changeState(button.name)">
+  <a href="#{{button.type}}">{{button.name}}</a>
+</div>

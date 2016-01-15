@@ -1,0 +1,2 @@
+cd C:\Users\ihor.dubovyi\Desktop\IgorDubovoy\trainee\task3_AngularJS
+node node_modules/http-server/bin/http-server -a 0.0.0.0 -p 8080

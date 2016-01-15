@@ -1,0 +1,12 @@
+<div class="container_for_products" ng-if="app.phones.length">
+  <div class="product" ng-click="app.changeLocation(phone)" ng-repeat="phone in app.phones | orderBy:app.sortPhones | limitTo: app.limitPhones : (app.pageNo - 1) * app.limitPhones">
+    <img ng-src={{phone.url}} alt="">
+    <div ng-class="phone.inFavorite ? 'product_favorite_btn active' : 'product_favorite_btn'"
+         ng-click="app.toggleFavorite(phone); $event.stopPropagation()"></div>
+    <div class="product_name">{{phone.name}}</div>
+    <div class="product_price">{{phone.price}} грн</div>
+    <button ng-class="phone.inShopCart ? 'product_cart_btn active' : 'product_cart_btn'"
+            ng-click="app.toggleShopCart(phone); $event.stopPropagation()">{{phone.inShopCart ? 'В кошику' : 'В кошик'}}</button>
+  </div>
+</div>
+<div class="empty" ng-if="!app.phones.length">Пусто</div>

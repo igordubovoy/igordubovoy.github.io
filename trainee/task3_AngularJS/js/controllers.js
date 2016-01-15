@@ -1,11 +1,28 @@
 'use strict';
+var shopApp = angular.module('shopApp', ['ngRoute']);
 
-/*controllers*/
-var shopApp = angular.module('shopApp', []);
-shopApp.controller('mainListCtrl', ['$http', function ($http) {
+function mainService() {
+  this.viewPhones = [];
+}
+
+
+function mainListCtr(dataService, favoriteService, shoppingCartService, productService, $route, $location) {
   var self = this;
+  this.headerNav = [
+    {
+      name: 'Кошик',
+      type: '/shoppingCart'
+    },
+    {
+      name: 'Вибране',
+      type: '/favorite'
+    },
+    {
+      name: 'Головна',
+      type: '/products'
+    }
+  ];
 
-  this.headerNav = ['Кошик', 'Вибране', 'Головна'];
   this.sortingLabels = ['Сортування', 'Кількість']
   this.limitValues = ['4', '8', '12', '16', '20'];
   this.orderType = {
@@ -22,65 +39,51 @@ shopApp.controller('mainListCtrl', ['$http', function ($http) {
       text: 'По ціні'
     }
   };
-  this.allStates = {
-    favorite: 'favorite',
-    products: 'products',
-    shoppingCart: 'shoppingCart',
-    product: 'product'
-  };
-
-  $http.get('js/data.json').success(function (data) {
-    self.phones = data;
-    self.calculatePageCount()
-  });
-
-  this.favoritesIds = [];
-  this.state = this.allStates.products;
+  this.favoritesIds = dataService._favoritesIds;
   this.pageNo = 1;
   this.lengthArr = [];
   this.sortPhones = 'id';
   this.limitPhones = this.limitValues[1];
 
+  this.state = $route.current.$$route.originalPath
+  this.filterProducts = function () {}
+  this.phones = dataService.getPhones();
 
   this.calculatePageCount = function () {
-    var pageCount = Math.ceil(this.phones.length / parseInt(this.limitPhones));
+    var pageCount = 0;
+    if(this.phones) {
+      pageCount = Math.ceil(this.phones.length / parseInt(this.limitPhones))
+    };
+
+
     this.lengthArr = [];
     for (var i = 1; i <= pageCount; i++) {
       this.lengthArr.push(i);
     }
   };
+  this.calculatePageCount()
 
-  this.changePageNo = function(pageNo){
+  this.changePageNo = function (pageNo) {
     self.pageNo = pageNo;
   }
-
-  this.changeState = function(button) {
-    switch(button) {
-      case 'Кошик':
-        this.state = this.allStates.shoppingCart;
-        break;
-      case 'Вибране':
-        this.state = this.allStates.favorite;
-        break;
-      case 'Головна':
-        this.state = this.allStates.products;
-        break;
-    }
+  this.toggleFavorite = function(phone) {
+    favoriteService.toggle(phone);
+    this.calculatePageCount()
   };
-  this.exist = function(phone) {
-    return this.favoritesIds.indexOf(phone.id) === -1;
-  };
-  this.addId = function(phone){
-    this.favoritesIds.push(phone.id)
-  }
-
-  this.remove = function(phone) {
-    var index = this.favoritesIds.indexOf(phone.id);
-    this.favoritesIds.splice(index, 1);
+  this.toggleShopCart = function(phone) {
+    shoppingCartService.toggle(phone);
+    this.calculatePageCount()
   };
 
-  this.toggle = function(phone) {
-    this.exist(phone) ? this.addId(phone) : this.remove(phone);
+  this.changeLocation = function(phone) {
+    productService.savePhone(phone);
+    $location.path('/product');
   };
 
-}]);
+  this.saveData = function() {
+    var dataStr = JSON.stringify(this.phones);
+    localStorage.productsData = dataStr;
+  };
+
+
+};
