@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    #div1, #div3{
+      float: left;
+      height: 250px;
+      width: 250px;
+      border: 2px solid blue;
+      margin: 5px;
+    }
+    #div2 {
+      height: 40px;
+      width: 40px;
+      background: red;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="div1" ondrop="drop(event)" ondragover="dragover(event)">
+    <div id="div2" draggable="true" ondragstart="dragstart(event)"></div>
+  </div>
+  <div id="div3" ondrop="drop(event)" ondragover="dragover(event)">
+
+  </div>
+
+  <script>
+    function dragstart(event) {
+      event.dataTransfer.setData('id', event.currentTarget.id)
+      event.dataTransfer.setData('elemTop', event.offsetY)
+      event.dataTransfer.setData('elemLeft', event.offsetX)
+    }
+    function dragover(event) {
+      event.preventDefault()
+    }
+    function drop(event) {
+      event.preventDefault();
+
+      var toDrop = document.getElementById(event.target.id),
+          id = document.getElementById(event.dataTransfer.getData('id')),
+          elemTop = event.dataTransfer.getData('elemTop'),
+          elemLeft = event.dataTransfer.getData('elemLeft');
+
+      toDrop.appendChild(id);
+      var
+        top = Math.round((event.offsetY - elemTop) / toDrop.clientHeight * 100),
+        left = Math.round((event.offsetX - elemLeft) / toDrop.clientWidth * 100);
+      id.style.top = top +'%';
+      id.style.left = left +'%';
+      console.log('destX:', left, 'destY: ',top);
+    }
+  </script>
+  <script src="2.js"></script>
+  <script src="3.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,3 @@
-
-
-
 'use strict';
 shop.Core = function () {
   this.dataSource = new shop.DataSource(this);

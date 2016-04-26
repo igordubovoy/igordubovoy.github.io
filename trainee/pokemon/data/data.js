@@ -1,0 +1,4 @@
+var pokemonData = [
+  'use strict';
+
+]

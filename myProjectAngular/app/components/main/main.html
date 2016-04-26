@@ -1,0 +1,8 @@
+<div ng-controller="mainCtrl as app">
+  <div class="gallery">
+    <div class="img_wrapper" ng-repeat="series in app.series" ng-class="{{series.id}}">
+       <img class="preview" ng-src="{{series.prevImgUrl}}" alt="">
+       <div class="signature">{{series.name}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular/angular-route.js"></script>
+  <script src="libs/angular/angular-parallax.js"></script>
+  <script src="app/data/photo-data.js"></script>
+  <script src="app/core/core.js"></script>
+  <script src="app/route/route.js"></script>
+  <script src="app/data/photo-data-service.js"></script>
+  <script src="app/components/main/main-ctrl.js"></script>
+  <script src="app/components/main/main-directive.js"></script>
+  <script src="app/components/contacts/contacts-ctrl.js"></script>
+  <script src="app/components/contacts/contacts-directive.js"></script>
+  <script src="app/components/services/services-ctrl.js"></script>
+  <script src="app/components/services/services-directive.js"></script>
+  <script src="app/components/navi/navi-ctrl.js"></script>
+  <script src="app/components/navi/navi-directive.js"></script>
+  <script src="app/components/footer/foot-directive.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-controller="coreCtrl as app">
+  <div class="background" parallax-background parallax-ratio="0.5">
+    <div ng-view></div>
+  </div>
+</body>
+
+</html>
