@@ -1,15 +1,13 @@
-var summ = 0;
-function add(arr) {
-  arr.forEach(function(elem) {
-    if(elem.join) {
-      add(elem);
-    } else {
-      return summ+= elem;
-    }
-  })
-  return summ;
+function stop() {
+  navigator.webkitGetUserMedia({
+      audio: false,
+      video: true
+    },
+    function (stream) {
+      var video = document.getElementById("local_video");
+      video.src = window.webkitURL.createObjectURL(null);
+    },
+    function (error) {
+      console.log('getUserMedia() error', error);
+    });
 }
-
-var arr = [1,2,3,4,[4,2,3]];
-
-console.log(add(arr));

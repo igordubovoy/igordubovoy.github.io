@@ -268,6 +268,7 @@ body {
 }
 .background {
     background-image: url(../app/data/image/img.jpg);
+    transition: background 0.8s;
     background-position: center 0;
 }
 header {
