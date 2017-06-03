@@ -1,0 +1,140 @@
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.clock {
+  position: relative;
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  border: 2px dotted black;
+}
+
+.time_points div {
+  position: absolute;
+  height: 20px;
+  width: 3px;
+  background-color: black
+}
+
+.time_points .up, .down {
+  left: 50%;
+  margin-left: -1px;
+}
+
+.time_points .down {
+  bottom: 0;
+}
+.time_points .left, .right {
+  top: 50%;
+  margin-top: -10px;
+  transform: rotate(90deg);
+}
+.time_points .right {
+  right: 8px;
+}
+.time_points .left {
+  left: 8px;
+}
+.time_points .ten {
+  left: 40px;
+  top: 120px;
+  transform: rotate(120deg);
+}
+.time_points .eight {
+  left: 40px;
+  bottom: 120px;
+  transform: rotate(240deg);
+}
+.time_points .four {
+  right: 40px;
+  bottom: 120px;
+  transform: rotate(120deg);
+}
+.time_points .two {
+  top: 120px;
+  right: 40px;
+  transform: rotate(240deg);
+}
+.time_points .one {
+  top: 32px;
+  right: 128px;
+  transform: rotate(30deg);
+}
+.time_points .seven {
+  bottom: 32px;
+  left: 128px;
+  transform: rotate(30deg);
+}
+.time_points .eleven {
+  top: 32px;
+  left: 129px;
+  transform: rotate(150deg);
+}
+.time_points .five {
+  bottom: 32px;
+  right: 129px;
+  transform: rotate(150deg);
+}
+
+.arrows .second {
+  transition: transform 1s linear;
+  z-index: 10;
+  transform-origin: 50px 0px;
+  margin-left: -50px;
+  height: 1px;
+  background-color: red;
+  width: 300px;
+}
+.arrows .minute, .arrows .hour{
+  height: 10px;
+  background-color: black;
+  border-radius: 6px;
+  margin-top: -5px;
+  transform-origin: 0 50%;
+}
+.arrows .hour {
+  width: 115px;
+}
+.arrows .minute {
+  width: 235px;
+}
+.arrows > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+.arrows .circle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  background-color: red;
+  z-index: 11;
+  border-radius: 50%;
+}
+
+.sub_circle {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -3px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background-color: black;
+}
